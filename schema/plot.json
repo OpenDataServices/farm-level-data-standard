@@ -1,0 +1,101 @@
+{
+	"id": "http://standard.First-MileFarmerData.org/schema/0__0__1/Plot.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Farm plot",
+	"description": "Schema for the description of a farm plot ",
+	"type": "object",
+	"required": [
+		"plot-ID","farm-ID"
+	],
+	"primarykey": "plot-ID",
+	"foreignkey": [
+		"farm-ID", "owner-ID"
+	],
+
+	"properties": 
+	{
+		"id": 
+		{
+			"title": "Plot identifier",
+			"description": "Identification number of the farm plot",
+			"type": "integer",
+			"minimum": 0
+		},
+		"farm-ID": 
+		{
+			"title": "Farm identifier",
+			"description": "Identification number of the farm",
+			"type": "integer",
+			"minimum": 0
+		},
+		"owner-ID": 
+		{
+			"title": "Owner-ID",
+			"description": "Identification number of the owner of the farm plot",
+			"type": "integer",
+			"minimum": 0
+		},
+		"fieldGeometry": 
+		{
+			"title": "fieldGeometry",
+			"description": "Geometry of the field as measured",
+			"type": "string"
+		},
+		"fieldCoordinates": 
+		{
+			"title": "fieldCoordinates",
+			"description": "Lattitude and Logitude coordinates of the plot boundary or plot reference point",
+			"type": "integer",
+			"minimum": 0
+		},
+		"plotArea": 
+		{
+			"title": "Plot area",
+			"description": "Total area of the plot",
+			"type": "integer",
+			"minimum": 0
+		},
+		"soilType": 
+		{
+			"title": "Soil type",
+			"description": "Main soiltype of the polt area",
+			"type": "integer",
+			"minimum": 0
+		},
+		"cropRotation": 		
+		{
+			"title": "Crop rotation",
+			"description": "Crop rotation",
+			"type": "integer",
+			"minimum": 0
+		},
+		"thisYearsCrop": 	
+		{
+			"title": "This years crop",
+			"description": "This years crop",
+			"type": "integer",
+			"minimum": 0
+		},
+		"standingCropYearX": 	
+		{
+			"title": "Standing crop in year x",
+			"description": "Standing crop in year x",
+			"type": "integer",
+			"minimum": 0
+		},
+		"expectedHarvest": 	
+		{
+			"title": "Expected harvest result",
+			"description": "Expected harvest result",
+			"type": "integer",
+			"minimum": 0
+		},
+		"harvestYearX": 	
+		{
+			"title": "Harvest result in year X",
+			"description": "Harvest result in year X",
+			"type": "integer",
+			"minimum": 0
+		}
+	}
+}

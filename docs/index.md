@@ -1,6 +1,7 @@
-Open Data Services Sphinx Base
+Farm Level Data Standard (documentation demonstrator)
 ==============================
 
+This is a demonstration documentation site for work on a Farm Level Data Standard.
 
 Contents:
 
@@ -11,6 +12,18 @@ Contents:
    about
 
 ```
+
+
+## Schema
+
+Plot level schema embedded below
+
+```eval_rst
+.. jsonschema:: ../schema/plot.json
+    :include: 
+    :collapse: 
+```
+
 
 
 

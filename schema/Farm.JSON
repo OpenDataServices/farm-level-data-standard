@@ -1,0 +1,405 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Farm",
+	"description": "Schema for the description of a farm",
+	"type": "object",
+	"required": 
+	[
+		"farmID",
+		"dataCollectorsGeolocation",
+		"collectionTimeDateStamp"
+	],
+		
+	"primarykey": 
+	[
+		"farmID",
+		"dataCollectorsGeolocation",
+		"collectionTimeDateStamp"
+	],
+		
+	"Foreignkey": 
+	[
+		"farmer-ID",
+		"owner-ID",
+		"plot-ID",
+		"herd-IDs",
+		"worker-IDs",
+		"building-IDs"
+	],
+	"properties": 
+	{
+		"farmID": 
+		{
+			"title": "Farm ID",
+			"description": "ID of the farmer used by the datacollector",
+			"type": "string"
+		},
+		"dataCollectorsGeolocation": 
+		{
+			"title": "Geolocation of the datacollecting organisation",
+			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+			"$ref": "#/definitions/position"
+		},
+		"collectionTimeDateStamp": 
+		{
+			"title": "Date-time of data collection",
+			"description": "Date when the data has been collected by the data collecting organisation",
+			"type": "string",
+			"format": "date-time"
+		},
+
+		"dataCollectingOrganisationName": 
+		{
+			"title": "Name of the data collecting organisation",
+			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+			"type": "string"
+		},
+		"dataCollectorsID": 
+		{
+			"title": "Legal registration number of the data collecting organisation",
+			"description": "Legal registration number of the organisation collected the data",
+			"type": "string"
+		},
+		"FarmAddress": 
+		{
+			"title": "Address of the farm",
+			"description": "An address. This is the (legally) registered address of the organization.",
+			"$ref": "#/definitions/adress"
+		},
+		"IDGeolocation": 
+		{
+			"title": "IDGeolocation of the Farm",
+			"description": "Geolocation that helps to identify the farm in the future. Choose the option with the lowest number: 1 Location of the front door of the farm house; 2 centerpoint of a plot that is part of the farm; 3 at the farm; 4 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+			"$ref": "#/definitions/position"
+		},
+
+ 		"natureoftheIDGeolocation": 
+		{
+			"title": "Nature of the IDGeolocation of the Farmer",
+			"description": "Nature of the reference point that has been used as an IDGeolocation.",
+		      "type": "string",
+                  "enum": ["1 Location of the front door of the farm house" , "2 Centerpoint of a plot that is part of the farm"," 3 at the farm"  , "4 location where the interview has taken place"]
+		},
+
+		"owner_ID": 
+		{
+			"title": "Owner-ID",
+			"description": "ID of the owner as used by the datacollecting organisation",
+			"type": "string"
+		},		
+		"farmer_ID": 
+		{
+			"title": "Farmer-ID",
+			"description": "ID of the farmer used by the datacollector",
+			"type": "string"
+		},
+		"plot-IDs": 
+		{
+			"title": "Plot-ID",
+			"description": "Array of the plot_IDs, as used by the datacollector, separated by ; ",
+			"type": "Array",
+  		      "items": [ {"type": "string"}]
+		},
+		"herd-IDs": 
+		{
+			"title": "Herd-IDs",
+			"description": "Enumaration of the plot_IDs, as used by the datacollector, separated by ; ",
+			"type": "Array",
+  		      "items": [ {"type": "string"}]
+		},
+		"worker-IDs": 
+		{
+			"title": "Worker-IDs",
+			"description": "Enumaration of the Worker-IDs, as used by the datacollector, separated by ;",
+			"type": "Array",
+  		      "items": [ {"type": "string"}]
+		},
+
+		"farmArea": 
+		{
+			"title": "Farm Area",
+			"description": "All land belonging to (and not necessarily owned by) farm",
+			"$ref": "#/definitions/polygon"
+		},
+
+		"stockofProduce": 
+		{
+			"title": "Stock of Produce",
+			"description": "Total stock of produce on the farm",
+			"type": "number"
+		}
+		
+	},
+
+	"definitions": 
+	{
+		"position": 
+		{
+			"description": "A single position",
+			"type": "array",
+			"minItems": 2,
+			"items": 
+			[
+				{
+					"type": "number"
+				},
+				{
+					"type": "number"
+				}
+			],
+			"additionalItems": false
+		},
+		"positionArray": 
+		{
+			"description": "An array of positions",
+			"type": "array",
+			"items": 
+			{
+				"$ref": "#/definitions/position"
+			}
+		},
+		"lineString": 
+		{
+			"description": "An array of two or more positions",
+			"allOf": 
+			[
+				{
+					"$ref": "#/definitions/positionArray"
+				},
+				{
+					"minItems": 2
+				}
+			]
+		},
+		"linearRing": 
+		{
+			"description": "An array of four positions where the first equals the last",
+			"allOf": 
+			[
+				{
+					"$ref": "#/definitions/positionArray"
+				},
+				{
+					"minItems": 4
+				}
+			]
+		},
+		"polygon": 
+		{
+			"description": "An array of linear rings",
+			"type": "array",
+			"items": 
+			{
+				"$ref": "#/definitions/linearRing"
+			}
+		},
+		"dataattributestructure": 
+		{
+			"title": "Data attribute structure",
+			"description": "Data elements to describe a data attribute",
+			"type": "object",
+			"required": 
+			[
+				"dataEntity",
+				"attributeTitle",
+				"attributeDescription",
+				"attributeType"
+			],
+			"properties": 
+			{
+				"dataEntiy": 
+				{
+					"title": "Title of the data entity",
+					"description": "Title of the data entity the data attribute belongs to",
+					"type": "string"
+				},
+				"attributeTitle": 
+				{
+					"title": "Title of the data attribute",
+					"description": "Title of the data attribute",
+					"type": "string"
+				},
+				"attributeDescription": 
+				{
+					"title": "Description of the data attribute",
+					"description": "Description of the data atrribute",
+					"type": "string"
+				},
+				"attributeType": 
+				{
+					"title": "Type of data attribute",
+					"description": "Type of data atrribute",
+					"type": "string"
+				}
+			}
+		},
+		"dataEntityStructure": 
+		{
+			"title": "Data Entity Structure",
+			"description": "Structure of the customized data entity",
+			"type": "object",
+			"required": 
+			[
+				"entityTitle",
+				"entityDescription"
+			],
+			"properties": 
+			{
+				"entiyTitle": 
+				{
+					"title": "Title of the data entity",
+					"description": "Title of the data entity",
+					"type": "string"
+				},
+				"entityDescription": 
+				{
+					"title": "Description of the data entity",
+					"description": "Description of the data entiy",
+					"type": "string"
+				}
+			}
+		},
+		"adress": 
+		{
+			"title": "address",
+			"description": "An address. This is the legally registered address of the organization.",
+			"type": "object",
+			"properties": 
+			{
+				"streetAddress": 
+				{
+					"title": "Street address",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The street address. For example, 1600 Amphitheatre Pkwy."
+				},
+				"locality": 
+				{
+					"title": "Locality",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The locality. For example, Mountain View."
+				},
+				"region": 
+				{
+					"title": "Region",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The region. For example, CA."
+				},
+				"postalCode": 
+				{
+					"title": "Postalcode",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The postal code. For example, 94043."
+				},
+				"countryName": 
+				{
+					"title": "Country name",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The country name. For example, United States."
+				}
+			},
+			"patternProperties": 
+			{
+				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
+				{
+					"type": 
+					[
+						"string",
+						"null"
+					]
+				}
+			}
+		},
+		"contactpoint": 
+		{
+			"title": "contact point",
+			"type": "object",
+			"description": "An person, contact point or department to contact in relation to this contracting process.",
+			"properties": 
+			{
+				"name": 
+				{
+					"title": "Name",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+				},
+				"email": 
+				{
+					"title": "Email",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The e-mail address of the contact point/person."
+				},
+				"telephone": 
+				{
+					"title": "Telephone",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The telephone number of the contact point/person. This should include the international dialling code."
+				},
+				"faxNumber": 
+				{
+					"title": "Fax number",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The fax number of the contact point/person. This should include the international dialling code."
+				},
+				"url": 
+				{
+					"title": "URL",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "A web address for the contact point/person.",
+					"format": "uri"
+				}
+			},
+			"patternProperties": 
+			{
+				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
+				{
+					"type": 
+					[
+						"string",
+						"null"
+					]
+				}
+			}
+		}
+	}
+		
+}

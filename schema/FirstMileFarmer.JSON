@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "First Mile Data Schema",
+	"description": "Data format for first mile farmer data exchange",
+	"language": "en",
+	"Type": "object",
+	"Properties": 
+	{
+		"Meta_data": 
+		{
+
+		},
+		"Farmer_groups": 
+		[
+
+		],
+		"Farmers": 
+		[
+
+		],
+		"Farms": 
+		[
+
+		],
+		"Plots": 
+		[
+
+		],
+		"Crop_observations": 
+		[
+
+		],
+		"Additional data": 
+		[
+
+		]
+	}
+}

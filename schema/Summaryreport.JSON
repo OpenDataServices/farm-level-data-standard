@@ -1,0 +1,408 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Summary report",
+	"description": "This data entity provides metadata about the first mile farm data",
+	"type": "object",
+	"required": 
+	[
+		"exportDate",
+		"dataProvidersGeolocation",
+		"dataProvidersID",
+		"dataProvidersName",
+		"datasetDescription"
+	],
+	"primarykey": 
+	[
+		"exportDate",
+		"dataProvidersGeolocation"
+	],
+	"properties": 
+	{
+		"exportDate": 
+		{
+			"title": "Export date",
+			"description": "Date when the data has been exported from the database into First Mile Export Format",
+			"type": "string",
+			"format": "date-time"
+		},
+		"dataProvidersGeolocation": 
+		{
+			"title": "Geolocation of the data provider",
+			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+			"$ref": "#/definitions/position"
+		},
+		"dataProvidersID": 
+		{
+			"title": "Legal registration number of the data provider",
+			"description": "Legal registration number of the organisation that converted its data into First Mile Data Format",
+			"type": "string"
+		},
+		"dataProvidersName": 
+		{
+			"title": "data provider name",
+			"description": "Official name of the organisation that converted its data into First Mile Data Format",
+			"type": "string"
+		},
+		"dataProvidersAdress": 
+		{
+			"title": "data providers lega; adress",
+			"description": "The legally registered address of the organisation that converted it's data into First Mile Data Format.",
+			"$ref": "#/definitions/adress"
+		},
+		"dataProvidersPointofContact": 
+		{
+			"title": "data provider point of contact",
+			"description": "Contact point of the organisation that converted it's data into First Mile Export Format",
+			"$ref": "#/definitions/contactpoint"
+		},
+		"datasetDescription": 
+		{
+			"title": "Dataset description",
+			"description": "Description of the data set that is converted into First Mile Export Format",
+			"type": "string"
+		},
+		"#groups": 
+		{
+			"title": "# of groups",
+			"description": "Number of farmer group recordsin the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#farmers": 
+		{
+			"title": "# of farmers",
+			"description": "Number of farmers in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#farms": 
+		{
+			"title": "# of farms",
+			"description": "Number of farms in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#plots": 
+		{
+			"title": "# of plots",
+			"description": "Number of plotrecords in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#cropObservations": 
+		{
+			"title": "# of crop observations",
+			"description": "Number of crop observation records in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#Persons": 
+		{
+			"title": "# of Persons",
+			"description": "Number of persons in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"#households": 
+		{
+			"title": "# of Households",
+			"description": "Number of household records in the dataset",
+			"type": "integer",
+			"minimum": 0
+		},
+		"additionalDataEntities": 
+		{
+			"title": "Additional data entities",
+			"description": "Array of additional data entities added to the data model by customization",
+			"type": "array",
+			"items": 
+			[
+				{
+					"$ref": "#/definitions/dataEntityStructure"
+				}
+			]
+		},
+		"additionalDataAttributes": 
+		{
+			"title": "Additional data attributes",
+			"description": "Array of additional data attributes added to the data model by customization",
+			"type": "array",
+			"items": 
+			[
+				{
+					"$ref": "#/definitions/dataattributestructure"
+				}
+			]
+		}
+	},
+	"definitions": 
+	{
+		"position": 
+		{
+			"description": "A single position",
+			"type": "array",
+			"minItems": 2,
+			"items": 
+			[
+				{
+					"type": "number"
+				},
+				{
+					"type": "number"
+				}
+			],
+			"additionalItems": false
+		},
+		"positionArray": 
+		{
+			"description": "An array of positions",
+			"type": "array",
+			"items": 
+			{
+				"$ref": "#/definitions/position"
+			}
+		},
+		"lineString": 
+		{
+			"description": "An array of two or more positions",
+			"allOf": 
+			[
+				{
+					"$ref": "#/definitions/positionArray"
+				},
+				{
+					"minItems": 2
+				}
+			]
+		},
+		"linearRing": 
+		{
+			"description": "An array of four positions where the first equals the last",
+			"allOf": 
+			[
+				{
+					"$ref": "#/definitions/positionArray"
+				},
+				{
+					"minItems": 4
+				}
+			]
+		},
+		"polygon": 
+		{
+			"description": "An array of linear rings",
+			"type": "array",
+			"items": 
+			{
+				"$ref": "#/definitions/linearRing"
+			}
+		},
+		"dataattributestructure": 
+		{
+			"title": "Data attribute structure",
+			"description": "Data elements to describe a data attribute",
+			"type": "object",
+			"required": 
+			[
+				"dataEntity",
+				"attributeTitle",
+				"attributeDescription",
+				"attributeType"
+			],
+			"properties": 
+			{
+				"dataEntiy": 
+				{
+					"title": "Title of the data entity",
+					"description": "Title of the data entity the data attribute belongs to",
+					"type": "string"
+				},
+				"attributeTitle": 
+				{
+					"title": "Title of the data attribute",
+					"description": "Title of the data attribute",
+					"type": "string"
+				},
+				"attributeDescription": 
+				{
+					"title": "Description of the data attribute",
+					"description": "Description of the data atrribute",
+					"type": "string"
+				},
+				"attributeType": 
+				{
+					"title": "Type of data attribute",
+					"description": "Type of data atrribute",
+					"type": "string"
+				}
+			}
+		},
+		"dataEntityStructure": 
+		{
+			"title": "Data Entity Structure",
+			"description": "Structure of the customized data entity",
+			"type": "object",
+			"required": 
+			[
+				"entityTitle",
+				"entityDescription"
+			],
+			"properties": 
+			{
+				"entiyTitle": 
+				{
+					"title": "Title of the data entity",
+					"description": "Title of the data entity",
+					"type": "string"
+				},
+				"entityDescription": 
+				{
+					"title": "Description of the data entity",
+					"description": "Description of the data entiy",
+					"type": "string"
+				}
+			}
+		},
+		"adress": 
+		{
+			"title": "address",
+			"description": "An address. This is the legally registered address of the organization.",
+			"type": "object",
+			"properties": 
+			{
+				"streetAddress": 
+				{
+					"title": "Street address",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The street address. For example, 1600 Amphitheatre Pkwy."
+				},
+				"locality": 
+				{
+					"title": "Locality",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The locality. For example, Mountain View."
+				},
+				"region": 
+				{
+					"title": "Region",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The region. For example, CA."
+				},
+				"postalCode": 
+				{
+					"title": "Postalcode",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The postal code. For example, 94043."
+				},
+				"countryName": 
+				{
+					"title": "Country name",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The country name. For example, United States."
+				}
+			},
+			"patternProperties": 
+			{
+				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
+				{
+					"type": 
+					[
+						"string",
+						"null"
+					]
+				}
+			}
+		},
+		"contactpoint": 
+		{
+			"title": "contact point",
+			"type": "object",
+			"description": "An person, contact point or department to contact in relation to this contracting process.",
+			"properties": 
+			{
+				"name": 
+				{
+					"title": "Name",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+				},
+				"email": 
+				{
+					"title": "Email",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The e-mail address of the contact point/person."
+				},
+				"telephone": 
+				{
+					"title": "Telephone",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The telephone number of the contact point/person. This should include the international dialling code."
+				},
+				"faxNumber": 
+				{
+					"title": "Fax number",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "The fax number of the contact point/person. This should include the international dialling code."
+				},
+				"url": 
+				{
+					"title": "URL",
+					"type": 
+					[
+						"string",
+						"null"
+					],
+					"description": "A web address for the contact point/person.",
+					"format": "uri"
+				}
+			},
+			"patternProperties": 
+			{
+				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
+				{
+					"type": 
+					[
+						"string",
+						"null"
+					]
+				}
+			}
+		}
+	}
+}

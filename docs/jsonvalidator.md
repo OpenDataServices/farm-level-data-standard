@@ -1,4 +1,4 @@
 JSON validator
 ==============
 
-https://json-schema-validator.herokuapp.com/
+[Find the validator here](https://json-schema-validator.herokuapp.com/)

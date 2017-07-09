@@ -5,55 +5,35 @@
 	"type": "object",
 	"required": 
 	[
-		"farmerID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp",
+		"farmerRecordGlobalID",
+		"farmerInternalID",
+		"farmerGeoID",
 		"farmerFirstName",
 		"farmerFamilyName"
 	],
 	"primarykey": 
 	[
-		"farmerID",
-		"dataCollectorsGeolocation",
-		"recordingTimeDateStamp"
-	],
-	"Foreignkey": 
-	[
-		"farm-ID",
-		"household-ID"
+		"farmerRecordGlobalID"
 	],
 	"properties": 
 	{
-		"farmerID": 
+		"farmerRecordGlobalID": 
 		{
-			"title": "Farmer ID",
-			"description": "ID of the farmer used by the datacollector",
+			"title": "Global farmer Record ID",
+			"description": "Globally Unique ID of the recording of the farmer at a specific time and by a specific organisation.",
+			"$ref": "#/definitions/GlobalID"
+		},
+		"farmerInternalID": 
+		{
+			"title": "Internal farmer ID",
+			"description": "Internal dataset ID for the farmer in the dataset",
 			"type": "string"
 		},
-		"dataCollectorsGeolocation": 
+		"farmerGeoID": 
 		{
-			"title": "Geolocation of the datacollecting organisation",
-			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-		"collectionTimeDateStamp": 
-		{
-			"title": "Date-time of data collection",
-			"description": "Date when the data has been collected by the data collecting organisation",
-			"type": "string",
-			"format": "date-time"
-		},
-				"dataCollectingOrganisationName": 
-		{
-			"title": "Name of the data collecting organisation",
-			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-			"type": "string"
-		},
-		"dataCollectorsID": 
-		{
-			"title": "Legal registration number of the data collecting organisation",
-			"description": "Legal registration number of the organisation collected the data",
-			"type": "string"
+			"title": "GeoID of the Farmer",
+			"description": "Geolocation that helps to uniquely identify the farmer in the field",
+			"$ref": "#/definitions/GeoID"
 		},
 		"farmerFirstName": 
 		{
@@ -73,37 +53,97 @@
 			"description": "An address. This is the (legally) registered address of the organization.",
 			"$ref": "#/definitions/adress"
 		},
-		"IDGeolocation": 
+		"groupInternalIDs": 
 		{
-			"title": "IDGeolocation of the Farmer",
-			"description": "Geolocation that helps to identify the farmer in the future. Choose the option with the lowest number: 1 Location of the front door of his house of residence; 2 location of the farm house; 3 centerpoint of a plot; 4 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-
- 		"natureoftheIDGeolocation": 
-		{
-			"title": "Nature of the IDGeolocation of the Farmer",
-			"description": "Nature of the reference point that has been used as an IDGeolocation.",
-		      "type": "string",
-                  "enum": ["1 Location of the front door of his house of residence" , "2 location of the farm house" , "3 centerpoint of a plot"  , "4 location where the interview has taken place"]
-		},
-		
-		"farm-ID": 
-		{
-			"title": "Farm-ID",
-			"description": "Identification number of the farm",
-			"type": "string"
-		},
-		
-		"household-ID": 
-		{
-			"title": "household-ID",
-			"description": "Identification the household where the farmer is part of",
-			"type": "string"
+			"title": "groupInternalIDs",
+			"description": "Array of group Internal Identification numbers linking the farmer to 1 or more groups",
+			"type": "array",
+			"items":  { "type": "string"}
 		}
 	},
 	"definitions": 
 	{
+		"GlobalID": 
+		{
+			"title": "Global ID",
+			"description": "Globally unique identifier for the record",
+			"type": "object",
+			"required": 
+			[
+				"ID",
+				"dataCollectorsGeolocation",
+				"collectionTimeDateStamp"
+			],
+			"properties": 
+			{
+				"ID": 
+				{
+					"title": "ID",
+					"description": "ID for the data entity as used originally by the datacollector",
+					"type": "string"
+				},
+				"dataCollectorsGeolocation": 
+				{
+					"title": "Geolocation of the datacollecting organisation",
+					"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"collectionTimeDateStamp": 
+				{
+					"title": "Date-time of data collection",
+					"description": "Date when the data has been collected by the data collecting organisation",
+					"type": "string",
+					"format": "date-time"
+				},
+						"dataCollectingOrganisationName": 
+		{
+			"title": "Name of the data collecting organisation",
+			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+			"type": "string"
+		},
+		"dataCollectorsID": 
+		{
+			"title": "Legal registration number of the data collecting organisation",
+			"description": "Legal registration number of the organisation collected the data",
+			"type": "string"
+		
+		}	
+		}	
+		},
+		"GeoID": 
+		{
+			"title": "ID geolocation",
+			"description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
+			"type": "object",
+			"required": 
+			[
+				"Geolocation",
+				"DescriptionIDGeolocation"
+			],
+			"properties": 
+			{
+				"Geolocation": 
+				{
+					"title": "Geolocation",
+					"description": "Geolocation that helps to identify the object in the future. Choose the option with the lowest number: 1 Location of main entrance of the object or the front door of the main office from where operations take place; 2 Centerpoint of the object or centerpoint of area of operation of the object; 3 Location on the object or in the area of operation; 4 Location near the object or near the area of operation of the object; 5 Location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"DescriptionIDGeolocation": 
+				{
+					"title": "Description of the IDGeolocation",
+					"description": "Description where the reference point has been taken that has been used as an ID.",
+					"type": "string",
+					"enum": 
+					[
+						"1 Location of main entrance of the object or the front door of the main office from where operations take place",
+						"2 Centerpoint of the object or centerpoint of area of operation of the object",
+						"3 Location on the object or in the area of operation",
+						"4 Location near the object or near the area of operation of the object",
+						"5 Location where the interview has taken place"
+					]
+				}
+			}
+		},
 		"position": 
 		{
 			"description": "A single position",
@@ -372,5 +412,4 @@
 			}
 		}
 	}
-		
 }

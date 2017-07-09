@@ -5,134 +5,192 @@
 	"type": "object",
 	"required": 
 	[
-		"farmID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp"
+		"farmRecordGlobalID",
+		"farmInternalID",
+		"farmGeoID",
+		"farmName",
+		"farmDescription"
 	],
-		
 	"primarykey": 
 	[
-		"farmID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp"
+		"farmRecordGlobalID"
 	],
-		
 	"Foreignkey": 
 	[
-		"farmer-ID",
-		"owner-ID",
-		"plot-ID",
-		"herd-IDs",
-		"worker-IDs",
-		"building-IDs"
+		"farmerInternalID",
+		"owner_ID"
 	],
 	"properties": 
 	{
-		"farmID": 
+		"farmRecordGlobalID": 
 		{
-			"title": "Farm ID",
-			"description": "ID of the farmer used by the datacollector",
+			"title": "Global Farm Record ID",
+			"description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
+			"$ref": "#/definitions/GlobalID"
+		},
+		"farmInternalID": 
+		{
+			"title": "Internal Farm ID",
+			"description": "Internal dataset ID for the farm in the dataset",
 			"type": "string"
 		},
-		"dataCollectorsGeolocation": 
+		"farmGeoID": 
 		{
-			"title": "Geolocation of the datacollecting organisation",
-			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
+			"title": "GeoID of the Farm",
+			"description": "Geolocation that helps to uniquely identify the farm  in the field",
+			"$ref": "#/definitions/GeoID"
 		},
-		"collectionTimeDateStamp": 
-		{
-			"title": "Date-time of data collection",
-			"description": "Date when the data has been collected by the data collecting organisation",
-			"type": "string",
-			"format": "date-time"
-		},
-
-		"dataCollectingOrganisationName": 
-		{
-			"title": "Name of the data collecting organisation",
-			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-			"type": "string"
-		},
-		"dataCollectorsID": 
-		{
-			"title": "Legal registration number of the data collecting organisation",
-			"description": "Legal registration number of the organisation collected the data",
-			"type": "string"
-		},
-		"FarmAddress": 
+		"farmAddress": 
 		{
 			"title": "Address of the farm",
 			"description": "An address. This is the (legally) registered address of the organization.",
 			"$ref": "#/definitions/adress"
 		},
-		"IDGeolocation": 
-		{
-			"title": "IDGeolocation of the Farm",
-			"description": "Geolocation that helps to identify the farm in the future. Choose the option with the lowest number: 1 Location of the front door of the farm house; 2 centerpoint of a plot that is part of the farm; 3 at the farm; 4 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-
- 		"natureoftheIDGeolocation": 
-		{
-			"title": "Nature of the IDGeolocation of the Farmer",
-			"description": "Nature of the reference point that has been used as an IDGeolocation.",
-		      "type": "string",
-                  "enum": ["1 Location of the front door of the farm house" , "2 Centerpoint of a plot that is part of the farm"," 3 at the farm"  , "4 location where the interview has taken place"]
-		},
-
 		"owner_ID": 
 		{
 			"title": "Owner-ID",
 			"description": "ID of the owner as used by the datacollecting organisation",
 			"type": "string"
-		},		
-		"farmer_ID": 
+		},
+		"farmerInternalID": 
 		{
-			"title": "Farmer-ID",
-			"description": "ID of the farmer used by the datacollector",
+			"title": "Internal Farmer ID",
+			"description": "Internal dataset ID for the farmer in the dataset",
 			"type": "string"
 		},
-		"plot-IDs": 
+		"plotInternalIDs": 
 		{
-			"title": "Plot-ID",
-			"description": "Array of the plot_IDs, as used by the datacollector, separated by ; ",
+			"title": "Internal ID for the plot",
+			"description": "Array of internal  plot_IDs ",
 			"type": "Array",
-  		      "items": [ {"type": "string"}]
+			"items": 
+			{
+				"type": "string"
+			}
 		},
-		"herd-IDs": 
+		"herdInternalIDs": 
 		{
-			"title": "Herd-IDs",
-			"description": "Enumaration of the plot_IDs, as used by the datacollector, separated by ; ",
+			"title": "Internal ID for the herd",
+			"description": "Array of internal  herd_IDs ",
 			"type": "Array",
-  		      "items": [ {"type": "string"}]
+			"items": 
+			{
+				"type": "string"
+			}
 		},
-		"worker-IDs": 
+		"workerInternalIDs": 
 		{
-			"title": "Worker-IDs",
-			"description": "Enumaration of the Worker-IDs, as used by the datacollector, separated by ;",
+			"title": "Internal ID for the worker",
+			"description": "Array of internal  worker_IDs ",
 			"type": "Array",
-  		      "items": [ {"type": "string"}]
+			"items": 
+			{
+				"type": "string"
+			}
 		},
-
+		"farmBoundary": 
+		{
+			"title": "Farm Boundary",
+			"description": "All the land belonging to (and not necessarily owned by) farm",
+			"$ref": "#/definitions/polygon"
+		},
 		"farmArea": 
 		{
 			"title": "Farm Area",
-			"description": "All land belonging to (and not necessarily owned by) farm",
-			"$ref": "#/definitions/polygon"
+			"description": "Surface area of all land belonging to (and not necessarily owned by) farm",
+			"type": "number",
+			"minimum": 0
 		},
-
 		"stockofProduce": 
 		{
 			"title": "Stock of Produce",
 			"description": "Total stock of produce on the farm",
-			"type": "number"
+			"type": "number",
+			"minimum": 0
 		}
-		
 	},
-
 	"definitions": 
 	{
+		"GlobalID": 
+		{
+			"title": "Global ID",
+			"description": "Globally unique identifier for the record",
+			"type": "object",
+			"required": 
+			[
+				"ID",
+				"dataCollectorsGeolocation",
+				"collectionTimeDateStamp"
+			],
+			"properties": 
+			{
+				"ID": 
+				{
+					"title": "ID",
+					"description": "ID for the data entity as used originally by the datacollector",
+					"type": "string"
+				},
+				"dataCollectorsGeolocation": 
+				{
+					"title": "Geolocation of the datacollecting organisation",
+					"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"collectionTimeDateStamp": 
+				{
+					"title": "Date-time of data collection",
+					"description": "Date when the data has been collected by the data collecting organisation",
+					"type": "string",
+					"format": "date-time"
+				},
+				"dataCollectingOrganisationName": 
+				{
+					"title": "Name of the data collecting organisation",
+					"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+					"type": "string"
+				},
+				"dataCollectorsID": 
+				{
+					"title": "Legal registration number of the data collecting organisation",
+					"description": "Legal registration number of the organisation collected the data",
+					"type": "string"
+				}
+			}
+		},
+		"GeoID": 
+		{
+			"title": "ID geolocation",
+			"description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
+			"type": "object",
+			"required": 
+			[
+				"Geolocation",
+				"DescriptionIDGeolocation"
+			],
+			"properties": 
+			{
+				"Geolocation": 
+				{
+					"title": "Geolocation",
+					"description": "Geolocation that helps to identify the object in the future. Choose the option with the lowest number: 1 Location of main entrance of the object or the front door of the main office from where operations take place; 2 Centerpoint of the object or centerpoint of area of operation of the object; 3 Location on the object or in the area of operation; 4 Location near the object or near the area of operation of the object; 5 Location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"DescriptionIDGeolocation": 
+				{
+					"title": "Description of the IDGeolocation",
+					"description": "Description where the reference point has been taken that has been used as an ID.",
+					"type": "string",
+					"enum": 
+					[
+						"1 Location of main entrance of the object or the front door of the main office from where operations take place",
+						"2 Centerpoint of the object or centerpoint of area of operation of the object",
+						"3 Location on the object or in the area of operation",
+						"4 Location near the object or near the area of operation of the object",
+						"5 Location where the interview has taken place"
+					]
+				}
+			}
+		},
 		"position": 
 		{
 			"description": "A single position",
@@ -401,5 +459,4 @@
 			}
 		}
 	}
-		
 }

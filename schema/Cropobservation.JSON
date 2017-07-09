@@ -3,80 +3,60 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Crop observation ",
 	"description": "Schema for the description of a crop observation ",
-	"required":
+	"required": 
 	[
-		"cropObservationID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp",
-		"plot-ID"
+		"cropObservationRecordGlobalID",
+		"cropObservationInternalID",
+		"cropObservationGeometry",
+		"cropObservationDescription"
+		 
 	],
-	"primarykey":
+	"primarykey": 
 	[
-		"cropObservationID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp"
+		"cropObservationRecordGlobalID"
 	],
-	"foreignkey":
+	"Foreignkey": 
 	[
-		"plot-ID"
+		"plotInternalID"
 	],
-	"properties":
+	"properties": 
 	{
-		"cropObservationID":
+		"cropObservationRecordGlobalID": 
 		{
-			"title": "Crop Observation ID",
-			"description": "ID of the crop observation as used by the datacollector",
+			"title": "Global cropObservation Record ID",
+			"description": "Globally Unique ID of the recording of the cropObservation at a specific time and by a specific organisation.",
+			"$ref": "#/definitions/GlobalID"
+		},
+		"cropObservationInternalID": 
+		{
+			"title": "Internal ID for the CropObservation",
+			"description": "Internal dataset ID for the crop observation  in the dataset",
 			"type": "string"
 		},
-		"dataCollectorsGeolocation":
-		{
-			"title": "Geolocation of the datacollecting organisation",
-			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-		"collectionTimeDateStamp":
-		{
-			"title": "Date-time of data collection",
-			"description": "Date when the data has been collected by the data collecting organisation",
-			"type": "string",
-			"format": "date-time"
-		},
-		"dataCollectingOrganisationName":
-		{
-			"title": "Name of the data collecting organisation",
-			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-			"type": "string"
-		},
-		"dataCollectorsID":
-		{
-			"title": "Legal registration number of the data collecting organisation",
-			"description": "Legal registration number of the organisation collected the data",
-			"type": "string"
-		},
-		"CropObservationGeometry":
+		"cropObservationGeometry": 
 		{
 			"title": "CropObservationGeometry",
 			"description": "Geometry of the Observation as measured",
 			"type": "object",
-			"required":
+			"required": 
 			[
 				"type",
 				"coordinates"
 			],
-			"oneOf":
+			"oneOf": 
 			[
 				{
 					"title": "Point",
-					"properties":
+					"properties": 
 					{
-						"type":
+						"type": 
 						{
-							"enum":
+							"enum": 
 							[
 								"Point"
 							]
 						},
-						"coordinates":
+						"coordinates": 
 						{
 							"$ref": "#/definitions/position"
 						}
@@ -84,16 +64,16 @@
 				},
 				{
 					"title": "LineString",
-					"properties":
+					"properties": 
 					{
-						"type":
+						"type": 
 						{
-							"enum":
+							"enum": 
 							[
 								"LineString"
 							]
 						},
-						"coordinates":
+						"coordinates": 
 						{
 							"$ref": "#/definitions/lineString"
 						}
@@ -101,16 +81,16 @@
 				},
 				{
 					"title": "Polygon",
-					"properties":
+					"properties": 
 					{
-						"type":
+						"type": 
 						{
-							"enum":
+							"enum": 
 							[
 								"Polygon"
 							]
 						},
-						"coordinates":
+						"coordinates": 
 						{
 							"$ref": "#/definitions/polygon"
 						}
@@ -118,23 +98,108 @@
 				}
 			]
 		},
-
-		"plot-ID":
+		"cropObservationDescription": 
 		{
-			"title": "Farm-ID",
-			"description": "Identification number of the plot as use by the data collector",
+			"title": "Description of het crop observation",
+			"description": "Description of het crop observation",
+			"type": "string"
+		},
+		"plotInternalID": 
+		{
+			"title": "plotInternalID",
+			"description": "Internal Identification number of the plot",
 			"type": "string"
 		}
 
 	},
-	"definitions":
+	"definitions": 
 	{
-		"position":
+		"GlobalID": 
+		{
+			"title": "Global ID",
+			"description": "Globally unique identifier for the record",
+			"type": "object",
+			"required": 
+			[
+				"ID",
+				"dataCollectorsGeolocation",
+				"collectionTimeDateStamp"
+			],
+			"properties": 
+			{
+				"ID": 
+				{
+					"title": "ID",
+					"description": "ID as used originally by the datacollector",
+					"type": "string"
+				},
+				"dataCollectorsGeolocation": 
+				{
+					"title": "Geolocation of the datacollecting organisation",
+					"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"collectionTimeDateStamp": 
+				{
+					"title": "Date-time of data collection",
+					"description": "Date when the data has been collected by the data collecting organisation",
+					"type": "string",
+					"format": "date-time"
+				},
+				"dataCollectingOrganisationName": 
+				{
+					"title": "Name of the data collecting organisation",
+					"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+					"type": "string"
+				},
+				"dataCollectorsID": 
+				{
+					"title": "Legal registration number of the data collecting organisation",
+					"description": "Legal registration number of the organisation collected the data",
+					"type": "string"
+				}
+			}
+		},
+		"GeoID": 
+		{
+			"title": "ID geolocation",
+			"description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
+			"type": "object",
+			"required": 
+			[
+				"Geolocation",
+				"DescriptionIDGeolocation"
+			],
+			"properties": 
+			{
+				"Geolocation": 
+				{
+					"title": "Geolocation",
+					"description": "Geolocation that helps to identify the object in the future. Choose the option with the lowest number: 1 Location of main entrance of the object or the front door of the main office from where operations take place; 2 Centerpoint of the object or centerpoint of area of operation of the object; 3 Location on the object or in the area of operation; 4 Location near the object or near the area of operation of the object; 5 Location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+					"$ref": "#/definitions/position"
+				},
+				"DescriptionIDGeolocation": 
+				{
+					"title": "Description of the IDGeolocation",
+					"description": "Description where the reference point has been taken that has been used as an ID.",
+					"type": "string",
+					"enum": 
+					[
+						"1 Location of main entrance of the object or the front door of the main office from where operations take place",
+						"2 Centerpoint of the object or centerpoint of area of operation of the object",
+						"3 Location on the object or in the area of operation",
+						"4 Location near the object or near the area of operation of the object",
+						"5 Location where the interview has taken place"
+					]
+				}
+			}
+		},
+		"position": 
 		{
 			"description": "A single position",
 			"type": "array",
 			"minItems": 2,
-			"items":
+			"items": 
 			[
 				{
 					"type": "number"
@@ -145,19 +210,19 @@
 			],
 			"additionalItems": false
 		},
-		"positionArray":
+		"positionArray": 
 		{
 			"description": "An array of positions",
 			"type": "array",
-			"items":
+			"items": 
 			{
 				"$ref": "#/definitions/position"
 			}
 		},
-		"lineString":
+		"lineString": 
 		{
 			"description": "An array of two or more positions",
-			"allOf":
+			"allOf": 
 			[
 				{
 					"$ref": "#/definitions/positionArray"
@@ -167,10 +232,10 @@
 				}
 			]
 		},
-		"linearRing":
+		"linearRing": 
 		{
 			"description": "An array of four positions where the first equals the last",
-			"allOf":
+			"allOf": 
 			[
 				{
 					"$ref": "#/definitions/positionArray"
@@ -180,48 +245,48 @@
 				}
 			]
 		},
-		"polygon":
+		"polygon": 
 		{
 			"description": "An array of linear rings",
 			"type": "array",
-			"items":
+			"items": 
 			{
 				"$ref": "#/definitions/linearRing"
 			}
 		},
-		"dataattributestructure":
+		"dataattributestructure": 
 		{
 			"title": "Data attribute structure",
 			"description": "Data elements to describe a data attribute",
 			"type": "object",
-			"required":
+			"required": 
 			[
 				"dataEntity",
 				"attributeTitle",
 				"attributeDescription",
 				"attributeType"
 			],
-			"properties":
+			"properties": 
 			{
-				"dataEntiy":
+				"dataEntiy": 
 				{
 					"title": "Title of the data entity",
 					"description": "Title of the data entity the data attribute belongs to",
 					"type": "string"
 				},
-				"attributeTitle":
+				"attributeTitle": 
 				{
 					"title": "Title of the data attribute",
 					"description": "Title of the data attribute",
 					"type": "string"
 				},
-				"attributeDescription":
+				"attributeDescription": 
 				{
 					"title": "Description of the data attribute",
 					"description": "Description of the data atrribute",
 					"type": "string"
 				},
-				"attributeType":
+				"attributeType": 
 				{
 					"title": "Type of data attribute",
 					"description": "Type of data atrribute",
@@ -229,25 +294,25 @@
 				}
 			}
 		},
-		"dataEntityStructure":
+		"dataEntityStructure": 
 		{
 			"title": "Data Entity Structure",
 			"description": "Structure of the customized data entity",
 			"type": "object",
-			"required":
+			"required": 
 			[
 				"entityTitle",
 				"entityDescription"
 			],
-			"properties":
+			"properties": 
 			{
-				"entiyTitle":
+				"entiyTitle": 
 				{
 					"title": "Title of the data entity",
 					"description": "Title of the data entity",
 					"type": "string"
 				},
-				"entityDescription":
+				"entityDescription": 
 				{
 					"title": "Description of the data entity",
 					"description": "Description of the data entiy",
@@ -255,57 +320,57 @@
 				}
 			}
 		},
-		"adress":
+		"adress": 
 		{
 			"title": "address",
 			"description": "An address. This is the legally registered address of the organization.",
 			"type": "object",
-			"properties":
+			"properties": 
 			{
-				"streetAddress":
+				"streetAddress": 
 				{
 					"title": "Street address",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The street address. For example, 1600 Amphitheatre Pkwy."
 				},
-				"locality":
+				"locality": 
 				{
 					"title": "Locality",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The locality. For example, Mountain View."
 				},
-				"region":
+				"region": 
 				{
 					"title": "Region",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The region. For example, CA."
 				},
-				"postalCode":
+				"postalCode": 
 				{
 					"title": "Postalcode",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The postal code. For example, 94043."
 				},
-				"countryName":
+				"countryName": 
 				{
 					"title": "Country name",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
@@ -313,11 +378,11 @@
 					"description": "The country name. For example, United States."
 				}
 			},
-			"patternProperties":
+			"patternProperties": 
 			{
-				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$":
+				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
 				{
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
@@ -325,57 +390,57 @@
 				}
 			}
 		},
-		"contactpoint":
+		"contactpoint": 
 		{
 			"title": "contact point",
 			"type": "object",
 			"description": "An person, contact point or department to contact in relation to this contracting process.",
-			"properties":
+			"properties": 
 			{
-				"name":
+				"name": 
 				{
 					"title": "Name",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
 				},
-				"email":
+				"email": 
 				{
 					"title": "Email",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The e-mail address of the contact point/person."
 				},
-				"telephone":
+				"telephone": 
 				{
 					"title": "Telephone",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The telephone number of the contact point/person. This should include the international dialling code."
 				},
-				"faxNumber":
+				"faxNumber": 
 				{
 					"title": "Fax number",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
 					],
 					"description": "The fax number of the contact point/person. This should include the international dialling code."
 				},
-				"url":
+				"url": 
 				{
 					"title": "URL",
-					"type":
+					"type": 
 					[
 						"string",
 						"null"
@@ -384,11 +449,11 @@
 					"format": "uri"
 				}
 			},
-			"patternProperties":
+			"patternProperties": 
 			{
-				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$":
+				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
 				{
-					"type":
+					"type": 
 					[
 						"string",
 						"null"

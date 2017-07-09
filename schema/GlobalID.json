@@ -1,130 +1,5 @@
-{
+{      
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Famer group",
-	"description": "Schema for the description of farmer groups",
-	"type": "object",
-	"required": 
-	[
-		"groupID",
-		"groupName",
-		"groupDescription"
-	],
-	"primarykey": 
-	[
-		"groupID"
-	],
-	"properties": 
-	{
-		"groupID": 
-		{
-			"title": "Group ID",
-			"description": "Global ID of the recording of the farmer group",
-			"$ref": "#/definitions/GlobalID"
-		},
-		"dataCollectorsGeolocation": 
-		{
-			"title": "Geolocation of the datacollecting organisation",
-			"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-		"collectionTimeDateStamp": 
-		{
-			"title": "Date-time of data collection",
-			"description": "Date when the data has been collected by the data collecting organisation",
-			"type": "string",
-			"format": "date-time"
-		},
-		"dataCollectingOrganisationName": 
-		{
-			"title": "Name of the data collecting organisation",
-			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-			"type": "string"
-		},
-		"dataCollectorsID": 
-		{
-			"title": "Legal registration number of the data collecting organisation",
-			"description": "Legal registration number of the organisation collected the data",
-			"type": "string"
-		},
-		"groupName": 
-		{
-			"title": "Name of the farmer group",
-			"description": "Official name farmer group",
-			"type": "string"
-		},
-		"groupDescription": 
-		{
-			"title": "Group description",
-			"description": "Description of the farmersgroup",
-			"type": "string"
-		},
-		"groupAddress": 
-		{
-			"title": "Group address",
-			"description": "An address. This is the (legally) registered address of the organization.",
-			"$ref": "#/definitions/adress"
-		},
-		"groupContactPoint": 
-		{
-			"title": "Contact point farmers group",
-			"description": "An person, contact point or department to contact at the farmergroup",
-			"$ref": "#/definitions/contactpoint"
-		},
-		"IDGeolocation": 
-		{
-			"title": "IDGeolocation of the Farmergroup",
-			"description": "Geolocation that helps to identify the farmergroup in the future. Choose the option with the lowest number: 1 Location of the front door of the main office; 2  centerpoint of the area of operation; 3 Location of another important building of the farmersgroup; 4 location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-		"natureoftheIDGeolocation": 
-		{
-			"title": "Nature of the IDGeolocation of the Farmer",
-			"description": "Nature of the reference point that has been used as an IDGeolocation.",
-			"type": "string",
-			"enum": 
-			[
-				"1 Location of the front door of the main office",
-				" 2  centerpoint of the area of operation",
-				" 3 Location of another important building of the farmersgroup",
-				"4 location where the interview has taken place"
-			]
-		},
-		"farmer-IDS": 
-		{
-			"title": "Member farmers",
-			"description": "Array of all the farmer IDs, as used by the data collecting organisation, who are member of the group by ;",
-			"type": "array",
-			"items": 
-			[
-				{
-					"type": "string"
-				}
-			]
-		},
-		"groupArea": 
-		{
-			"title": "Group Area",
-			"description": "Area of operation of the famers group WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/polygon"
-		},
-		"groupCertificates": 
-		{
-			"title": "Group Certificates",
-			"description": "Certifications from standard organisations granted to this farmers group",
-			"type": "string"
-		},
-		"totalAmountofCertifiedProduce": 
-		{
-			"title": "Total amount of Certified Produce",
-			"description": "Total amount of certified produce in stock expressed in kg",
-			"type": "number",
-			"minimum": 0
-		}
-	},
-	"definitions": 
-	{
-			"GlobalID":	
-	{      
 	"title": "Global ID",
 	"description": "Globally unique identifier for the record",
 	"type": "object",
@@ -156,8 +31,10 @@
 			"type": "string",
 			"format": "date-time"
 		}
-	}
-},
+	},
+
+"definitions": 
+	{
 		"position": 
 		{
 			"description": "A single position",

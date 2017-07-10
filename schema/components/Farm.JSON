@@ -1,0 +1,112 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Farm",
+	"description": "Schema for the description of a farm",
+	"type": "object",
+	"required": 
+	[
+		"farmRecordGlobalID",
+		"farmInternalID",
+		"farmGeoID",
+		"farmName",
+		"farmDescription"
+	],
+	"primarykey": 
+	[
+		"farmRecordGlobalID"
+	],
+	"Foreignkey": 
+	[
+		"farmerInternalID",
+		"owner_ID"
+	],
+	"properties": 
+	{
+		"farmRecordGlobalID": 
+		{
+			"title": "Global Farm Record ID",
+			"description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
+			"$ref": "#/definitions/GlobalID"
+		},
+		"farmInternalID": 
+		{
+			"title": "Internal Farm ID",
+			"description": "Internal dataset ID for the farm in the dataset",
+			"type": "string"
+		},
+		"farmGeoID": 
+		{
+			"title": "GeoID of the Farm",
+			"description": "Geolocation that helps to uniquely identify the farm  in the field",
+			"$ref": "#/definitions/GeoID"
+		},
+		"farmAddress": 
+		{
+			"title": "Address of the farm",
+			"description": "An address. This is the (legally) registered address of the organization.",
+			"$ref": "#/definitions/adress"
+		},
+		"owner_ID": 
+		{
+			"title": "Owner-ID",
+			"description": "ID of the owner as used by the datacollecting organisation",
+			"type": "string"
+		},
+		"farmerInternalID": 
+		{
+			"title": "Internal Farmer ID",
+			"description": "Internal dataset ID for the farmer in the dataset",
+			"type": "string"
+		},
+		"plotInternalIDs": 
+		{
+			"title": "Internal ID for the plot",
+			"description": "Array of internal  plot_IDs ",
+			"type": "Array",
+			"items": 
+			{
+				"type": "string"
+			}
+		},
+		"herdInternalIDs": 
+		{
+			"title": "Internal ID for the herd",
+			"description": "Array of internal  herd_IDs ",
+			"type": "Array",
+			"items": 
+			{
+				"type": "string"
+			}
+		},
+		"workerInternalIDs": 
+		{
+			"title": "Internal ID for the worker",
+			"description": "Array of internal  worker_IDs ",
+			"type": "Array",
+			"items": 
+			{
+				"type": "string"
+			}
+		},
+		"farmBoundary": 
+		{
+			"title": "Farm Boundary",
+			"description": "All the land belonging to (and not necessarily owned by) farm",
+			"$ref": "#/definitions/polygon"
+		},
+		"farmArea": 
+		{
+			"title": "Farm Area",
+			"description": "Surface area of all land belonging to (and not necessarily owned by) farm",
+			"type": "number",
+			"minimum": 0
+		},
+		"stockofProduce": 
+		{
+			"title": "Stock of Produce",
+			"description": "Total stock of produce on the farm",
+			"type": "number",
+			"minimum": 0
+		}
+	}
+}

@@ -1,89 +1,147 @@
 {
+	"id": "http://standard.First-MileFarmerData.org/schema/0__0__1/Plot.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Definitions",
-	"description": "This JSON doc provides all definitions needed for the first mile farm data schema",
+	"title": "Farm plot",
+	"description": "Schema for the description of a farm plot ",
+	"required": 
+	[
+		"plotID",
+		"dataCollectorsGeolocation",
+		"collectionTimeDateStamp",
+		"farm-ID"
+	],
+	"primarykey": 
+	[
+		"plotID",
+		"dataCollectorsGeolocation",
+		"collectionTimeDateStamp"
+	],
+	"foreignkey": 
+	[
+		"farm-ID",
+		"owner-ID"
+	],
+	"properties": 
+	{
+
+		"plotID": 
+		{
+			"title": "Plot ID",
+			"description": "ID of the plot as used by the datacollector",
+			"type": "string"
+		},
+		"dataCollectorsGeolocation": 
+		{
+			"title": "Geolocation of the datacollecting organisation",
+			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+			"$ref": "#/definitions/position"
+		},
+		
+		"collectionTimeDateStamp": 
+		{
+			"title": "Date-time of data collection",
+			"description": "Date when the data has been collected by the data collecting organisation",
+			"type": "string",
+			"format": "date-time"
+		},
+
+		"dataCollectingOrganisationName": 
+		{
+			"title": "Name of the data collecting organisation",
+			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+			"type": "string"
+		},
+		"dataCollectorsID": 
+		{
+			"title": "Legal registration number of the data collecting organisation",
+			"description": "Legal registration number of the organisation collected the data",
+			"type": "string"
+		},
+
+		"IDGeolocation": 
+		{
+			"title": "IDGeolocation of the Farm",
+			"description": "Geolocation that helps to identify the farm in the future. Choose the option with the lowest number: 1 Centerpoint of the plot; 2 Point at the plot; 3 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+			"$ref": "#/definitions/position"
+		},
+
+ 		"natureoftheIDGeolocation": 
+		{
+			"title": "Nature of the IDGeolocation of the Farmer",
+			"description": "Nature of the reference point that has been used as an IDGeolocation.",
+		      "type": "string",
+                  "enum": ["1 Centerpoint of the plot " ,"2 Point at the plot"  , "3 location where the interview has taken place"]
+		},
+
+		"owner_ID": 
+		{
+			"title": "Owner-ID",
+			"description": "ID of the owner as used by the datacollecting organisation",
+			"type": "string"
+		},		
+
+		"farm-ID": 
+		{
+			"title": "Farm-ID",
+			"description": "Identification number of the farm which uses this plot, as used by the datacollecting organisation",
+			"type": "string"
+
+		},
+
+		"plotGeometry": 
+		{
+			"title": "plotGeometry",
+			"description": "Geometry of the plot as measured",
+			"$ref": "#/definitions/polygon"
+		},
+
+		"plotArea": 
+		{
+			"title": "Plot area",
+			"description": "Total area of the plot in hectare",
+			"type": "number",
+			"minimum": 0
+		},
+
+		"soilType": 
+		{
+			"title": "Soil type",
+			"description": "Main soiltype of the polt area",
+			"type": "integer",
+			"minimum": 0
+		},
+
+		"mainCrop": 
+		{
+			"title": "MainCrop",
+			"description": "Name and variety of the main crop",
+			"type": "string"
+		},
+
+		"interCrop": 
+		{
+			"title": "interCrop",
+			"description": "Name and variety of the inter crop",
+			"type": "string"
+		},
+
+		"borderCrop": 
+		{
+			"title": "borderCrop",
+			"description": "Name and variety of the border crop",
+			"type": "string"
+		},
+
+		"expectedHarvestMainCrop": 
+		{
+			"title": "Expected harvest result main crop",
+			"description": "Expected harvest result main crop",
+			"type": "number",
+			"minimum": 0
+		}
+	},
 	"definitions": 
 	{
-		"GlobalID": 
-		{
-			"title": "Global ID",
-			"description": "Globally unique identifier for the record",
-			"type": "object",
-			"required": 
-			[
-				"ID",
-				"dataCollectorsGeolocation",
-				"collectionTimeDateStamp"
-			],
-			"properties": 
-			{
-				"ID": 
-				{
-					"title": "ID",
-					"description": "ID for the data entity as used originally by the datacollector",
-					"type": "string"
-				},
-				"dataCollectorsGeolocation": 
-				{
-					"title": "Geolocation of the datacollecting organisation",
-					"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-					"$ref": "#/definitions/position"
-				},
-				"collectionTimeDateStamp": 
-				{
-					"title": "Date-time of data collection",
-					"description": "Date when the data has been collected by the data collecting organisation",
-					"type": "string",
-					"format": "date-time"
-				},
-				"dataCollectingOrganisationName": 
-				{
-					"title": "Name of the data collecting organisation",
-					"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-					"type": "string"
-				},
-				"dataCollectorsID": 
-				{
-					"title": "Legal registration number of the data collecting organisation",
-					"description": "Legal registration number of the organisation collected the data",
-					"type": "string"
-				}
-			}
-		},
-		"GeoID": 
-		{
-			"title": "ID geolocation",
-			"description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
-			"type": "object",
-			"required": 
-			[
-				"Geolocation",
-				"DescriptionIDGeolocation"
-			],
-			"properties": 
-			{
-				"Geolocation": 
-				{
-					"title": "Geolocation",
-					"description": "Geolocation that helps to identify the object in the future. Choose the option with the lowest number: 1 Location of main entrance of the object or the front door of the main office from where operations take place; 2 Centerpoint of the object or centerpoint of area of operation of the object; 3 Location on the object or in the area of operation; 4 Location near the object or near the area of operation of the object; 5 Location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-					"$ref": "#/definitions/position"
-				},
-				"DescriptionIDGeolocation": 
-				{
-					"title": "Description of the IDGeolocation",
-					"description": "Description where the reference point has been taken that has been used as an ID.",
-					"type": "string",
-					"enum": 
-					[
-						"1 Location of main entrance of the object or the front door of the main office from where operations take place",
-						"2 Centerpoint of the object or centerpoint of area of operation of the object",
-						"3 Location on the object or in the area of operation",
-						"4 Location near the object or near the area of operation of the object",
-						"5 Location where the interview has taken place"
-					]
-				}
-			}
-		},
 		"position": 
 		{
 			"description": "A single position",
@@ -351,5 +409,5 @@
 				}
 			}
 		}
-	}
+	}		
 }

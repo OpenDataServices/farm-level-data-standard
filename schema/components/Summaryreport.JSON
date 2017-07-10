@@ -71,7 +71,7 @@
           "type": "array"
         },
         "dataProvidersAdress": {
-          "$ref": "#/definitions/adress",
+          "$ref": "#/definitions/address",
           "description": "The legally registered address of the organisation that converted it's data into First Mile Data Format.",
           "title": "data providers lega; adress"
         },

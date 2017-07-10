@@ -377,7 +377,7 @@ def setup(app):
 
     schema = {}
 
-    for file in glob.glob("../schema/components/*.JSON"):
+    for file in glob.glob("../schema/components/*.JSON") + glob.glob("../schema/components/*.json"):
         try:
             with open(file,'r') as schema_file:
                 print("Merging "+ file)
@@ -390,4 +390,8 @@ def setup(app):
     with open("../schema/first-mile-schema.json","w") as outfile:
         outfile.write(json.dumps(schema,indent=2))
 
+    with open("_static/first-mile-schema.json","w") as outfile:
+        outfile.write(json.dumps(schema,indent=2))        
+    
     print("Full schema in first-mile-schema.json updated")
+

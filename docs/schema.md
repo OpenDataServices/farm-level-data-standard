@@ -1,13 +1,15 @@
 # Schema
 
+<script src="../_static/docson/widget.js" data-schema="../../_static/first-mile-schema.json"></script>
+
 ## Summary 
 
 To maximize traceability of the data, each recording of a data entity carries the geolocation of the organisation that collected the data together with the internal database ID. The combination of the geolocation, the timestamp and the ID of the data entity identify the data record globally unique. To support the process of identifying and potentially cleaning the data while reusing it is recommended to add additional identifying data elements to the record (see also the chapter on identifying and geolocating data)
 
 
 ```eval_rst
-.. jsonschema:: ../schema/Summaryreport.JSON
-    :include: 
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: summary
     :collapse: 
 ```
 

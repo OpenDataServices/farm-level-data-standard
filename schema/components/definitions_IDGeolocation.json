@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "GeoID": {
+      "description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
+      "properties": {
+        "natureoftheIDGeolocation": {
+          "description": "Nature of the reference point that has been used as an IDGeolocation.",
+          "enum": [
+            "1 Location of the front door of the head office",
+            "2 Centerpoint of the object/area of operation",
+            "3 Location on the object/area of opeartion",
+            "4 Location near the object/area of operation",
+            "5 location where the interview has taken place"
+          ],
+          "title": "Nature of the IDGeolocation of the Farmer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Geolocation",
+        "natureoftheIDGeolocation"
+      ],
+      "title": "ID geolocation",
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "GlobalID": {
+      "description": "Globally unique identifier for the record",
+      "properties": {
+        "ID": {
+          "description": "ID as used originally by the datacollector",
+          "title": "ID",
+          "type": "string"
+        },
+        "collectionTimeDateStamp": {
+          "description": "Date when the data has been collected by the data collecting organisation",
+          "format": "date-time",
+          "title": "Date-time of data collection",
+          "type": "string"
+        },
+        "dataCollectorsGeolocation": {
+          "$ref": "#/definitions/position",
+          "description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+          "title": "Geolocation of the datacollecting organisation"
+        }
+      },
+      "required": [
+        "ID",
+        "dataCollectorsGeolocation",
+        "collectionTimeDateStamp"
+      ],
+      "title": "Global ID",
+      "type": "object"
+    }
+  }
+}

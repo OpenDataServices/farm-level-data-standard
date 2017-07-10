@@ -1,0 +1,58 @@
+{
+  "definitions": {
+    "dataattributestructure": {
+      "title": "Data attribute structure",
+      "description": "Data elements to describe a data attribute",
+      "type": "object",
+      "required": [
+        "dataEntity",
+        "attributeTitle",
+        "attributeDescription",
+        "attributeType"
+      ],
+      "properties": {
+        "dataEntiy": {
+          "title": "Title of the data entity",
+          "description": "Title of the data entity the data attribute belongs to",
+          "type": "string"
+        },
+        "attributeTitle": {
+          "title": "Title of the data attribute",
+          "description": "Title of the data attribute",
+          "type": "string"
+        },
+        "attributeDescription": {
+          "title": "Description of the data attribute",
+          "description": "Description of the data atrribute",
+          "type": "string"
+        },
+        "attributeType": {
+          "title": "Type of data attribute",
+          "description": "Type of data atrribute",
+          "type": "string"
+        }
+      }
+    },
+    "dataEntityStructure": {
+      "title": "Data Entity Structure",
+      "description": "Structure of the customized data entity",
+      "type": "object",
+      "required": [
+        "entityTitle",
+        "entityDescription"
+      ],
+      "properties": {
+        "entiyTitle": {
+          "title": "Title of the data entity",
+          "description": "Title of the data entity",
+          "type": "string"
+        },
+        "entityDescription": {
+          "title": "Description of the data entity",
+          "description": "Description of the data entiy",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

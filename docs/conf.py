@@ -137,6 +137,14 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_context = {
         'css_files':['_static/theme_overrides.css']
     }
+else:
+    html_context = {
+    'css_files': [
+        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
+        'https://media.readthedocs.org/css/readthedocs-doc-embed.css',
+        '_static/theme_overrides.css'  # override wide tables in RTD theme
+        ]
+     }
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
 
 # Theme options are theme-specific and customize the look and feel of a theme

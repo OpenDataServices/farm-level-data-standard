@@ -1,15 +1,15 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "Foreignkey": [
-    "farmerInternalID",
-    "owner_ID"
-  ],
-  "description": "Schema for the description of a farm",
-  "primarykey": [
-    "farmRecordGlobalID"
-  ],
   "properties": {
     "farm": {
+      "Foreignkey": [
+        "farmerInternalID",
+        "owner_ID"
+      ],
+      "description": "Schema for the description of a farm",
+      "primarykey": [
+        "farmRecordGlobalID"
+      ],
       "properties": {
         "farmAddress": {
           "$ref": "#/definitions/address",

@@ -13,57 +13,105 @@ To maximize traceability of the data, each recording of a data entity carries th
     :collapse: 
 ```
 
-## Farm
+## Key tables
 
-
-
-```eval_rst
-.. jsonschema:: ../schema/Farm.JSON
-    :include: 
-    :collapse: dataCollectorsGeolocation, dataCollectingOrganisationName, collectionTimeDateStamp, dataCollectorsID
-```
-
-
-## Farmer
+### Farm
 
 ```eval_rst
-.. jsonschema:: ../schema/Farmer.JSON
-    :include: 
-    :collapse: 
-```
-
- 
-## First Mile Farmer
-
-```eval_rst
-.. jsonschema:: ../schema/FirstMileFarmer.JSON
-    :include: 
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: farm
     :collapse: 
 ```
 
 
-## Plot level
+### Farmer
 
 ```eval_rst
-.. jsonschema:: ../schema/Plot.JSON
-    :include: 
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: farmer
+    :collapse: 
+```
+
+### Plot level
+
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: plot
     :collapse: 
 ```
  
-## Crop observation
+### Crop observation
 
 ```eval_rst
-.. jsonschema:: ../schema/Cropobservation.JSON
-    :include: 
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: cropObservation
     :collapse: 
 ```
 
 
-## Group
+### Group
 
 ```eval_rst
-.. jsonschema:: ../schema/Group.JSON
-    :include: 
+.. jsonschema:: ../schema/first-mile-schema.json
+    :include: group
     :collapse: 
 ```
 
+## Definitions
+
+### Address
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/address
+    :include:
+    :collapse: 
+```
+
+### ContactPoint
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/contactpoint
+    :include:
+    :collapse: 
+```
+
+### GlobalID
+
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/GlobalID
+    :include:
+    :collapse: 
+```
+
+### IDGeolocation
+
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/GeoID
+    :include:
+    :collapse: 
+```
+
+### DataAttributeStructure
+
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/dataattributestructure
+    :include:
+    :collapse: 
+```
+
+### DataEntityStructure
+
+```eval_rst
+.. jsonschema:: ../schema/first-mile-schema.json
+    :pointer: /definitions/dataEntityStructure
+    :include:
+    :collapse: 
+```
+
+
+### Location
+
+Auto-documentation of location is not currently working.

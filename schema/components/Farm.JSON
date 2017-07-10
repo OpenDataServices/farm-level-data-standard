@@ -38,7 +38,7 @@
 		{
 			"title": "Geolocation of the datacollecting organisation",
 			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
+			"$ref": "file:Definitions.JSON#/definitions/position"
 		},
 		"collectionTimeDateStamp": 
 		{

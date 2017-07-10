@@ -1,0 +1,63 @@
+{
+    "definitions":{
+        "address": 
+        {
+            "title": "address",
+            "description": "An address. This is the legally registered address of the organization.",
+            "type": "object",
+            "properties": 
+            {
+                "streetAddress": 
+                {
+                    "title": "Street address",
+                    "type": 
+                    [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The street address. For example, 1600 Amphitheatre Pkwy."
+                },
+                "locality": 
+                {
+                    "title": "Locality",
+                    "type": 
+                    [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The locality. For example, Mountain View."
+                },
+                "region": 
+                {
+                    "title": "Region",
+                    "type": 
+                    [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The region. For example, CA."
+                },
+                "postalCode": 
+                {
+                    "title": "Postalcode",
+                    "type": 
+                    [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The postal code. For example, 94043."
+                },
+                "countryName": 
+                {
+                    "title": "Country name",
+                    "type": 
+                    [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The country name. For example, United States."
+                }
+            }
+        }
+    }
+}

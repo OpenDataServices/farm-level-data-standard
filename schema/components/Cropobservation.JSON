@@ -1,465 +1,95 @@
 {
-	"id": "http://standard.First-MileFarmerData.org/schema/0__0__1/cropobservation.json",
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Crop observation ",
-	"description": "Schema for the description of a crop observation ",
-	"required": 
-	[
-		"cropObservationRecordGlobalID",
-		"cropObservationInternalID",
-		"cropObservationGeometry",
-		"cropObservationDescription"
-		 
-	],
-	"primarykey": 
-	[
-		"cropObservationRecordGlobalID"
-	],
-	"Foreignkey": 
-	[
-		"plotInternalID"
-	],
-	"properties": 
-	{
-		"cropObservationRecordGlobalID": 
-		{
-			"title": "Global cropObservation Record ID",
-			"description": "Globally Unique ID of the recording of the cropObservation at a specific time and by a specific organisation.",
-			"$ref": "#/definitions/GlobalID"
-		},
-		"cropObservationInternalID": 
-		{
-			"title": "Internal ID for the CropObservation",
-			"description": "Internal dataset ID for the crop observation  in the dataset",
-			"type": "string"
-		},
-		"cropObservationGeometry": 
-		{
-			"title": "CropObservationGeometry",
-			"description": "Geometry of the Observation as measured",
-			"type": "object",
-			"required": 
-			[
-				"type",
-				"coordinates"
-			],
-			"oneOf": 
-			[
-				{
-					"title": "Point",
-					"properties": 
-					{
-						"type": 
-						{
-							"enum": 
-							[
-								"Point"
-							]
-						},
-						"coordinates": 
-						{
-							"$ref": "#/definitions/position"
-						}
-					}
-				},
-				{
-					"title": "LineString",
-					"properties": 
-					{
-						"type": 
-						{
-							"enum": 
-							[
-								"LineString"
-							]
-						},
-						"coordinates": 
-						{
-							"$ref": "#/definitions/lineString"
-						}
-					}
-				},
-				{
-					"title": "Polygon",
-					"properties": 
-					{
-						"type": 
-						{
-							"enum": 
-							[
-								"Polygon"
-							]
-						},
-						"coordinates": 
-						{
-							"$ref": "#/definitions/polygon"
-						}
-					}
-				}
-			]
-		},
-		"cropObservationDescription": 
-		{
-			"title": "Description of het crop observation",
-			"description": "Description of het crop observation",
-			"type": "string"
-		},
-		"plotInternalID": 
-		{
-			"title": "plotInternalID",
-			"description": "Internal Identification number of the plot",
-			"type": "string"
-		}
-
-	},
-	"definitions": 
-	{
-		"GlobalID": 
-		{
-			"title": "Global ID",
-			"description": "Globally unique identifier for the record",
-			"type": "object",
-			"required": 
-			[
-				"ID",
-				"dataCollectorsGeolocation",
-				"collectionTimeDateStamp"
-			],
-			"properties": 
-			{
-				"ID": 
-				{
-					"title": "ID",
-					"description": "ID as used originally by the datacollector",
-					"type": "string"
-				},
-				"dataCollectorsGeolocation": 
-				{
-					"title": "Geolocation of the datacollecting organisation",
-					"description": "Location of the frontdoor of head office of the organisation that collected the data indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-					"$ref": "#/definitions/position"
-				},
-				"collectionTimeDateStamp": 
-				{
-					"title": "Date-time of data collection",
-					"description": "Date when the data has been collected by the data collecting organisation",
-					"type": "string",
-					"format": "date-time"
-				},
-				"dataCollectingOrganisationName": 
-				{
-					"title": "Name of the data collecting organisation",
-					"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-					"type": "string"
-				},
-				"dataCollectorsID": 
-				{
-					"title": "Legal registration number of the data collecting organisation",
-					"description": "Legal registration number of the organisation collected the data",
-					"type": "string"
-				}
-			}
-		},
-		"GeoID": 
-		{
-			"title": "ID geolocation",
-			"description": "Geolocation used to uniquely identify and object or to facilitate it's identification",
-			"type": "object",
-			"required": 
-			[
-				"Geolocation",
-				"DescriptionIDGeolocation"
-			],
-			"properties": 
-			{
-				"Geolocation": 
-				{
-					"title": "Geolocation",
-					"description": "Geolocation that helps to identify the object in the future. Choose the option with the lowest number: 1 Location of main entrance of the object or the front door of the main office from where operations take place; 2 Centerpoint of the object or centerpoint of area of operation of the object; 3 Location on the object or in the area of operation; 4 Location near the object or near the area of operation of the object; 5 Location where the interview has taken place, indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-					"$ref": "#/definitions/position"
-				},
-				"DescriptionIDGeolocation": 
-				{
-					"title": "Description of the IDGeolocation",
-					"description": "Description where the reference point has been taken that has been used as an ID.",
-					"type": "string",
-					"enum": 
-					[
-						"1 Location of main entrance of the object or the front door of the main office from where operations take place",
-						"2 Centerpoint of the object or centerpoint of area of operation of the object",
-						"3 Location on the object or in the area of operation",
-						"4 Location near the object or near the area of operation of the object",
-						"5 Location where the interview has taken place"
-					]
-				}
-			}
-		},
-		"position": 
-		{
-			"description": "A single position",
-			"type": "array",
-			"minItems": 2,
-			"items": 
-			[
-				{
-					"type": "number"
-				},
-				{
-					"type": "number"
-				}
-			],
-			"additionalItems": false
-		},
-		"positionArray": 
-		{
-			"description": "An array of positions",
-			"type": "array",
-			"items": 
-			{
-				"$ref": "#/definitions/position"
-			}
-		},
-		"lineString": 
-		{
-			"description": "An array of two or more positions",
-			"allOf": 
-			[
-				{
-					"$ref": "#/definitions/positionArray"
-				},
-				{
-					"minItems": 2
-				}
-			]
-		},
-		"linearRing": 
-		{
-			"description": "An array of four positions where the first equals the last",
-			"allOf": 
-			[
-				{
-					"$ref": "#/definitions/positionArray"
-				},
-				{
-					"minItems": 4
-				}
-			]
-		},
-		"polygon": 
-		{
-			"description": "An array of linear rings",
-			"type": "array",
-			"items": 
-			{
-				"$ref": "#/definitions/linearRing"
-			}
-		},
-		"dataattributestructure": 
-		{
-			"title": "Data attribute structure",
-			"description": "Data elements to describe a data attribute",
-			"type": "object",
-			"required": 
-			[
-				"dataEntity",
-				"attributeTitle",
-				"attributeDescription",
-				"attributeType"
-			],
-			"properties": 
-			{
-				"dataEntiy": 
-				{
-					"title": "Title of the data entity",
-					"description": "Title of the data entity the data attribute belongs to",
-					"type": "string"
-				},
-				"attributeTitle": 
-				{
-					"title": "Title of the data attribute",
-					"description": "Title of the data attribute",
-					"type": "string"
-				},
-				"attributeDescription": 
-				{
-					"title": "Description of the data attribute",
-					"description": "Description of the data atrribute",
-					"type": "string"
-				},
-				"attributeType": 
-				{
-					"title": "Type of data attribute",
-					"description": "Type of data atrribute",
-					"type": "string"
-				}
-			}
-		},
-		"dataEntityStructure": 
-		{
-			"title": "Data Entity Structure",
-			"description": "Structure of the customized data entity",
-			"type": "object",
-			"required": 
-			[
-				"entityTitle",
-				"entityDescription"
-			],
-			"properties": 
-			{
-				"entiyTitle": 
-				{
-					"title": "Title of the data entity",
-					"description": "Title of the data entity",
-					"type": "string"
-				},
-				"entityDescription": 
-				{
-					"title": "Description of the data entity",
-					"description": "Description of the data entiy",
-					"type": "string"
-				}
-			}
-		},
-		"adress": 
-		{
-			"title": "address",
-			"description": "An address. This is the legally registered address of the organization.",
-			"type": "object",
-			"properties": 
-			{
-				"streetAddress": 
-				{
-					"title": "Street address",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The street address. For example, 1600 Amphitheatre Pkwy."
-				},
-				"locality": 
-				{
-					"title": "Locality",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The locality. For example, Mountain View."
-				},
-				"region": 
-				{
-					"title": "Region",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The region. For example, CA."
-				},
-				"postalCode": 
-				{
-					"title": "Postalcode",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The postal code. For example, 94043."
-				},
-				"countryName": 
-				{
-					"title": "Country name",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The country name. For example, United States."
-				}
-			},
-			"patternProperties": 
-			{
-				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
-				{
-					"type": 
-					[
-						"string",
-						"null"
-					]
-				}
-			}
-		},
-		"contactpoint": 
-		{
-			"title": "contact point",
-			"type": "object",
-			"description": "An person, contact point or department to contact in relation to this contracting process.",
-			"properties": 
-			{
-				"name": 
-				{
-					"title": "Name",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
-				},
-				"email": 
-				{
-					"title": "Email",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The e-mail address of the contact point/person."
-				},
-				"telephone": 
-				{
-					"title": "Telephone",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The telephone number of the contact point/person. This should include the international dialling code."
-				},
-				"faxNumber": 
-				{
-					"title": "Fax number",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The fax number of the contact point/person. This should include the international dialling code."
-				},
-				"url": 
-				{
-					"title": "URL",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "A web address for the contact point/person.",
-					"format": "uri"
-				}
-			},
-			"patternProperties": 
-			{
-				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
-				{
-					"type": 
-					[
-						"string",
-						"null"
-					]
-				}
-			}
-		}
-	}
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://standard.First-MileFarmerData.org/schema/0__0__1/cropobservation.json",
+  "properties": {
+    "cropObservation": {
+      "Foreignkey": [
+        "plotInternalID"
+      ],
+      "description": "Schema for the description of a crop observation ",
+      "primarykey": [
+        "cropObservationRecordGlobalID"
+      ],
+      "properties": {
+        "cropObservationDescription": {
+          "description": "Description of het crop observation",
+          "title": "Description of het crop observation",
+          "type": "string"
+        },
+        "cropObservationGeometry": {
+          "description": "Geometry of the Observation as measured",
+          "oneOf": [
+            {
+              "properties": {
+                "coordinates": {
+                  "$ref": "#/definitions/position"
+                },
+                "type": {
+                  "enum": [
+                    "Point"
+                  ]
+                }
+              },
+              "title": "Point"
+            },
+            {
+              "properties": {
+                "coordinates": {
+                  "$ref": "#/definitions/lineString"
+                },
+                "type": {
+                  "enum": [
+                    "LineString"
+                  ]
+                }
+              },
+              "title": "LineString"
+            },
+            {
+              "properties": {
+                "coordinates": {
+                  "$ref": "#/definitions/polygon"
+                },
+                "type": {
+                  "enum": [
+                    "Polygon"
+                  ]
+                }
+              },
+              "title": "Polygon"
+            }
+          ],
+          "required": [
+            "type",
+            "coordinates"
+          ],
+          "title": "CropObservationGeometry",
+          "type": "object"
+        },
+        "cropObservationInternalID": {
+          "description": "Internal dataset ID for the crop observation  in the dataset",
+          "title": "Internal ID for the CropObservation",
+          "type": "string"
+        },
+        "cropObservationRecordGlobalID": {
+          "$ref": "#/definitions/GlobalID",
+          "description": "Globally Unique ID of the recording of the cropObservation at a specific time and by a specific organisation.",
+          "title": "Global cropObservation Record ID"
+        },
+        "plotInternalID": {
+          "description": "Internal Identification number of the plot",
+          "title": "plotInternalID",
+          "type": "string"
+        }
+      },
+      "required": [
+        "cropObservationRecordGlobalID",
+        "cropObservationInternalID",
+        "cropObservationGeometry",
+        "cropObservationDescription"
+      ],
+      "title": "Crop observation",
+      "type": "object"
+    }
+  }
 }

@@ -6,7 +6,7 @@ import glob
 
 schema = {}
 
-for file in glob.glob("components/*.JSON"):
+for file in glob.glob("components/*.JSON") + glob.glob("components/*.json"):
     try:
         with open(file,'r') as schema_file:
             print("Merging "+ file)

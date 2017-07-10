@@ -1,413 +1,116 @@
 {
-	"id": "http://standard.First-MileFarmerData.org/schema/0__0__1/Plot.json",
-	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Farm plot",
-	"description": "Schema for the description of a farm plot ",
-	"required": 
-	[
-		"plotID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp",
-		"farm-ID"
-	],
-	"primarykey": 
-	[
-		"plotID",
-		"dataCollectorsGeolocation",
-		"collectionTimeDateStamp"
-	],
-	"foreignkey": 
-	[
-		"farm-ID",
-		"owner-ID"
-	],
-	"properties": 
-	{
-
-		"plotID": 
-		{
-			"title": "Plot ID",
-			"description": "ID of the plot as used by the datacollector",
-			"type": "string"
-		},
-		"dataCollectorsGeolocation": 
-		{
-			"title": "Geolocation of the datacollecting organisation",
-			"description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-		
-		"collectionTimeDateStamp": 
-		{
-			"title": "Date-time of data collection",
-			"description": "Date when the data has been collected by the data collecting organisation",
-			"type": "string",
-			"format": "date-time"
-		},
-
-		"dataCollectingOrganisationName": 
-		{
-			"title": "Name of the data collecting organisation",
-			"description": "Official name under which the organisation that collected the data is registered in the country of the head office",
-			"type": "string"
-		},
-		"dataCollectorsID": 
-		{
-			"title": "Legal registration number of the data collecting organisation",
-			"description": "Legal registration number of the organisation collected the data",
-			"type": "string"
-		},
-
-		"IDGeolocation": 
-		{
-			"title": "IDGeolocation of the Farm",
-			"description": "Geolocation that helps to identify the farm in the future. Choose the option with the lowest number: 1 Centerpoint of the plot; 2 Point at the plot; 3 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
-			"$ref": "#/definitions/position"
-		},
-
- 		"natureoftheIDGeolocation": 
-		{
-			"title": "Nature of the IDGeolocation of the Farmer",
-			"description": "Nature of the reference point that has been used as an IDGeolocation.",
-		      "type": "string",
-                  "enum": ["1 Centerpoint of the plot " ,"2 Point at the plot"  , "3 location where the interview has taken place"]
-		},
-
-		"owner_ID": 
-		{
-			"title": "Owner-ID",
-			"description": "ID of the owner as used by the datacollecting organisation",
-			"type": "string"
-		},		
-
-		"farm-ID": 
-		{
-			"title": "Farm-ID",
-			"description": "Identification number of the farm which uses this plot, as used by the datacollecting organisation",
-			"type": "string"
-
-		},
-
-		"plotGeometry": 
-		{
-			"title": "plotGeometry",
-			"description": "Geometry of the plot as measured",
-			"$ref": "#/definitions/polygon"
-		},
-
-		"plotArea": 
-		{
-			"title": "Plot area",
-			"description": "Total area of the plot in hectare",
-			"type": "number",
-			"minimum": 0
-		},
-
-		"soilType": 
-		{
-			"title": "Soil type",
-			"description": "Main soiltype of the polt area",
-			"type": "integer",
-			"minimum": 0
-		},
-
-		"mainCrop": 
-		{
-			"title": "MainCrop",
-			"description": "Name and variety of the main crop",
-			"type": "string"
-		},
-
-		"interCrop": 
-		{
-			"title": "interCrop",
-			"description": "Name and variety of the inter crop",
-			"type": "string"
-		},
-
-		"borderCrop": 
-		{
-			"title": "borderCrop",
-			"description": "Name and variety of the border crop",
-			"type": "string"
-		},
-
-		"expectedHarvestMainCrop": 
-		{
-			"title": "Expected harvest result main crop",
-			"description": "Expected harvest result main crop",
-			"type": "number",
-			"minimum": 0
-		}
-	},
-	"definitions": 
-	{
-		"position": 
-		{
-			"description": "A single position",
-			"type": "array",
-			"minItems": 2,
-			"items": 
-			[
-				{
-					"type": "number"
-				},
-				{
-					"type": "number"
-				}
-			],
-			"additionalItems": false
-		},
-		"positionArray": 
-		{
-			"description": "An array of positions",
-			"type": "array",
-			"items": 
-			{
-				"$ref": "#/definitions/position"
-			}
-		},
-		"lineString": 
-		{
-			"description": "An array of two or more positions",
-			"allOf": 
-			[
-				{
-					"$ref": "#/definitions/positionArray"
-				},
-				{
-					"minItems": 2
-				}
-			]
-		},
-		"linearRing": 
-		{
-			"description": "An array of four positions where the first equals the last",
-			"allOf": 
-			[
-				{
-					"$ref": "#/definitions/positionArray"
-				},
-				{
-					"minItems": 4
-				}
-			]
-		},
-		"polygon": 
-		{
-			"description": "An array of linear rings",
-			"type": "array",
-			"items": 
-			{
-				"$ref": "#/definitions/linearRing"
-			}
-		},
-		"dataattributestructure": 
-		{
-			"title": "Data attribute structure",
-			"description": "Data elements to describe a data attribute",
-			"type": "object",
-			"required": 
-			[
-				"dataEntity",
-				"attributeTitle",
-				"attributeDescription",
-				"attributeType"
-			],
-			"properties": 
-			{
-				"dataEntiy": 
-				{
-					"title": "Title of the data entity",
-					"description": "Title of the data entity the data attribute belongs to",
-					"type": "string"
-				},
-				"attributeTitle": 
-				{
-					"title": "Title of the data attribute",
-					"description": "Title of the data attribute",
-					"type": "string"
-				},
-				"attributeDescription": 
-				{
-					"title": "Description of the data attribute",
-					"description": "Description of the data atrribute",
-					"type": "string"
-				},
-				"attributeType": 
-				{
-					"title": "Type of data attribute",
-					"description": "Type of data atrribute",
-					"type": "string"
-				}
-			}
-		},
-		"dataEntityStructure": 
-		{
-			"title": "Data Entity Structure",
-			"description": "Structure of the customized data entity",
-			"type": "object",
-			"required": 
-			[
-				"entityTitle",
-				"entityDescription"
-			],
-			"properties": 
-			{
-				"entiyTitle": 
-				{
-					"title": "Title of the data entity",
-					"description": "Title of the data entity",
-					"type": "string"
-				},
-				"entityDescription": 
-				{
-					"title": "Description of the data entity",
-					"description": "Description of the data entiy",
-					"type": "string"
-				}
-			}
-		},
-		"adress": 
-		{
-			"title": "address",
-			"description": "An address. This is the legally registered address of the organization.",
-			"type": "object",
-			"properties": 
-			{
-				"streetAddress": 
-				{
-					"title": "Street address",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The street address. For example, 1600 Amphitheatre Pkwy."
-				},
-				"locality": 
-				{
-					"title": "Locality",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The locality. For example, Mountain View."
-				},
-				"region": 
-				{
-					"title": "Region",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The region. For example, CA."
-				},
-				"postalCode": 
-				{
-					"title": "Postalcode",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The postal code. For example, 94043."
-				},
-				"countryName": 
-				{
-					"title": "Country name",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The country name. For example, United States."
-				}
-			},
-			"patternProperties": 
-			{
-				"^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
-				{
-					"type": 
-					[
-						"string",
-						"null"
-					]
-				}
-			}
-		},
-		"contactpoint": 
-		{
-			"title": "contact point",
-			"type": "object",
-			"description": "An person, contact point or department to contact in relation to this contracting process.",
-			"properties": 
-			{
-				"name": 
-				{
-					"title": "Name",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
-				},
-				"email": 
-				{
-					"title": "Email",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The e-mail address of the contact point/person."
-				},
-				"telephone": 
-				{
-					"title": "Telephone",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The telephone number of the contact point/person. This should include the international dialling code."
-				},
-				"faxNumber": 
-				{
-					"title": "Fax number",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "The fax number of the contact point/person. This should include the international dialling code."
-				},
-				"url": 
-				{
-					"title": "URL",
-					"type": 
-					[
-						"string",
-						"null"
-					],
-					"description": "A web address for the contact point/person.",
-					"format": "uri"
-				}
-			},
-			"patternProperties": 
-			{
-				"^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": 
-				{
-					"type": 
-					[
-						"string",
-						"null"
-					]
-				}
-			}
-		}
-	}		
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://standard.First-MileFarmerData.org/schema/0__0__1/Plot.json",
+  "properties": {
+    "plot": {
+      "description": "Schema for the description of a farm plot ",
+      "foreignkey": [
+        "farm-ID",
+        "owner-ID"
+      ],
+      "primarykey": [
+        "plotID",
+        "dataCollectorsGeolocation",
+        "collectionTimeDateStamp"
+      ],
+      "properties": {
+        "IDGeolocation": {
+          "$ref": "#/definitions/position",
+          "description": "Geolocation that helps to identify the farm in the future. Choose the option with the lowest number: 1 Centerpoint of the plot; 2 Point at the plot; 3 location where the interview has taken place indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+          "title": "IDGeolocation of the Farm"
+        },
+        "borderCrop": {
+          "description": "Name and variety of the border crop",
+          "title": "borderCrop",
+          "type": "string"
+        },
+        "collectionTimeDateStamp": {
+          "description": "Date when the data has been collected by the data collecting organisation",
+          "format": "date-time",
+          "title": "Date-time of data collection",
+          "type": "string"
+        },
+        "dataCollectingOrganisationName": {
+          "description": "Official name under which the organisation that collected the data is registered in the country of the head office",
+          "title": "Name of the data collecting organisation",
+          "type": "string"
+        },
+        "dataCollectorsGeolocation": {
+          "$ref": "#/definitions/position",
+          "description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+          "title": "Geolocation of the datacollecting organisation"
+        },
+        "dataCollectorsID": {
+          "description": "Legal registration number of the organisation collected the data",
+          "title": "Legal registration number of the data collecting organisation",
+          "type": "string"
+        },
+        "expectedHarvestMainCrop": {
+          "description": "Expected harvest result main crop",
+          "minimum": 0,
+          "title": "Expected harvest result main crop",
+          "type": "number"
+        },
+        "farm-ID": {
+          "description": "Identification number of the farm which uses this plot, as used by the datacollecting organisation",
+          "title": "Farm-ID",
+          "type": "string"
+        },
+        "interCrop": {
+          "description": "Name and variety of the inter crop",
+          "title": "interCrop",
+          "type": "string"
+        },
+        "mainCrop": {
+          "description": "Name and variety of the main crop",
+          "title": "MainCrop",
+          "type": "string"
+        },
+        "natureoftheIDGeolocation": {
+          "description": "Nature of the reference point that has been used as an IDGeolocation.",
+          "enum": [
+            "1 Centerpoint of the plot ",
+            "2 Point at the plot",
+            "3 location where the interview has taken place"
+          ],
+          "title": "Nature of the IDGeolocation of the Farmer",
+          "type": "string"
+        },
+        "owner_ID": {
+          "description": "ID of the owner as used by the datacollecting organisation",
+          "title": "Owner-ID",
+          "type": "string"
+        },
+        "plotArea": {
+          "description": "Total area of the plot in hectare",
+          "minimum": 0,
+          "title": "Plot area",
+          "type": "number"
+        },
+        "plotGeometry": {
+          "$ref": "#/definitions/polygon",
+          "description": "Geometry of the plot as measured",
+          "title": "plotGeometry"
+        },
+        "plotID": {
+          "description": "ID of the plot as used by the datacollector",
+          "title": "Plot ID",
+          "type": "string"
+        },
+        "soilType": {
+          "description": "Main soiltype of the polt area",
+          "minimum": 0,
+          "title": "Soil type",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "plotID",
+        "dataCollectorsGeolocation",
+        "collectionTimeDateStamp",
+        "farm-ID"
+      ],
+      "title": "Farm plot"
+    }
+  }
 }

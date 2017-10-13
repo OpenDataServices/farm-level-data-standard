@@ -13,7 +13,7 @@
 
 --></style>
 
-Farm Level Data Standard (documentation demonstrator)
+The first mile reference frame work for data collection, storage and exchange
 ======================================================
 
 ```eval_rst
@@ -26,7 +26,8 @@ Farm Level Data Standard (documentation demonstrator)
 
 ```
 
-This is a demonstration documentation site for work on a Farm Level Data Standard.
+This is verion 1.0 for the first mile reference framework for data collection, storage and exchange.
+The reference framework is posted on github and intended as a building block for other organisations to build a shared repositry of data formats and collection methods for data elements generally collected in the field for M&E, research or certification purposes. 
 
 
 

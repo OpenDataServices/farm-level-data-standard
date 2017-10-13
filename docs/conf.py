@@ -382,7 +382,6 @@ def setup(app):
     import os
     import glob
 
-
     schema = {}
 
     for file in glob.glob("../schema/components/*.JSON") + glob.glob("../schema/components/*.json"):
@@ -403,3 +402,6 @@ def setup(app):
     
     print("Full schema in first-mile-schema.json updated")
 
+    global html_static_path
+    for file in glob.glob("extensions/*/*.json"):
+        html_static_path = html_static_path + [file]

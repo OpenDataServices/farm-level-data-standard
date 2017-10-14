@@ -7,7 +7,7 @@ In ‘first mile’ projects many different aspects of farms are being collected
 
 ###Model
 
-![alt text][datamodel]
+![alt text][neutralmodel]
 
 To define the conceptual data model, the concept of a farm is taken as the starting point. A farm in this reference framework is defined as a collection assets managed as 1 entity with the primarily objective to raise living organisms for food or raw materials. At the farm crops are cultivated on one or more plots of land and farm animals are being kept. The farm is a run by a farmer often supported by farm workers. Different buildings may be present at the farm to support the work. The farm may consist of multiple plots, herds or buildings. Workers are not bound to 1 farm but may work at different farms. A farmer may manage several farms. A farmer may be member of one or more farmers groups. A farmer group can be a cooperative or a group of farmers loosely organised around a government or corporate program.
 
@@ -27,4 +27,4 @@ The expected harvest of a field should be a data element of the data entity grou
 The dark blue elements indicated in the model will be detailed out more in the sections below. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. In case of customisation the added data elements can be described in the summary report to provide extra context and data integrity validation options.
 
 
-[datamodel]: https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodel.gif "Neutral model for first mile farm data"
+[neutralmodel]: https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodel.gif "Neutral model for first mile farm data"

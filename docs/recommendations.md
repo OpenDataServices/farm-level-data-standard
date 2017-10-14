@@ -1,4 +1,4 @@
-## Recommendations to increase reusability of data
+## Further recommendations 
 
 ### Most data have a spatial component
 

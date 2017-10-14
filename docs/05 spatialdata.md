@@ -1,1 +1,2 @@
-## Spatial data aquisition and standards
+Spatial data aquisition and standards
+=====================================

@@ -1,4 +1,6 @@
-##Use cases
+Use cases
+=========
+
 This chapter provides a number of use cases describing where the reference framework and its data model applies.
 
 ###2.1 Use cases for farmer groups

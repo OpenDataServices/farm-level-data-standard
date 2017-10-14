@@ -1,4 +1,5 @@
-## Further recommendations 
+Further recommendations 
+=======================
 
 ### Most data have a spatial component
 

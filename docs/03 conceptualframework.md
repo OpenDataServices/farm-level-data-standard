@@ -1,4 +1,5 @@
-## Conceptual Framework
+Conceptual Framework
+====================
 
 ### Approach
 In the three schema approach a conceptual data model is proposed as an effective way to integrate between different databases and organisations. In the conceptual model the data entities are defined in the way that the end-users think and talk about concepts in the real world. It is therefore assumed that multiple organisations can easily develop a mapping from their own internal data structures onto such conceptual model because of the internal logic of the community. The conceptual model can therefore function as a neutral and organisation independent interface for the data from 1 database to another database. If all organisations would develop such a mapping (or adapt their own internal data structures), effortless and automated data exchange and data integration can take place. This document aims to put the foundation for such a neutral model for first mile farm data.

@@ -13,6 +13,7 @@ This is an extension schema on the reference framework for first mile farm data 
 ### Structured schema
 
 <script src="../../../_static/docson/widget.js" data-schema="../../extensions/cocoaaction/cocoaaction.json></script>
+<script src="../../../_static/docson/widget.js" data-schema="../../_static/irrigation.json"></script>
 
 ### Prescribed methodologies to measure the data elements
 

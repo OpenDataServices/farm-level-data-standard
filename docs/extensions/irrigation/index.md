@@ -13,7 +13,7 @@ To represent this field, add the following data to the 'Farm' object or table.
 
 ## Structured schema
 
-<script src="../../../_static/docson/widget.js" data-schema="../../_static/irrigation.json"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../_static/irrigation.json"></script>
 
 ## About
 

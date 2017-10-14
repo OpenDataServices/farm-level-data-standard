@@ -5,7 +5,7 @@ In the three schema approach a conceptual data model is proposed as an effective
 
 In ‘first mile’ projects many different aspects of farms are being collected. Examples are the agricultural and economic performance of a farms, farming activities performed at a farm, social and environmental conditions, compliance to standard measures etc. It is beyond the scope of this document to address all of these aspects in detail, including the recommended field data collection methodologies and associated data formats. This document presents a generic structure by representing the core components of a farm as data entities. It will only discuss data attributes that are essential for the internal structure and which are needed to be able understand and combine the data, such as farmers ID or the shape of the fields or are commonly collected such as the address or expected yield. It will also present a logic how the model can be expanded with additional data attributes or data entities providing the option to customise the model and to provide the opportunity to expand the generic model into a more all comprehensive model at a later stage.
 
-### Model
+### Neutral data model
 
 ![alt text][neutralmodel]
 

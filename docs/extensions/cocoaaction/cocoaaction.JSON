@@ -1,0 +1,25 @@
+{
+    "properties":{
+        "Farm":{
+            "properties":{
+                "irrigationType":{
+                    "type":"string",
+                    "title":"Irrigation Type",
+                    "description":"The type of irrigation",
+                    "enum":["yes","no","drop","flooding","other"]
+                }
+            }
+        }
+    }
+}
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog

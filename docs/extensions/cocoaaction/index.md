@@ -5,14 +5,14 @@ This is an extension schema on the reference framework for first mile farm data 
 ### Additional attributes
 
 ```eval_rst
-.. jsonschema:: cocoaction.json
+.. jsonschema:: cocoaaction.json
     :include: 
     :collapse: 
 ```
 
 ### Structured schema
 
-<script src="../../../_static/docson/widget.js" data-schema="../../_static/cocoaction.json"></script>
+<script src="../../../_static/docson/widget.js" data-schema="../../_static/cocoaaction.json"></script>
 
 ### Prescribed methodologies to measure the data elements
 

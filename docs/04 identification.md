@@ -4,11 +4,11 @@ Uniquely identifying data
 ### Key message
 In the reference framework a data structure is proposed to uniquely identify objects in the real world and in the data while exchanging information between organisations.  3 Identifiers are used build a structure of data entities interlinked with keys and to maintain this structure. These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID.
 
-1.The InternalID* provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
+1. The InternalID* provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
 
-2.The GeoID* provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
+2. The GeoID* provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
 
-3.The GlobalRecordID* is a globally unique identifier for First Mile Farm data record.
+3. The GlobalRecordID* is a globally unique identifier for First Mile Farm data record.
 
 The GeoID and the GlobalRecordID can be used to maintain the InternalID structure while exchanging data between organisations.
 
@@ -22,24 +22,24 @@ The InternalID is the ID used to uniquely identify Data Entities in a data set l
 
 When the data set is merged with another First Mile Farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principles there are 3 problems that need to be solved.
 
-..1. If 2 datasets are merged and they may contain information about the same farmers these farmers should get the same InternalIDs and all related Keys inside the combined dataset need to be updated. 
+1. If 2 datasets are merged and they may contain information about the same farmers these farmers should get the same InternalIDs and all related Keys inside the combined dataset need to be updated. 
 
-..1. If 2 different farmers have the same Internal ID before the merge, 1 of the 2 farmers need to get a new and unique ID during the merge and all Keys need to be updated.
+2. If 2 different farmers have the same Internal ID before the merge, 1 of the 2 farmers need to get a new and unique ID during the merge and all Keys need to be updated.
 
-..1. If dataset a is shared with organisation b and with organisation c and these organisations merge their datasets the newly derived data set will contain all records of dataset a twice. These doubles need to be removed from the database.
+3. If dataset a is shared with organisation b and with organisation c and these organisations merge their datasets the newly derived data set will contain all records of dataset a twice. These doubles need to be removed from the database.
 
 ### The GeoID
 To clean the datasets from problem 1 and 2 the GeoID is introduced.** The GeoID is the location of an object in WGS84 coordinates and a description of where the geolocation is measured (See also additional data entities). When the WGS84 TRF (see box x)  is considered as an register with 2 ID numbers, WGS84 can be considered as the only registration system that is consistently used globally to “identify” objects over the past 20 year. However the the location of an object may have different interpretations between different data collectors, therefor a description of where the geolocation is measured is made part of the GeoID to ease the cleaning process. One can imagine that the cleaning based on geolocation will be made with much more confidence when all GeoIDs are taken at the doorstep of a farm and not at the location where the interview is taken. However sometimes the GeoID can not be taken at the doorstep, therefor different options are provided with decreasing accuracy
 
-..1.Location of main entrance of the object or the front door of the main office from where operations take place; 
+1. Location of main entrance of the object or the front door of the main office from where operations take place; 
 
-..1.Centerpoint of the object or centerpoint of area of operation of the object; 
+2. Centerpoint of the object or centerpoint of area of operation of the object; 
 
-..1.Location on the object or in the area of operation; 
+3. Location on the object or in the area of operation; 
 
-..1.Location near the object or near the area of operation of the object; 
+4. Location near the object or near the area of operation of the object; 
 
-..1.Location where the interview has taken place
+5. Location where the interview has taken place
 
 It is assumed that even the location of an interview is relative in the proximity of the place where a farmer has is activities. It may be the only information available and is still informative on the area where the farm is located. Therefore it is recommended to add additional identifying information when available to facilitate the cleaning process, like:
 

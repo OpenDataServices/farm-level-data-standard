@@ -1,6 +1,6 @@
 # Open Data Services Sphinx Base
 
-First mile data standard draft
+The reference framework for first mile farm data collection, storage and exchange
 
 The base Sphinx setup (recommonmark + internationalisation) for Open Data
 Services docs projects.

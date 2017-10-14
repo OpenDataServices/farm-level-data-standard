@@ -13,7 +13,7 @@
 
 --></style>
 
-Farm Level Data Standard (documentation demonstrator)
+The reference framework for first mile farm data 
 ======================================================
 
 ```eval_rst
@@ -26,7 +26,7 @@ Farm Level Data Standard (documentation demonstrator)
 
 ```
 
-This is a demonstration documentation site for work on a Farm Level Data Standard.
+
 
 
 

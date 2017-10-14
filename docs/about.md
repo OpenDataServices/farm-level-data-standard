@@ -1,4 +1,4 @@
-About the reference frame
+About the reference framework
 ==================
 
 This is verion 1.0 for the reference framework for first mile farm data. This resource aims to evolve into a set of shared guidelines on how to  collect, store and exchange data about farmers, farmer organisations, farms, plots and other data related to agricultural practice.   

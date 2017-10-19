@@ -4,11 +4,11 @@ Uniquely identifying data elements
 ### Key message
 In the reference framework a data structure is proposed to uniquely identify objects in the real world and in the data while exchanging information between organisations.  3 Identifiers are used build a structure of data entities interlinked with keys and to maintain this structure. These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID.
 
-1. The InternalID* provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
+1. *The InternalID* provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
 
-2. The GeoID* provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
+2. *The GeoID* provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
 
-3. The GlobalRecordID* is a globally unique identifier for First Mile Farm data record.
+3. *The GlobalRecordID* is a globally unique identifier for First Mile Farm data record.
 
 The GeoID and the GlobalRecordID can be used to maintain the InternalID structure while exchanging data between organisations.
 

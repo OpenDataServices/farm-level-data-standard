@@ -15,7 +15,7 @@
           "type": "string"
         }
        "dataProvidersID": {
-          "description": "Legal registration number of the organisation that converted its data into First Mile Data Format",
+          "description": "Legal registration number of the organisation that converted its data into first-mile-farm-data-schema",
           "title": "Legal registration number of the data provider",
           "type": "string"
         },
@@ -26,22 +26,22 @@
         },
         "dataProvidersGeolocation": {
           "$ref": "#/definitions/position",
-          "description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+          "description": "Location of the frontdoor of head office of the organisation that converted it's data into first-mile-farm-data-schemaindicated by WGS84 Lat-Long Coordinates ddd.dddd",
           "title": "Geolocation of the data provider"
         },
         "datasetDescription": {
-          "description": "Description of the data set that is converted into First Mile Export Format",
+          "description": "Description of the data set that is converted into first-mile-farm-data-schema",
           "title": "Dataset description",
           "type": "string"
         },
         "dataProvidersPointofContact": {
           "$ref": "#/definitions/contactpoint",
-          "description": "Contact point of the organisation that converted it's data into First Mile Export Format",
+          "description": "Contact point of the organisation that converted it's data into first-mile-farm-data-schema",
           "title": "data provider point of contact"
         },
         "dataProvidersAdress": {
           "$ref": "#/definitions/address",
-          "description": "The legally registered address of the organisation that converted it's data into First Mile Data Format.",
+          "description": "The legally registered address of the organisation that converted it's data into first-mile-farm-data-schema.",
           "title": "data providers lega; adress"
         },
 

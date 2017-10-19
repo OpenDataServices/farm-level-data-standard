@@ -28,4 +28,5 @@ The expected harvest of a field should be a data element of the data entity grou
 The dark blue elements indicated in the model will be detailed out more in the sections below. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. In case of customisation the added data elements can be described in the summary report to provide extra context and data integrity validation options.
 
 
-[neutralmodel]: https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodelgif.gif "Neutral model for first mile farm data"
+[neutralmodel]: ../_static/Neutraldatamodelgif.gif "Neutral model for first mile farm data"
+

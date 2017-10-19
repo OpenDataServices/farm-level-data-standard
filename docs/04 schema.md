@@ -1,4 +1,4 @@
-Schema
+Data schema
 ======
 
 <script src="../_static/docson/widget.js" data-schema="../../_static/first-mile-schema.json"></script>

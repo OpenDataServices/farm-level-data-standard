@@ -53,7 +53,7 @@
         "dataProvidersName",
         "datasetDescription"
       ],
-      "title": "Meta data",
+      "title": "Metadata",
       "type": "object"
     }
   }

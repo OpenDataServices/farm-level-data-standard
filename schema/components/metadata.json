@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "summary": {
+      "description": "This data entity provides metadata about the first mile farm data",
+      "primarykey": [
+        "exportDate",
+        "dataProvidersGeolocation"
+      ],
+      "properties": {
+      "exportDate": {
+          "description": "Date when the data has been exported from the database into First Mile Export Format",
+          "format": "date-time",
+          "title": "Export date",
+          "type": "string"
+        }
+       "dataProvidersID": {
+          "description": "Legal registration number of the organisation that converted its data into First Mile Data Format",
+          "title": "Legal registration number of the data provider",
+          "type": "string"
+        },
+        "dataProvidersName": {
+          "description": "Official name of the organisation that converted its data into First Mile Data Format",
+          "title": "data provider name",
+          "type": "string"
+        },
+        "dataProvidersGeolocation": {
+          "$ref": "#/definitions/position",
+          "description": "Location of the frontdoor of head office of the organisation that converted it's data into First Mile Export Format indicated by WGS84 Lat-Long Coordinates ddd.dddd",
+          "title": "Geolocation of the data provider"
+        },
+        "datasetDescription": {
+          "description": "Description of the data set that is converted into First Mile Export Format",
+          "title": "Dataset description",
+          "type": "string"
+        },
+        "dataProvidersPointofContact": {
+          "$ref": "#/definitions/contactpoint",
+          "description": "Contact point of the organisation that converted it's data into First Mile Export Format",
+          "title": "data provider point of contact"
+        },
+        "dataProvidersAdress": {
+          "$ref": "#/definitions/address",
+          "description": "The legally registered address of the organisation that converted it's data into First Mile Data Format.",
+          "title": "data providers lega; adress"
+        },
+
+      },
+      "required": [
+        "exportDate",
+        "dataProvidersGeolocation",
+        "dataProvidersID",
+        "dataProvidersName",
+        "datasetDescription"
+      ],
+      "title": "Meta data",
+      "type": "object"
+    }
+  }
+}

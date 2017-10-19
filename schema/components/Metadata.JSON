@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "properties": {
     "summary": {
-      "description": "This data entity provides metadata about the first mile farm data",
+      "description": "This data entity provides meta data about the first mile farm data",
       "primarykey": [
         "exportDate",
         "dataProvidersGeolocation"
@@ -53,7 +53,7 @@
         "dataProvidersName",
         "datasetDescription"
       ],
-      "title": "Metadata",
+      "title": "Meta_data",
       "type": "object"
     }
   }

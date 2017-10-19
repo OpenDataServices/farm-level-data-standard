@@ -1,6 +1,6 @@
 ## CocoaAction
 
-This is an extension schema on the reference framework for first mile farm data collection, storage and exchange. This schema is building on the standardization discussions in the cocoa valuechain. For further information on CocoaAction see [the CocoaAction website](http://www.worldcocoafoundation.org/about-wcf/cocoaaction/)  
+This is an extension schema on the reference framework for first mile farm data collection, storage and exchange. This schema is building on the standardization discussions in the cocoa valuechain. For further information on CocoaAction see [their website](http://www.worldcocoafoundation.org/about-wcf/cocoaaction/)  
 
 ### Additional attributes
 

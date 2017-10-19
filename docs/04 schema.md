@@ -1,18 +1,9 @@
-Data schema
-======
+# Data schema
+![alt text][Main data structure]
+
+The model consists of the main data entities Group, Farmer, Farm, Plot, Cropobservation and number of supporting data entities. New data attributes or data entities can be added to the model by submitting extensions to the model.  
 
 <script src="../_static/docson/widget.js" data-schema="../../_static/first-mile-schema.json"></script>
-
-## Summary 
-
-To maximize traceability of the data, each recording of a data entity carries the geolocation of the organisation that collected the data together with the internal database ID. The combination of the geolocation, the timestamp and the ID of the data entity identify the data record globally unique. To support the process of identifying and potentially cleaning the data while reusing it is recommended to add additional identifying data elements to the record (see also the chapter on identifying and geolocating data)
-
-
-```eval_rst
-.. jsonschema:: ../schema/first-mile-schema.json
-    :include: summary
-    :collapse: 
-```
 
 ## Key tables
 
@@ -94,25 +85,6 @@ To maximize traceability of the data, each recording of a data entity carries th
     :collapse: 
 ```
 
-### DataAttributeStructure
-
-```eval_rst
-.. jsonschema:: ../schema/first-mile-schema.json
-    :pointer: /definitions/dataattributestructure
-    :include:
-    :collapse: 
-```
-
-### DataEntityStructure
-
-```eval_rst
-.. jsonschema:: ../schema/first-mile-schema.json
-    :pointer: /definitions/dataEntityStructure
-    :include:
-    :collapse: 
-```
 
 
-### Location
-
-Auto-documentation of location is not currently working.
+https://github.com/firstmile/reference-framework/blob/master/_static/Neutraldatamodelgif.gif

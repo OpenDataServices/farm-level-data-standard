@@ -16,7 +16,7 @@ for file in glob.glob("components/*.JSON") + glob.glob("components/*.json"):
         print("Problem merging from " + file)
         pass
 
-with open("first-mile-schema.json","w") as outfile:
+with open("first-mile-farm-data-schema.json","w") as outfile:
     outfile.write(json.dumps(schema,indent=2))
 
-print("Full schema in first-mile-schema.json updated")
+print("Full schema in first-mile-farm-data-schema.json updated")

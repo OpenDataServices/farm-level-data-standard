@@ -13,7 +13,7 @@
 
 --></style>
 
-## The reference framework for first mile farm data V1.0
+## The reference framework for first mile farm data
 
 ```eval_rst
 .. toctree::

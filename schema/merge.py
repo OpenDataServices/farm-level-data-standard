@@ -5,7 +5,7 @@ import glob
 from collections import OrderedDict
 
 
-schema = {}
+schema = OrderedDict()
 
 for file in glob.glob("components/*.JSON") + glob.glob("components/*.json"):
     try:

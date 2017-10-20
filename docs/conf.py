@@ -383,7 +383,7 @@ def setup(app):
     import glob
     from collections import OrderedDict
 
-    schema = {}
+    schema = OrderedDict()
 
     for file in glob.glob("../schema/components/*.JSON") + glob.glob("../schema/components/*.json"):
         try:

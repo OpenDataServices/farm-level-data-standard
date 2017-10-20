@@ -55,7 +55,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'The reference framework for first mile farm data (beta)'
+project = 'The reference framework for first mile farm data (underdevelopment)'
 copyright = 'GNU General Public License'
 author = 'Data-Impact.com'
 

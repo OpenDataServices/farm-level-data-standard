@@ -9,7 +9,7 @@
       ],
       "properties": {
       "exportDate": {
-          "description": "Date when the data has been exported from the database into First Mile Export Format",
+          "description": "Date when the data has been exported from the database into first-mile-farm-data-schema",
           "format": "date-time",
           "title": "Export date",
           "type": "string"

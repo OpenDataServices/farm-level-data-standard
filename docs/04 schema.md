@@ -9,6 +9,3 @@ The model consists of the main data entities Group, Farmer, Farm, Plot, Cropobse
 
 <script src="../_static/docson/widget.js" data-schema="../../_static/first-mile-schema.json"></script>
 
-[Coredatastructure]: https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodelgif.gif "Core data structure first mile farm data"
-
-

@@ -394,10 +394,7 @@ def setup(app):
             print("Problem merging from " + file)
             pass
 
-    with open("../schema/first-mile-schema.json","w") as outfile:
-        outfile.write(json.dumps(schema,indent=2))
-
-    with open("_static/first-mile-schema.json","w") as outfile:
+    with open("_static/first-mile-farm-data-schema.json", "w") as outfile:
         outfile.write(json.dumps(schema,indent=2))        
     
     print("Full schema in first-mile-schema.json updated")

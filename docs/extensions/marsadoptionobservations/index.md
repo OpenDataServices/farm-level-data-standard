@@ -4,8 +4,8 @@ This is an unofficial extension schema of the reference framework for first mile
 
 ## Added data entities and data attributes
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/marsadoptionobservations.json"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../_static/marsadoptionobservationsb.json"></script>
 
 ## Prescribed methodologies to measure the data elements
 
-Description of the methodologies go here. 
+Description of the methodologies go [here](https://docs.google.com/spreadsheets/d/1RefjQJqW4DkvEYrrUBMF-96gnF1HJESh1W_ILyu6k7Y/edit?usp=sharing). 

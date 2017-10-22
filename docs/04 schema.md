@@ -6,5 +6,5 @@ The model consists of the main data entities Group, Farmer, Farm, Plot, Cropobse
 
 ## Flattened table in Excel format
 
-A flattened table in excel for mat is avialable [here](reference-framework/docs/_static/First Mile Farmer Data Mapping table.xlsx)
+A flattened table in excel for mat is avialable [here](https://docs.google.com/spreadsheets/d/1lmKCK8K4ZXjjW23dOeA7WtUf3QbyhKg3HWF_7StsAsY/edit?usp=sharing)
 

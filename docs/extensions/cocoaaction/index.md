@@ -8,4 +8,4 @@ This is an unofficial extension schema on the reference framework for first mile
 
 ## Prescribed methodologies to measure the data elements
 
-Description of the methodologies go here.
+Find the Cocoaaction M&E guide [here](http://www.worldcocoafoundation.org/wp-content/uploads/20160427-HR_CocoaAction-MandE-Guide-1.pdf)

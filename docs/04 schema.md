@@ -4,5 +4,8 @@ The model consists of the main data entities Group, Farmer, Farm, Plot, Cropobse
 
 <script src="../_static/docson/widget.js" data-schema="../../_static/first-mile-farm-data-schema.json"></script>
 
+<script src="../_static/docson/widget.js" data-schema="../../../_static/reference-framework/schema/components/Group.JSON"></script>
+
+
 
 

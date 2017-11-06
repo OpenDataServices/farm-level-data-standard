@@ -4,8 +4,18 @@ This is an unofficial extension schema on the reference framework for first mile
 
 ## Added data entities and data attributes
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/cocoaaction.json"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../_static/cocoaactionb.json"></script>
+
+(to be completed)
 
 ## Prescribed methodologies to measure the data elements
 
-Description of the methodologies go here.
+Find the Cocoaaction M&E guide [here](http://www.worldcocoafoundation.org/wp-content/uploads/20160427-HR_CocoaAction-MandE-Guide-1.pdf) with the descriptions on how to measure the different dataelements.
+
+## Mapping of all CocoaAction data on the First-Mile Farm Data Schema
+
+<html>
+<iframe  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSk98_vP9-pFtRQb74nlFGS4YMn0NN3gKy-CLtwgSfh8O2ijKaGdH8-rAV6JR1kSkdYLtm7WfeWMNDZ/pubhtml" height="230" width="100%" ></iframe>
+</html>
+
+(to be completed)

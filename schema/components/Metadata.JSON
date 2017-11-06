@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-    "summary": {
+  "definitions": {
+    "MetaData": {
       "description": "This data entity provides meta data about the first mile farm data",
       "primarykey": [
         "exportDate",
@@ -13,7 +13,7 @@
           "format": "date-time",
           "title": "Export date",
           "type": "string"
-        }
+        },
        "dataProvidersID": {
           "description": "Legal registration number of the organisation that converted its data into first-mile-farm-data-schema",
           "title": "Legal registration number of the data provider",
@@ -43,8 +43,7 @@
           "$ref": "#/definitions/address",
           "description": "The legally registered address of the organisation that converted it's data into first-mile-farm-data-schema.",
           "title": "data providers lega; adress"
-        },
-
+        }
       },
       "required": [
         "exportDate",

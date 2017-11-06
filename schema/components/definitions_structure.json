@@ -1,6 +1,6 @@
 {
   "definitions": {
-    "dataattributestructure": {
+    "dataAttributeStructure": {
       "title": "Data attribute structure",
       "description": "Data elements to describe a data attribute",
       "type": "object",
@@ -42,7 +42,7 @@
         "entityDescription"
       ],
       "properties": {
-        "entiyTitle": {
+        "entityTitle": {
           "title": "Title of the data entity",
           "description": "Title of the data entity",
           "type": "string"

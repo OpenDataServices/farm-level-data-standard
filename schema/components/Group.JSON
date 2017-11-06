@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-    "group": {
+  "definitions": {
+    "Group": {
       "description": "Schema for the description of farmer groups",
       "primarykey": [
         "groupRecordGlobalID"
       ],
       "properties": {
         "farmer-IDS": {
-          "description": "Array of all the farmer IDs, as used by the data collecting organisation, who are member of the group by ;",
+          "description": "array of all the farmer IDs, as used by the data collecting organisation, who are member of the group by ;",
           "items": [
             {
               "type": "string"

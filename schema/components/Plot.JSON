@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://standard.First-MileFarmerData.org/schema/0__0__1/Plot.json",
-  "properties": {
-    "plot": {
+  "definitions": {
+    "Plot": {
       "description": "Schema for the description of a farm plot ",
       "foreignkey": [
         "farm-ID",

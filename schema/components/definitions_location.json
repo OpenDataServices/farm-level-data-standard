@@ -1,6 +1,7 @@
 {
   "definitions": {
     "position": {
+      "title":"Position",
       "description": "A single position",
       "type": "array",
       "minItems": 2,
@@ -14,18 +15,20 @@
       ],
       "additionalItems": false
     },
-    "positionArray": {
+    "positionarray": {
       "description": "An array of positions",
+      "title":"Position array",
       "type": "array",
       "items": {
         "$ref": "#/definitions/position"
       }
     },
     "lineString": {
+      "title":"Line string",
       "description": "An array of two or more positions",
       "allOf": [
         {
-          "$ref": "#/definitions/positionArray"
+          "$ref": "#/definitions/positionarray"
         },
         {
           "minItems": 2
@@ -33,10 +36,11 @@
       ]
     },
     "linearRing": {
+      "title":"Linear ring",
       "description": "An array of four positions where the first equals the last",
       "allOf": [
         {
-          "$ref": "#/definitions/positionArray"
+          "$ref": "#/definitions/positionarray"
         },
         {
           "minItems": 4
@@ -44,6 +48,7 @@
       ]
     },
     "polygon": {
+      "title":"Polygon",
       "description": "An array of linear rings",
       "type": "array",
       "items": {

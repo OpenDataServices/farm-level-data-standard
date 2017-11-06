@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://standard.First-MileFarmerData.org/schema/0__0__1/cropobservation.json",
-  "properties": {
-    "cropObservation": {
+  "definitions": {
+    "CropObservation": {
       "Foreignkey": [
         "plotInternalID"
       ],

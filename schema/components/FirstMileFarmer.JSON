@@ -3,32 +3,56 @@
 	"title": "First mile farm data schema",
 	"description": "Data structure for first mile farm data, as part of the reference framework for the collection, storage and exchanget of first mile farm data",
 	"language": "en",
-	"Type": "object",
-	"Properties": 
+	"type": "object",
+	"properties": 
 	{
-		"Meta_data": 
+		"metaData": 
 		{
+			"type":"array",
+			"title":"Meta data",
+			"items":{
+				"$ref":"#/definitions/MetaData"
+			}
+		},
+		"farmerGroups": 
+		{
+			"type":"array",
+			"title":"Farmer groups",
+			"items":{
+				"$ref":"#/definitions/Group"
+			}
 
 		},
-		"Farmer_groups": 
-		[
-
-		],
 		"Farmers": 
-		[
-
-		],
+		{
+			"type":"array",
+			"title":"Farmers",
+			"items":{
+				"$ref":"#/definitions/Farmer"
+			}
+		},
 		"Farms": 
-		[
-
-		],
+		{
+			"type":"array",
+			"title":"Farm",
+			"items":{
+				"$ref":"#/definitions/Farm"
+			}
+		},
 		"Plots": 
-		[
-
-		],
-		"Crop_observations": 
-		[
-
-		]
+		{
+			"type":"array",
+			"title":"Plots",
+			"items":{
+				"$ref":"#/definitions/Plot"
+			}
+		},
+		"cropObsevations": {
+			"type":"array",
+			"title":"Crop Observations",
+			"items":{
+				"$ref":"#/definitions/CropObservation"
+			}
+		}
 	}
 }

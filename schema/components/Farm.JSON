@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "properties": {
-    "farm": {
+  "definitions": {
+    "Farm": {
       "Foreignkey": [
         "farmerInternalID",
         "owner_ID"
@@ -48,12 +48,12 @@
           "type": "string"
         },
         "herdInternalIDs": {
-          "description": "Array of internal  herd_IDs ",
+          "description": "array of internal  herd_IDs ",
           "items": {
             "type": "string"
           },
           "title": "Internal ID for the herd",
-          "type": "Array"
+          "type": "array"
         },
         "owner_ID": {
           "description": "ID of the owner as used by the datacollecting organisation",
@@ -61,12 +61,12 @@
           "type": "string"
         },
         "plotInternalIDs": {
-          "description": "Array of internal  plot_IDs ",
+          "description": "array of internal  plot_IDs ",
           "items": {
             "type": "string"
           },
           "title": "Internal ID for the plot",
-          "type": "Array"
+          "type": "array"
         },
         "stockofProduce": {
           "description": "Total stock of produce on the farm",
@@ -75,12 +75,12 @@
           "type": "number"
         },
         "workerInternalIDs": {
-          "description": "Array of internal  worker_IDs ",
+          "description": "array of internal  worker_IDs ",
           "items": {
             "type": "string"
           },
           "title": "Internal ID for the worker",
-          "type": "Array"
+          "type": "array"
         }
       },
       "required": [

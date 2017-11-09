@@ -8,3 +8,4 @@ As explained in section 4.1.1 the block [FarmerRecordGlobalID, FarmerInternalID,
 groupInternalIDs is an array of database specific identification linking a farmer to 0, 1 or more groups.
 
 Required data attributes are indicated by grey shaded fields in the table below.
+<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/Farmer.JSON"></script>

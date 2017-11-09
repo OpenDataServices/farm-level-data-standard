@@ -1,7 +1,5 @@
-The first mile farm data model
+Model overview
 ============================
-
-## Model overview
 
 The model consists of the main data entities Group, Farmer, Farm, Plot, Cropobservation and number of supporting data entities. New data attributes or data entities can be added to the model by submitting extensions to the model.  
 

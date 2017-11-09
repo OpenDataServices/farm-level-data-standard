@@ -1,4 +1,4 @@
-A neutral data model for first mile farm data   
+A neutral data model
 ================
 
 ## Approach

@@ -10,7 +10,7 @@ The reference framework is designed in such away that new data attributes and ev
 
 By adding more and more extensions to the reference framework, a repositry emerges of 'proven' data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in 1 repositry will also facilitate further standardization discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
 
-## A conceptual model for first mile farm data
+## Defining the data entities 
 
 ![Conceptual model for first mile farm data](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodelgif.gif)
 

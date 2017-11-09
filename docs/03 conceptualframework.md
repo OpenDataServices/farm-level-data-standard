@@ -1,4 +1,4 @@
-Defining a neutral data model  
+A neutral data model for first mile farm data   
 ================
 
 ## Approach
@@ -10,26 +10,21 @@ The reference framework is designed in such away that new data attributes and ev
 
 By adding more and more extensions to the reference framework, a repositry emerges of 'proven' data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in 1 repositry will also facilitate further standardization discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
 
-## A conceptual data model for first mile farm data
+## A conceptual model for first mile farm data
 
-![Conceptual model for first mile farm data](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodelgif.gif)
+![Conceptual model for first mile farm data](/_static/Neutraldatamodelgif.gif)
 
 To define the conceptual data model, the concept of a farm is taken as the starting point. A farm in this reference framework is defined as a collection assets managed as 1 entity with the primarily objective to raise living organisms for food or raw materials. At the farm crops are cultivated on one or more plots of land and farm animals are being kept. The farm is a run by a farmer often supported by farm workers. Different buildings may be present at the farm to support the work. The farm may consist of multiple plots, herds or buildings. Workers are not bound to 1 farm but may work at different farms. A farmer may manage several farms. A farmer may be member of one or more farmers groups. A farmer group can be a cooperative or a group of farmers loosely organised around a government or corporate program.
 
-Many organisations are making observations in a plot during their field work. The data entity ‘plot observation’ is introduced to map the data elements directly linked to concrete  observations in the field.
+Many organisations are making observations in a plot during their field work. The data entity ‘plot observation’ is introduced to map the data elements directly linked to concrete observations in the field.
 
 The conceptual model is flexible to include a number of different farmer and farm types depending on the ownership of the farm and ownership of farm assets. Traditionally one may think of the farmer being the owner of both the farm and the farm assets, however this is not always the case. In many cases a farmer will hire or lease part of the production assets. ‘Sharecroppers’ or ‘Tenant farmers’ make use of agricultural assets which they do not own and have to pay a percentage of the profit, part of the produce or both. In ‘systems with communal land rights’ members of the community are getting fields assigned to use for farming, but do not own the land. Land use rights may change through time. The land of a farm is therefore a not static asset but may change through time.
 
 In some cases the farmer is more like ‘the manager’ and not ‘the owner’ of the farm benefitting directly from the produce of the farm. When the rights are shared with a group of individuals, the farm can be called a ‘Communal farm’. When ownership rights are with a company the farm can be called a ‘Corporate farm’. By managing the concept of ownership well for the different data entities all of these different type of farms and farmers can be included in the model, even while ownership changes over time.
 
-The summary report data entity is meant to add contextual information about each data release.
+The logic of the model is to map the first mile data elements collected in the field work at the right level data entity. Eg.:
+* The certified stock of a cooperative should be a data element of the data entity group
+* The total certified produce of a farm should be a data element of the data entity farm
+* The expected harvest of a field should be a data element of the data entity group
 
-The logic of the model is to map the first mile data elements collected in the field work at the right level data entity. Eg.
-The certified stock of a cooperative should be a data element of the data entity group
-The total certified produce of a farm should be a data element of the data entity farm
-The expected harvest of a field should be a data element of the data entity group
-
-The dark blue elements indicated in the model will be detailed out more in the sections below. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. In case of customisation the added data elements can be described in the summary report to provide extra context and data integrity validation options.
-
-
-[neutralmodel]: https://github.com/firstmile/reference-framework/blob/master/docs/_static/Neutraldatamodelgif.gif "Neutral model for first mile farm data"
+The dark blue elements in the figure above indicated in the model will be detailed out more in the description of the first mile data structure. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. 

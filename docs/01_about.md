@@ -15,9 +15,9 @@ It provides:
 
 To add or to ask questions about the first mile reference **please contact: andre.jellema@data-impact.com**. 
 
-The development of this framework has been developed by [UTZ](https://utz.org/) and funded by [ISEAL](https://www.isealalliance.org/)
+The development of this framework has been developed by [UTZ](https://utz.org/) supported by [Data-Impact.com](www.Data-Impact.com) and [Open Data Services](www.opendataservices.coop/) and funded by [ISEAL](https://www.isealalliance.org/)
 
-The following organisations are thanked for their relflexion and contributions to the framework:
+The following organisations are thanked for their reflection and contributions to the framework:
 
 * Rainforest Alliance
 * Grameen foundation

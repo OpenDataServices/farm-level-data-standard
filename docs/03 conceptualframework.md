@@ -1,5 +1,4 @@
 A neutral first mile farm data model  
-
 ================
 
 ## Approach
@@ -13,7 +12,7 @@ By adding more and more extensions to the reference framework, a repositry emerg
 
 ## Defining the conceptual data model
 
-![Conceptual model for first mile farm data collection][reference-framework/docs/_static/Neutraldatamodelgif.gif]
+![Conceptual model for first mile farm data collection](reference-framework/docs/_static/Neutraldatamodelgif.gif)
 
 To define the conceptual data model, the concept of a farm is taken as the starting point. A farm in this reference framework is defined as a collection assets managed as 1 entity with the primarily objective to raise living organisms for food or raw materials. At the farm crops are cultivated on one or more plots of land and farm animals are being kept. The farm is a run by a farmer often supported by farm workers. Different buildings may be present at the farm to support the work. The farm may consist of multiple plots, herds or buildings. Workers are not bound to 1 farm but may work at different farms. A farmer may manage several farms. A farmer may be member of one or more farmers groups. A farmer group can be a cooperative or a group of farmers loosely organised around a government or corporate program.
 

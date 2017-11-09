@@ -1,9 +1,9 @@
 About the reference framework
 ==================
 
-This is the development version for the reference framework for first mile farm data. This resource aims to evolve into a set of shared guidelines on how to  collect, store and exchange data about farmers, farmer organisations, farms, plots and other data related to agricultural practice.   
-
 <table border='1'><tr><td>The term ‘the first mile’ refers to the position of farmers at the start of the agricultural value chain. When moving up the chain, following all steps towards consumption, the distance to these food production area’s literally increases. While transparency and traceability in the value chain is of growing importance, data collection about ‘the first mile’ is generally difficult due to logistical reasons. There are many food producers and they are generally located in more remote areas making data collection labour intensive and expensive, especially in the case of small holder farming.</td></tr></table>
+
+This is the development version for the reference framework for first mile farm data. This resource aims to evolve into a set of shared guidelines on how to  collect, store and exchange data about farmers, farmer organisations, farms, plots and other data related to agricultural practice.   
 
 The purpose of the reference framework for first mile farm data is to align the way that data about farmers, farms and farm practices is collected and stored by different organisations to facilitate the data exchange and interoperability of first mile farm data sets. 
 

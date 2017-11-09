@@ -15,6 +15,7 @@ It provides:
 
 To add or to ask questions about the first mile reference **please contact: andre.jellema@data-impact.com**. 
 
+The development of this framework has been developed by [UTZ](https://utz.org/) and funded by [ISEAL](https://www.isealalliance.org/)
 
 
 

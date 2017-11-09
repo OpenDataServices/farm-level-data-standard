@@ -17,6 +17,14 @@ To add or to ask questions about the first mile reference **please contact: andr
 
 The development of this framework has been developed by [UTZ](https://utz.org/) and funded by [ISEAL](https://www.isealalliance.org/)
 
+The following organisations are thanked for their relflexion and contributions to the framework:
+
+* Rainforest Alliance
+* Grameen foundation
+* AKVO
+* SupplyShift
+* SourceTrace
+
 
 
 

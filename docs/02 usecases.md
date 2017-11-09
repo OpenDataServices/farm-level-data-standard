@@ -3,7 +3,7 @@ Use cases
 
 This chapter provides a number of use cases describing where the reference framework and its data model applies.
 
-## 2.1 Use cases for farmer groups
+### 2.1 Use cases for farmer groups
 
 *Narrative 1: to support the design of member management systems*
 Smallholder farmers in many sectors and countries are organized into cooperatives or farmer groups. Farmer groups often use management information system to store and retrieve information about their members. The collection and storage of this information happens more and more by digital means, also when smallholder farmers are involved. Farmer organisations use this information for decision making and to provide services to the farmers. In the management information system many different data elements may be stored including: personal information, demographics of the farmer group, expected and previous harvest results, the need for inputs, information on pest and diseases, soil quality etc. The data model as provided in this document provides a means to: 1 structure data in such a management information system, 2 exchange data between systems and recommendations on how data can be best collected in the field.

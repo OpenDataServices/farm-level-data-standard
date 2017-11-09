@@ -13,7 +13,7 @@ It provides:
 
 3. In addition a approach **to uniquely identify first mile farm data globally** using a system of 3 identifiers is presented and best practice recommendations are given for **spatial data collection**.
 
-To add to or ask questions about the first mile reference **please contact: andre.jellema@data-impact.com**. 
+To add or to ask questions about the first mile reference **please contact: andre.jellema@data-impact.com**. 
 
 
 

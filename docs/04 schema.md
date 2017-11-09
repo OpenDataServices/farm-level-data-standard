@@ -23,5 +23,5 @@ As explained in section 4.1.1 the block [GroupRecordGlobalID, GroupInternalID, G
 
 Required data attributes are indicated by grey shaded fields in the table below.
 
-<script src="../_static/docson/widget.js" data-schema="../../schema/components/Group.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="../schema/components/Group.JSON"></script>
 

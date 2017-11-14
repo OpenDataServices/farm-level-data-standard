@@ -24,4 +24,7 @@ By adding more and more extensions to the reference framework, a repositry emerg
 
 *Flattened table in Excel format*
 
-A flattened table in excel format is avialable [here](https://docs.google.com/spreadsheets/d/1lmKCK8K4ZXjjW23dOeA7WtUf3QbyhKg3HWF_7StsAsY/edit?usp=sharing) The flattened table can be used to make a mapping from an existing data structure to the generic data structure of the reference framework.  
+A flattened table in excel format is avialable [here](https://docs.google.com/spreadsheets/d/1lmKCK8K4ZXjjW23dOeA7WtUf3QbyhKg3HWF_7StsAsY/edit?usp=sharing) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storag and exchange.
+
+
+In the following sections the core data entities of the generic data structure for farm data collection, storag and exchange will be further elaborated.

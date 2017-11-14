@@ -5,9 +5,7 @@ Uniquely identifying data elements
 **In the reference framework a system of 3 identifiers is proposed to uniquely identify objects and model the relationships between these objects.** These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID. The system allows the exchange and merging of data that is structured in a similar way.
 
 1. **The InternalID** provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
-
 2. **The GeoID** provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
-
 3. **The GlobalRecordID** is a globally unique identifier for First Mile Farm data record.
 
 The GeoID and the GlobalRecordID can be used to maintain the InternalID structure while exchanging data between organisations.
@@ -23,32 +21,23 @@ The InternalID is the ID used to uniquely identify Data Entities in a data set i
 When the data set is merged with another First Mile Farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principles there are **3 problems that need to be solved**.
 
 1. *If 2 datasets are merged and they may contain information about the same farmers these farmers should get the same InternalIDs and all related Keys inside the combined dataset need to be updated.* 
-
 2. *If 2 different farmers have the same InternalID before the merge, 1 of the 2 farmers need to get a new and unique ID during the merger and all Keys need to be updated accordingly.*
-
 3. *If dataset a is shared with organisation b and with organisation c and next these organisations merge their datasets the newly derived data set will contain all records of dataset a twice. These doubles need to be removed from the database.*
 
 ### The GeoID
 **To clean the datasets from problem 1 and 2 the GeoID is introduced.** The GeoID is the location of an object in WGS84 coordinates and a description of where the geolocation is measured. When the WGS84 TRF (*see also the section on spatial data acquistion and standards*)  is viewed as an register using 2 ID numbers, WGS84 can be considered as the only registration system that is consistently used globally to uniquely “identify” objects over the past 20 year. However the location of an object may have different interpretations between different data collectors, therefor a description of where the geolocation is measured is made part of the GeoID to ease the cleaning process. One can imagine that the cleaning based on geolocation will be made with much more confidence when all GeoIDs are taken at the doorstep of a farm and not at the location where the interview is taken. However sometimes the GeoID can not be taken at the doorstep, therefor different options are provided with decreasing accuracy:
 
 1. Location of main entrance of the object or the front door of the main office from where operations take place; 
-
 2. Centerpoint of the object or centerpoint of area of operation of the object; 
-
 3. Location on the object or in the area of operation; 
-
 4. Location near the object or near the area of operation of the object; 
-
 5. Location where the interview has taken place
 
 It is assumed that even the location of an interview is relative in the proximity of the place where a farmer has is activities. It may be the only information available and is still informative on the area where the farm is located. Therefore it is recommended to add additional identifying information if available to facilitate the cleaning process, like:
 
 *the legal or official name
-
 *the legal registration number (and what kind)
-
 *the Address
-
 *etc. (*see also the section below on alternative ways of identification for more suggestions*)
 
 ### GloballyUniqueRecordID 

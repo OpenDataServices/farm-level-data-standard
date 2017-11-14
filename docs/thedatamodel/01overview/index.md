@@ -1,6 +1,8 @@
 Overview of the JSON model
 ============================
 
+<script src="../../_static/docson/widget.js" data-schema="../../_static/Firstmilefarmerdatab.JSON"></script>
+
 In the [JSON schema language]( http://json-schema.org/) the data entities making up the conceptual model (Group, Farmer, Farm, Plot, Plotobservation) as described in the conceptual model are stored as [arrays of JSON objects](https://specs.frictionlessdata.io/table-schema/).
 
 Each time a data entity is recorded a new JSON object is created and added to the array. The recording of the same data entity at another point in time needs to be added as a new record to allow for continuous monitoring and to allow the composition of farms and ownership to change overtime. The recording of the data entities therefore are timestamped. 
@@ -19,8 +21,6 @@ However to maintain compatibility of different global data sources it is essenti
 The reference framework is designed in such away that new data attributes or even new data entities for different purposes can be added to the model easily. This is illustrated under the heading extensions, for Cocoa action program and MARS Adoption Observations. The data formats are available together with the official protocols on how to collect the data in the field. 
 
 By adding more and more extensions to the reference framework, a repositry emerges of 'proven' data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in 1 repositry will also facilitate further standardization and interoperability discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
-
-<script src="../../_static/docson/widget.js" data-schema="../../_static/Firstmilefarmerdatab.JSON"></script>
 
 *Flattened table in Excel format*
 

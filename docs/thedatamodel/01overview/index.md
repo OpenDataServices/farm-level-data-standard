@@ -1,6 +1,12 @@
 Overview of the JSON model
 ============================
 
+The complete data structure is visualised in the table below:
+* All required data attributes are indicated bold in, 
+* By clicking on the blue table title -> all data attributes become visable, 
+* By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
+* By clicking on the {} symbols -> the JSON becomes visable 
+
 <script src="../../_static/docson/widget.js" data-schema="../../_static/Firstmilefarmerdatab.JSON"></script>
 
 In the [JSON schema language]( http://json-schema.org/) the data entities making up the conceptual model (Group, Farmer, Farm, Plot, Plotobservation) as described in the conceptual model are stored as [arrays of JSON objects](https://specs.frictionlessdata.io/table-schema/).

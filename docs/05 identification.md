@@ -2,7 +2,7 @@ Uniquely identifying data elements
 =========================
 
 ### Key message
-**In the reference framework a data structure is proposed to uniquely identify objects and model the relationships between these objects. The system allows the exchange and merging of data that is structured in a similar way.**  3 Identifiers are used build a structure of data entities interlinked with keys and to maintain this structure. These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID.
+**In the reference framework a system of 3 identifiers is proposed to uniquely identify objects and model the relationships between these objects.** These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID. The system allows the exchange and merging of data that is structured in a similar way.
 
 1. **The InternalID** provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
 

@@ -11,7 +11,7 @@ As explained in section '*Uniquely identifying data elements*' {GroupRecordGloba
 
 **Datastructure**
 Required data attributes are indicated by grey shaded fields in the table below.
-<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/Farmer.JSON"></script>
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
+<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/Farmer.JSON"></script>

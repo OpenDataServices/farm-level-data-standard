@@ -9,13 +9,13 @@ Typical observations in a plot are:
 - number of branches, 
 - good capture light and aeration, 
 - height of Jorquette, 
-- x% trees show old wilted, 
-- # dead or mummified pods, 
-- # dead branches, 
-- # damaged or diseased pods, 
-- # epiphytes 
-- # ant nests/tunnels nests,
--  etc. 
+- percentage of trees show old wilted, 
+- number of dead or mummified pods, 
+- number of dead branches, 
+- number of damaged or diseased pods, 
+- number of epiphytes 
+- number of ant nests/tunnels nests,
+- etc. 
 
 As explained in section '*Uniquely identifying data elements*' {GroupRecordGlobalID, GroupInternalID, GroupGeoID} provides the means to: 1 globally uniquely identify all the records of farmer groups, 2 to to provide each farmer group with a unique interal ID which allows to link to link other data entities to this farmer group and; 3 to have a clue to uniquely identify this farmer group in the field or to clean the dataset when combined with datasets from other sources.
 

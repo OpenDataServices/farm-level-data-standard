@@ -24,6 +24,13 @@ When the data set is merged with another First Mile Farm data set the internal I
 2. **If 2 different farmers have the same InternalID before the merge**, 1 of the 2 farmers need to get a new and unique ID during the merger and all Keys need to be updated accordingly.
 3. **If dataset a is shared with organisation b and with organisation c and next these organisations merge their datasets** the newly derived data set will contain all records of dataset a twice. These doubles need to be removed from the database.
 
+**Datastructure**
+The supporting data structure is visualised in the table below. All required data attributes are indicated in bold.
+* By clicking on the blue table title -> all data attributes become visable, 
+* By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
+* By clicking on the {} symbols -> the JSON becomes visable 
+<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/InternalID.JSON"></script>
+
 ### The GeoID
 **To clean the datasets from problem 1 and 2 the GeoID is introduced.** The GeoID is the location of an object in WGS84 coordinates and a description of where the geolocation is measured. When the WGS84 TRF (*see also the section on spatial data acquistion and standards*)  is viewed as an register using 2 ID numbers, WGS84 can be considered as the only registration system that is consistently used globally to uniquely “identify” objects over the past 20 year. However the location of an object may have different interpretations between different data collectors, therefor a description of where the geolocation is measured is made part of the GeoID to ease the cleaning process. One can imagine that the cleaning based on geolocation will be made with much more confidence when all GeoIDs are taken at the doorstep of a farm and not at the location where the interview is taken. However sometimes the GeoID can not be taken at the doorstep, therefor different options are provided with decreasing accuracy:
 
@@ -40,6 +47,13 @@ It is assumed that even the location of an interview is relative in the proximit
 * the Address
 * etc. (*see also the section below on alternative ways of identification for more suggestions*)
 
+**Datastructure**
+The supporting data structure is visualised in the table below. All required data attributes are indicated in bold.
+* By clicking on the blue table title -> all data attributes become visable, 
+* By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
+* By clicking on the {} symbols -> the JSON becomes visable 
+<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/GeoID.JSON"></script>
+
 ### GloballyUniqueRecordID 
 **To solve problem 3 the GloballyUniqueRecordID is used.** The GloballyUniqueRecordID is considered an indivisible part of the data record and attached to it at the time of recording. The GloballyUniqueRecordID consists of:
 
@@ -52,6 +66,13 @@ It is assumed that even the location of an interview is relative in the proximit
 The GloballyUniqueRecordID always needs to stay attached to the data record and should not be changed when exporting, merging or updating datasets. The GloballyUniqueRecordID also provides a means to go back to the source of the data.
 
 In principle the reference framework is building a pool of globally uniquely identified data records. If the data model and the 3 identifiers are used consistently by it’s user group, the combined dataset of uniquely identified records can be considered as the global pool of first mile farm data allowing for global data exchange and data analysis.
+
+**Datastructure**
+The supporting data structure is visualised in the table below. All required data attributes are indicated in bold.
+* By clicking on the blue table title -> all data attributes become visable, 
+* By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
+* By clicking on the {} symbols -> the JSON becomes visable 
+<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/GloballyUniqueRecordID.JSON"></script>
 
 ### Alternative ways of identification 
 

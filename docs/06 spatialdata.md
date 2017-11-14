@@ -1,7 +1,7 @@
 Spatial data aquisition and standards
 =====================================
 
-### Key message
+### Key messages
 The recommended Terrestrial Reference Framework to locate a point on the earth’s surface  is GWS84 using decimal degrees Latitude and Longitude coordinates with at least four decimal places (d.ddddd), for example Latitude: 52.05256, Longitude 5.26671. In this way locations are indicated with an accuracy of 1m.
 
 **Using a Navigational Satellite System (NSS)**
@@ -18,7 +18,7 @@ Locations and areas can also be mapped from a screen. Screen digitization is alw
 * The TRF of the reference source and the TRF that is used for the digitization. The recommended TRF in the reference framework is GWS84 using decimal degrees Latitude and Longitude coordinates. Local datasets are possibly to based on a different RTF. More advanced desktop GIS, like QGIS or ARCGIS are capable of making data transformations from one TRF to another TRF but need to be operated by a specialist.
 * The accuracy of the reference data set is determining the accuracy of the results. Field boundaries or boundaries between farms may not be clear on an aerial photograph for small holder farms. Boundaries maybe not visible or appear fuzzy. A third party data set needs to be checked overlaying it with actual field measurements to be sure of the accuracy.
 
-Different approaches to digitize data from screen described in this section below.
+Different approaches to digitize data from screen are described.
 
 ### Introduction
 The collection of spatial information of objects, like the geolocation or shape of objects, is of growing importance for first mile data collection. Spatial information helps to: 
@@ -31,7 +31,23 @@ The collection of spatial information of objects, like the geolocation or shape 
 Nowadays spatial information is often collected and stored digitally using [an object model of points, lines and polygon or collections of these]{https://www.e-education.psu.edu/geog486/l1_p8.html}. A Point type object is described by a single coordinate pair. A line string is a one-dimensional object represented by a sequence of points and the line segments connecting them. A Polygon is a two-dimensional surface stored as a sequence of points defining an exterior bounding ring of at least 3 points and zero or more interior rings to represent holes in the polygon if needed. Spatial information about objects can be collected digitally in the field using a Navigational Satellite System or behind a computer using a Geographical Information System. Both approaches are explained in more detail in [the section on Navigational Satellite System (NSS) to collect spatial data]{} and [4.2.2.]{}.
 
 ### Using a Navigational Satellite System (NSS) to collect spatial data in the field.
-A [Navigational Satellite System]{https://en.wikipedia.org/wiki/Satellite_navigation} is a constellation satellites with accurately known positions or orbits that transmits coded radio signals. These coded radio signals are used by specialized electronic devices to calculate the location on the earth’s surface relative to the satellite constellation. Currently the American [NAVSTAR Global Positioning System or GPS]{http://www.gps.gov/} is the most used system. However alternative systems exist, or become operational soon in the future (see als table X). Nowadays some receivers can already use the data from these alternative systems, or combine the signals of several systems. Combining the data from 2 or more NSS increases the accuracy of the measurement and decreases the search time for satellites data connections. 
+A [Navigational Satellite System]{https://en.wikipedia.org/wiki/Satellite_navigation} is a constellation satellites with accurately known positions or orbits that transmits coded radio signals. These coded radio signals are used by specialized electronic devices to calculate the location on the earth’s surface relative to the satellite constellation. Currently the American [NAVSTAR Global Positioning System or GPS]{http://www.gps.gov/} is the most used system. However alternative systems exist, or become operational soon in the future (see also the below table on NSS). Nowadays some receivers can already use the data from these alternative systems, or combine the signals of several systems. Combining the data from 2 or more NSS increases the accuracy of the measurement and decreases the search time for satellites data connections. 
+
+System | Coverage | Public horizontal Accuracy | Current Status | TRF
+--- | --- | --- | --- | ---
+GPS | Global | 2-9m | Operational | WGS84
+GLONASS | Global | 4-7m | Operational | PZ-90
+BeiDou-2 | South East Asia and Australia | 10m | Regionally Operational, Global in 2020 | BTRF
+Galileio | Global | 4m | Accessible,fully Operational in 2019 | GTFR
+NAVIC | 1.500 km beyond the Indian subcontinent | 10m | Operational | ITRF
+
+
+
+
+
+
+
+
 
 ### Using a Geographical Information System (GIS) to to collect spatial data in the field. 
 

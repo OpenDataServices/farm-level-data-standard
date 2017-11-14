@@ -43,11 +43,11 @@ It is assumed that even the location of an interview is relative in the proximit
 ### GloballyUniqueRecordID 
 **To solve problem 3 the GloballyUniqueRecordID is used.** The GloballyUniqueRecordID is considered an indivisible part of the data record and attached to it at the time of recording. The GloballyUniqueRecordID consists of:
 
-*The original internal ID used by the data collection organisation to identify that farmer, farm, plot, farmers group etc; When objects are uniquely identified only at project level, the project ID needs to be added to the object ID for example (Internal Project ID + Internal Object ID). 
+* The original internal ID used by the data collection organisation to identify that farmer, farm, plot, farmers group etc; When objects are uniquely identified only at project level, the project ID needs to be added to the object ID for example (Internal Project ID + Internal Object ID). 
 
-*The latitude and longitude coordinates of the main entrance of the headquarters of the organisation that collected the data;
+* The latitude and longitude coordinates of the main entrance of the headquarters of the organisation that collected the data;
 
-*Time-Date stamp of the recording.
+* Time-Date stamp of the recording.
 
 The GloballyUniqueRecordID always needs to stay attached to the data record and should not be changed when exporting, merging or updating datasets. The GloballyUniqueRecordID also provides a means to go back to the source of the data.
 

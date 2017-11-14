@@ -8,10 +8,9 @@ Many attributes can be assigned to a group, also depending on the nature of the 
 
 As explained in section '*Uniquely identifying data elements*' {GroupRecordGlobalID, GroupInternalID, GroupGeoID} provides the means to: 1 globally uniquely identify all the records of farmer groups, 2 to to provide each farmer group with a unique interal ID which allows to link to link other data entities to this farmer group and; 3 to have a clue to uniquely identify this farmer group in the field or to clean the dataset when combined with datasets from other sources.
 
+**Datastructure**
 The data structure is visualised in the table below. All required data attributes are indicated in bold.
-
 <script src="../../_static/docson/widget.js" data-schema="../../../schema/components/Group.JSON"></script>
-
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 

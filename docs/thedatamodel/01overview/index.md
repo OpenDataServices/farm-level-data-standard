@@ -1,4 +1,4 @@
-Setting-up the JSON model
+Overview of the JSON model
 ============================
 
 In the [JSON schema language]( http://json-schema.org/) the data entities making up the conceptual model (Group, Farmer, Farm, Plot, Plotobservation) as described in the conceptual model are stored as [arrays of JSON objects](https://specs.frictionlessdata.io/table-schema/).

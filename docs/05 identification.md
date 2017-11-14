@@ -35,10 +35,10 @@ When the data set is merged with another First Mile Farm data set the internal I
 
 It is assumed that even the location of an interview is relative in the proximity of the place where a farmer has is activities. It may be the only information available and is still informative on the area where the farm is located. Therefore it is recommended to add additional identifying information if available to facilitate the cleaning process, like:
 
-*the legal or official name
-*the legal registration number (and what kind)
-*the Address
-*etc. (*see also the section below on alternative ways of identification for more suggestions*)
+* the legal or official name
+* the legal registration number (and what kind)
+* the Address
+* etc. (*see also the section below on alternative ways of identification for more suggestions*)
 
 ### GloballyUniqueRecordID 
 **To solve problem 3 the GloballyUniqueRecordID is used.** The GloballyUniqueRecordID is considered an indivisible part of the data record and attached to it at the time of recording. The GloballyUniqueRecordID consists of:

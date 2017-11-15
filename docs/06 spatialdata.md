@@ -41,7 +41,7 @@ System | Coverage | Public horizontal Accuracy | Current Status | [TRF]( http://
 [Galileio](http://www.esa.int/Our_Activities/Navigation/Galileo_and_EGNOS) | Global | 4m | Accessible,fully Operational in 2019 | GTFR
 [NAVIC](http://www.isro.gov.in/irnss-programme) | 1.500 km beyond the Indian subcontinent | 10m | Operational | ITRF
 
-### Collecting a point location**
+### Collecting a point location
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 

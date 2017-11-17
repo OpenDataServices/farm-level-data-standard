@@ -45,17 +45,17 @@ System | Coverage | Public horizontal Accuracy | Current Status | [TRF]( http://
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 
-There are many mobile apps that turn an Android or iOS smartphone into a mapping tool; the following are just two examples that are free, easy to use, and work offline. These programs should be configured in the settings to report in decimal degrees. It is best to report location points by saving “waypoints” and downloading these onto your computer; this avoids the possibility of transcription errors. It is also possible to read the latitude and longitude coordinates directly off the app display and record this information in a notebook or data form. To increase the accuracy of your measurement towards 1m multiple measurements can be taken at the same location and then averaged. Some GPS systems have an automated option for this. 
+>There are many mobile apps that turn an Android or iOS smartphone into a mapping tool; the following are just two examples that are free, easy to use, and work offline. These programs should be configured in the settings to report in decimal degrees. It is best to report location points by saving “waypoints” and downloading these onto your computer; this avoids the possibility of transcription errors. It is also possible to read the latitude and longitude coordinates directly off the app display and record this information in a notebook or data form. To increase the accuracy of your measurement towards 1m multiple measurements can be taken at the same location and then averaged. Some GPS systems have an automated option for this. 
 
-Using [GPS Essentials](http://www.gpsessentials.com)
-This app provides a suite of location tools, including a tool for collecting points (waypoints). To collect a location point with GPS Essentials, click on the waypoints icon and the orange “plus” button in the bottom right corner (see screenshots below). Next, wait for a moment for your phone to pick up satellites and improve accuracy. The accuracy of your GPS should be 10m or less. Now, enter the name and description of the waypoint and click “create”; you can now read the latitude and longitude location of your point. If you like, you can save your point and export it to your computer. To do this, open the “Waypoints” button, click the three dots in the upper right corner for the pull-down menu and select “Export” to email the data to yourself as a .kml file. 
+>**Using [GPS Essentials](http://www.gpsessentials.com)**
+>This app provides a suite of location tools, including a tool for collecting points (waypoints). To collect a location point with GPS Essentials, click on the waypoints icon and the orange “plus” button in the bottom right corner (see screenshots below). Next, wait for a moment for your phone to pick up satellites and improve accuracy. The accuracy of your GPS should be 10m or less. Now, enter the name and description of the waypoint and click “create”; you can now read the latitude and longitude location of your point. If you like, you can save your point and export it to your computer. To do this, open the “Waypoints” button, click the three dots in the upper right corner for the pull-down menu and select “Export” to email the data to yourself as a .kml file. 
 
 ![GPSessentials screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/GPSessentials.gif "GPSessentials screenshots")
 
-**Using My Maps**
-Google My Maps is a mobile app and also a web-based application that runs on your desktop. The My Maps mobile app is similar to the Google Maps app that comes with many phones; however, it has additional functionality and must be downloaded and installed as a separate application. Once you have installed the app on your device and logged in with your Google account, you can create your own maps and add points. When you return from the field and connect with the Internet, these mobile maps synchronize with your desktop web-based My Maps program, where the data can be exported as a .kml file.
+>**Using My Maps**
+>Google My Maps is a mobile app and also a web-based application that runs on your desktop. The My Maps mobile app is similar to the Google Maps app that comes with many phones; however, it has additional functionality and must be downloaded and installed as a separate application. Once you have installed the app on your device and logged in with your Google account, you can create your own maps and add points. When you return from the field and connect with the Internet, these mobile maps synchronize with your desktop web-based My Maps program, where the data can be exported as a .kml file.
 
-When in the field, launch the Google My Maps mobile app. To add a waypoint, click the blue “+” sign in the lower right corner (see figure x), click on “Add a new point”, select the location, select the layer, and give the point a name and description. You also may be able to add points by holding down at a point in the screen for a few seconds; then you will be prompted to name and save this point. You can now read the latitude and longitude location of your point. If you like, you can also now view the point in Google Maps – My Maps, since the point will automatically sync through your Google account. 
+>When in the field, launch the Google My Maps mobile app. To add a waypoint, click the blue “+” sign in the lower right corner (see figure x), click on “Add a new point”, select the location, select the layer, and give the point a name and description. You also may be able to add points by holding down at a point in the screen for a few seconds; then you will be prompted to name and save this point. You can now read the latitude and longitude location of your point. If you like, you can also now view the point in Google Maps – My Maps, since the point will automatically sync through your Google account. 
 
 ![Google My Maps screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/googlemymaps.gif)
 
@@ -73,7 +73,7 @@ Screen digitization is always in relation to another data source (aerial photogr
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 
->** Point locations**
+>### Point locations
 >If the location of interest can be identified in a web-map or via satellite view, then it may be easy to obtain the GPS coordinates from the screen. In Google Earth, just place the cursor at the desired location and read off the coordinate values from the “Status bar” at the bottom of the screen. In Google Maps, simply create a point or marker at the desired location and then click on that marker to display the properties, which will show the GPS coordinates (usually at the bottom left of the pop-up). When reporting these points, make sure that they are in Decimal Degrees. 
 
 >### The digitization of polygons 
@@ -89,43 +89,41 @@ Screen digitization is always in relation to another data source (aerial photogr
 
 >When time-stamped GPS data are imported and displayed in Google Earth, the “Time slider” is automatically displayed at the top of the screen (figure 5). This slider has “Range Makers” that control the time and date range of the tracks and points that are displayed. This is important because sometimes you might think your data has disappeared, when it is only out of the range specified in the time slider. To view all the data, move the range markers to the far right and left sides to define a wider date range.
 
-![Google Earth Time slider](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif"Google Earth Time slider")
+![Google Earth Time slider](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif "Google Earth Time slider")
 
 >To draw a polygon, follow these steps (figure 6):
 >1. Select the <Add polygon> tool.
 >2. Click on the map at the location of the polygon corners (vertices), going around the entire edge of the polygon to define its shape.
 >3. When done, give the polygon a name in the “Name” field and add any additional details in the “Description field.”
-4. Click on the “Style, Color” tab to define how the polygon is displayed.
-5. Click on <OK> to save the polygon.
+>4. Click on the “Style, Color” tab to define how the polygon is displayed.
+>5. Click on <OK> to save the polygon.
 
-![Polygon digitizing steps in Google Earth](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif "Polygon digitizing steps in Google Earth")
+![Polygon digitizing steps in Google Earth](https://github.com/firstmile/reference-framework/blob/master/docs/_static/digipoligon.gif "Polygon digitizing steps in Google Earth")
 
-Polygon digitizing steps in Google Earth.
+>Once you have created your polygon you should see it in the left Places panel. You can edit both the vertices and the properties by right-clicking on the item in the Places panel and selecting properties. To save the polygon(s) as a kml/kmz file, in the Place panel move all the polygons you want to save into one folder, right-click on the folder, select “Save Place As” and enter the name and location of the output file.
 
-Once you have created your polygon you should see it in the left Places panel. You can edit both the vertices and the properties by right-clicking on the item in the Places panel and selecting properties. To save the polygon(s) as a kml/kmz file, in the Place panel move all the polygons you want to save into one folder, right-click on the folder, select “Save Place As” and enter the name and location of the output file (figure 7).
+![How to save polygons as a kmz file](https://github.com/firstmile/reference-framework/blob/master/docs/_static/savepolygon.gif "How to save polygons as a kmz file")
 
-Figure 7. Example of how to save polygons as a kmz file.
- 
-**Using polygons with Google My Maps**
-Google My Maps is an extension of Google Maps. It can be used as part of Google Maps on any internet browser (after you sign in using your Google account); on a smartphone it must be downloaded as a separate app. All maps and data created in either form can be displayed and edited in the other. Since maps are web-based, they can be shared and edited by multiple users. To use [Google Maps](https://www.google.com/maps/d/?hl=en_US&app=mp), open the website and sign-in with your Google credentials. This will take you to the My Maps home screen, where you can create a new map (figure 8). For a tutorial on how to create a Google My Maps, [Clickhere](https://www.youtube.com/watch?v=TftFnot5uXw).  
+>**Using polygons with Google My Maps**
+>Google My Maps is an extension of Google Maps. It can be used as part of Google Maps on any internet browser (after you sign in using your Google account); on a smartphone it must be downloaded as a separate app. All maps and data created in either form can be displayed and edited in the other. Since maps are web-based, they can be shared and edited by multiple users. To use [Google Maps](https://www.google.com/maps/d/?hl=en_US&app=mp), open the website and sign-in with your Google credentials. This will take you to the >My Maps home screen, where you can create a new map (figure 8). For a tutorial on how to create a Google My Maps, [Clickhere](https://www.youtube.com/watch?v=TftFnot5uXw).  
 
+![Google My Maps home screenshot](https://github.com/firstmile/reference-framework/blob/master/docs/_static/googleearthmymaps.gif "Google My Maps home screenshot")
 
-Figure 8. Google My Maps home screenshot.
+>Click on the “Create a New Map” button in the upper left corner to initiate your new map. Now you are ready to start using your map. Give the map a name, zoom-in to your area of interest and select the basemap from the various options (map, terrain, satellite, atlas and more).
 
-Click on the “Create a New Map” button in the upper left corner to initiate your new map. Now you are ready to start using your map. Give the map a name, zoom-in to your area of interest and select the basemap from the various options (map, terrain, satellite, atlas and more).
+>**Upload data into Google My Maps**
+>As Google My Maps is entirely web-based, whatever data you collect in the field on the My Maps app (waypoints, lines) will automatically sync into the desktop map. It is also possible to import spatial data stored .kml, .kmz, .cvs or .gpx files. To do this, first click on <Add layer> and then click on the <Import> button that appears under the new layer. A window is displayed for you to upload or drag / drop files to be imported.
 
-**Upload data into Google My Maps**
-As Google My Maps is entirely web-based, whatever data you collect in the field on the My Maps app (waypoints, lines) will automatically sync into the desktop map. It is also possible to import spatial data stored .kml, .kmz, .cvs or .gpx files. To do this, first click on <Add layer> and then click on the <Import> button that appears under the new layer. A window is displayed for you to upload or drag / drop files to be imported (figure 9).
+![Google My Maps import window](https://github.com/firstmile/reference-framework/blob/master/docs/_static/mymapsimport.gif "Google My Maps import window")
 
-Figure 9. Google My Maps import window.
+>**Create and edit polygons in Google My Maps**
+>Use the tools in the upper center of the map to create points, lines and polygons. To create a polygon, use the line tool and go around the perimeter of the desired polygon area clicking to create a vertex at every corner and then click on the first point to complete the polygon. If you have collected reference points from the field and imported them to Google My Maps, these can help indicate where to draw the polygon vertices. When you are finished, enter the polygon name and description, and save (figure 10).
 
-**Create and edit polygons in Google My Maps**
-Use the tools in the upper center of the map to create points, lines and polygons. To create a polygon, use the line tool and go around the perimeter of the desired polygon area clicking to create a vertex at every corner and then click on the first point to complete the polygon. If you have collected reference points from the field and imported them to Google My Maps, these can help indicate where to draw the polygon vertices. When you are finished, enter the polygon name and description, and save (figure 10).
+![Farm polygons drawn in Google My Maps](https://github.com/firstmile/reference-framework/blob/master/docs/_static/mapfarm.gif "Farm polygons drawn in Google My Maps")
 
-Figure 10. Example of a farm polygons drawn in Google My Maps.
-All features created can be symbolized by selecting the line thickness, icon type, and color. Note that when you create a point, the latitude / longitude coordinates are displayed at the bottom of the point’s information window. Maps are automatically saved as you work.
+>All features created can be symbolized by selecting the line thickness, icon type, and color. Note that when you create a point, the latitude / longitude coordinates are displayed at the bottom of the point’s information window. Maps are automatically saved as you work.
 
-To export the map, click on the three dots in the top right of the map box, select “export to kml” and select whether you want to export all the map data, or just the data in a specific layer. Note that Google My Maps has limited ability to move and organize features into layers, so for complex sites, it might be necessary to export the map into a more full-featured program, such as Google Earth, to organization the multiple polygons.
+>To export the map, click on the three dots in the top right of the map box, select “export to kml” and select whether you want to export all the map data, or just the data in a specific layer. Note that Google My Maps has limited ability to move and organize features into layers, so for complex sites, it might be necessary to export the map into a more full-featured program, such as Google Earth, to organization the multiple polygons.
 
 
 ## Some more background on the complexity behind geodata

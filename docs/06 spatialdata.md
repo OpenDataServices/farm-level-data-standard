@@ -50,8 +50,7 @@ There are many mobile apps that turn an Android or iOS smartphone into a mapping
 Using [GPS Essentials](http://www.gpsessentials.com)
 This app provides a suite of location tools, including a tool for collecting points (waypoints). To collect a location point with GPS Essentials, click on the waypoints icon and the orange “plus” button in the bottom right corner (see screenshots below). Next, wait for a moment for your phone to pick up satellites and improve accuracy. The accuracy of your GPS should be 10m or less. Now, enter the name and description of the waypoint and click “create”; you can now read the latitude and longitude location of your point. If you like, you can save your point and export it to your computer. To do this, open the “Waypoints” button, click the three dots in the upper right corner for the pull-down menu and select “Export” to email the data to yourself as a .kml file. 
 
-![GPSessential screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/gpsessentials.gif)
-
+![GPSessentials screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/GPSessentials.gif "GPSessentials screenshots")
 
 **Using My Maps**
 Google My Maps is a mobile app and also a web-based application that runs on your desktop. The My Maps mobile app is similar to the Google Maps app that comes with many phones; however, it has additional functionality and must be downloaded and installed as a separate application. Once you have installed the app on your device and logged in with your Google account, you can create your own maps and add points. When you return from the field and connect with the Internet, these mobile maps synchronize with your desktop web-based My Maps program, where the data can be exported as a .kml file.
@@ -74,24 +73,23 @@ Screen digitization is always in relation to another data source (aerial photogr
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 
-###Point locations
+### Point locations
 If the location of interest can be identified in a web-map or via satellite view, then it may be easy to obtain the GPS coordinates from the screen. In Google Earth, just place the cursor at the desired location and read off the coordinate values from the “Status bar” at the bottom of the screen. In Google Maps, simply create a point or marker at the desired location and then click on that marker to display the properties, which will show the GPS coordinates (usually at the bottom left of the pop-up). When reporting these points, make sure that they are in Decimal Degrees. 
 
-###The digitization of polygons 
+### The digitization of polygons 
 
 **Using Google Earth**
-Google Earth Pro is a program that you can download for free and install on your computer ([download her](https://www.google.com/earth/download/gep/agree.html). After installing the program, select from the main menu Tools à Options and configure: show Lat/Long in Decimal Degrees (3D View tab).
+Google Earth Pro is a program that you can download for free and install on your computer ([download here](https://www.google.com/earth/download/gep/agree.html). After installing the program, select from the main menu Tools à Options and configure: show Lat/Long in Decimal Degrees (3D View tab).
 
-The Google Earth screen is divided into 3 panels on the left-hand side of the screen and one larger panel with the “Map Viewing Area” in the center (figure 4). For the purpose of mapping farm polygons, you will mainly utilize the “Map Viewing Area” and the “Places panel”, which is where your data can be referenced and organized. The content layers under the folder “My Places” are automatically copied to your hard drive when you exit the program and re-loaded the next time it is launched. 
+The Google Earth screen is divided into 3 panels on the left-hand side of the screen and one larger panel with the “Map Viewing Area” in the center (see screenshot below). For the purpose of mapping farm polygons, you will mainly utilize the “Map Viewing Area” and the “Places panel”, which is where your data can be referenced and organized. The content layers under the folder “My Places” are automatically copied to your hard drive when you exit the program and re-loaded the next time it is launched. 
 
-Figure 4. Typical view of Google Earth with labels showing different parts of the screen
+![Google Earth screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googleearth.gif "Google Earth screenshots")
 
 If you have reference points collected in the field in .kml or .kmz format can simply be loaded into Google Earth by double-clicking on the .kml or .kmz file. Alternatively, you can also open kml/kmz, gpx and many other types of spatial data by clicking on File à Open. Data imported into Google Earth are stored in the “Temporary Places” folder of the “Places panel.” You must remember to move the files up to one of your folders so that they are not lost when you exit the program.
 
 When time-stamped GPS data are imported and displayed in Google Earth, the “Time slider” is automatically displayed at the top of the screen (figure 5). This slider has “Range Makers” that control the time and date range of the tracks and points that are displayed. This is important because sometimes you might think your data has disappeared, when it is only out of the range specified in the time slider. To view all the data, move the range markers to the far right and left sides to define a wider date range.
 
-
-Figure 5. Google Earth “Time slider”.
+![Google Earth Time slider](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif"Google Earth Time slider")
 
 To draw a polygon, follow these steps (figure 6):
 1.      Select the <Add polygon> tool.
@@ -100,8 +98,9 @@ To draw a polygon, follow these steps (figure 6):
 4.      Click on the “Style, Color” tab to define how the polygon is displayed.
 5.      Click on <OK> to save the polygon.
 
+![Polygon digitizing steps in Google Earth](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif "Polygon digitizing steps in Google Earth")
 
-Figure 6. Polygon digitizing steps in Google Earth.
+Polygon digitizing steps in Google Earth.
 
 Once you have created your polygon you should see it in the left Places panel. You can edit both the vertices and the properties by right-clicking on the item in the Places panel and selecting properties. To save the polygon(s) as a kml/kmz file, in the Place panel move all the polygons you want to save into one folder, right-click on the folder, select “Save Place As” and enter the name and location of the output file (figure 7).
 

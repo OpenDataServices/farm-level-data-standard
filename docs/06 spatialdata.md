@@ -73,30 +73,30 @@ Screen digitization is always in relation to another data source (aerial photogr
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 
-### Point locations
-If the location of interest can be identified in a web-map or via satellite view, then it may be easy to obtain the GPS coordinates from the screen. In Google Earth, just place the cursor at the desired location and read off the coordinate values from the “Status bar” at the bottom of the screen. In Google Maps, simply create a point or marker at the desired location and then click on that marker to display the properties, which will show the GPS coordinates (usually at the bottom left of the pop-up). When reporting these points, make sure that they are in Decimal Degrees. 
+>** Point locations**
+>If the location of interest can be identified in a web-map or via satellite view, then it may be easy to obtain the GPS coordinates from the screen. In Google Earth, just place the cursor at the desired location and read off the coordinate values from the “Status bar” at the bottom of the screen. In Google Maps, simply create a point or marker at the desired location and then click on that marker to display the properties, which will show the GPS coordinates (usually at the bottom left of the pop-up). When reporting these points, make sure that they are in Decimal Degrees. 
 
-### The digitization of polygons 
+>### The digitization of polygons 
 
-**Using Google Earth**
-Google Earth Pro is a program that you can download for free and install on your computer ([download here](https://www.google.com/earth/download/gep/agree.html). After installing the program, select from the main menu Tools à Options and configure: show Lat/Long in Decimal Degrees (3D View tab).
+>*Using Google Earth*
+>Google Earth Pro is a program that you can download for free and install on your computer ([download here](https://www.google.com/earth/download/gep/agree.html). After installing the program, select from the main menu Tools à Options and configure: show Lat/Long in Decimal Degrees (3D View tab).
 
-The Google Earth screen is divided into 3 panels on the left-hand side of the screen and one larger panel with the “Map Viewing Area” in the center (see screenshot below). For the purpose of mapping farm polygons, you will mainly utilize the “Map Viewing Area” and the “Places panel”, which is where your data can be referenced and organized. The content layers under the folder “My Places” are automatically copied to your hard drive when you exit the program and re-loaded the next time it is launched. 
+>The Google Earth screen is divided into 3 panels on the left-hand side of the screen and one larger panel with the “Map Viewing Area” in the center (see screenshot below). For the purpose of mapping farm polygons, you will mainly utilize the “Map Viewing Area” and the “Places panel”, which is where your data can be referenced and organized. The content layers under the folder “My Places” are automatically copied to your hard drive when you exit the program and re-loaded the next time it is launched. 
 
 ![Google Earth screenshots](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googleearth.gif "Google Earth screenshots")
 
-If you have reference points collected in the field in .kml or .kmz format can simply be loaded into Google Earth by double-clicking on the .kml or .kmz file. Alternatively, you can also open kml/kmz, gpx and many other types of spatial data by clicking on File à Open. Data imported into Google Earth are stored in the “Temporary Places” folder of the “Places panel.” You must remember to move the files up to one of your folders so that they are not lost when you exit the program.
+>If you have reference points collected in the field in .kml or .kmz format can simply be loaded into Google Earth by double-clicking on the .kml or .kmz file. Alternatively, you can also open kml/kmz, gpx and many other types of spatial data by clicking on File à Open. Data imported into Google Earth are stored in the “Temporary Places” folder of the “Places panel.” You must remember to move the files up to one of your folders so that they are not lost when you exit the program.
 
-When time-stamped GPS data are imported and displayed in Google Earth, the “Time slider” is automatically displayed at the top of the screen (figure 5). This slider has “Range Makers” that control the time and date range of the tracks and points that are displayed. This is important because sometimes you might think your data has disappeared, when it is only out of the range specified in the time slider. To view all the data, move the range markers to the far right and left sides to define a wider date range.
+>When time-stamped GPS data are imported and displayed in Google Earth, the “Time slider” is automatically displayed at the top of the screen (figure 5). This slider has “Range Makers” that control the time and date range of the tracks and points that are displayed. This is important because sometimes you might think your data has disappeared, when it is only out of the range specified in the time slider. To view all the data, move the range markers to the far right and left sides to define a wider date range.
 
 ![Google Earth Time slider](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif"Google Earth Time slider")
 
-To draw a polygon, follow these steps (figure 6):
-1.      Select the <Add polygon> tool.
-2.      Click on the map at the location of the polygon corners (vertices), going around the entire edge of the polygon to define its shape.
-3.      When done, give the polygon a name in the “Name” field and add any additional details in the “Description field.”
-4.      Click on the “Style, Color” tab to define how the polygon is displayed.
-5.      Click on <OK> to save the polygon.
+>To draw a polygon, follow these steps (figure 6):
+>1. Select the <Add polygon> tool.
+>2. Click on the map at the location of the polygon corners (vertices), going around the entire edge of the polygon to define its shape.
+>3. When done, give the polygon a name in the “Name” field and add any additional details in the “Description field.”
+4. Click on the “Style, Color” tab to define how the polygon is displayed.
+5. Click on <OK> to save the polygon.
 
 ![Polygon digitizing steps in Google Earth](https://github.com/firstmile/reference-framework/blob/master/docs/_static/Googletimeslider.gif "Polygon digitizing steps in Google Earth")
 

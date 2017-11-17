@@ -35,7 +35,7 @@ The role of a control body is to inspect if all practices at a farm or farmers g
 *Narrative 8: to align the technology demand from clients*
 If the clients are more aligned in what data need to be collected, how data is collected and how data is stored, it will become more easy to develop the specific tools. This applies to data collection tools, management information systems, data analytics, visualization and data exchange via an API.
 
-## 2.5 Use case for M&E
+## 2.5 Use cases for M&E
 
 *Narrative 9: Re-use of data and meta analysis*
 Numerous projects are run by NGO’s, companies, voluntary standards systems to improve the life of small holder farmers. It is often challenging to assess the impact on the different farmer communities. This reference framework will ease the exchange of farm data between organisations and project. Researcher could reuse the data making a more thorough analysis of impact and compare between projects, regions or even in time leading to better more effective interventions.

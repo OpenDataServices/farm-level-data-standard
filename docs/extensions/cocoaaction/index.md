@@ -4,7 +4,8 @@ This is an unofficial extension schema on the reference framework for first mile
 
 ## Added data entities and data attributes
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/cocoaactionb.json"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../extensions/cocoaaction/cocoaaction.json"></script>
+
 
 (to be completed)
 

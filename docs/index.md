@@ -13,12 +13,19 @@
 
 --></style>
 
-## The reference framework for first mile farm data colection, storage and exchange
+## The reference framework for first mile farm data collection, storage and exchange
 
 ```eval_rst
 .. toctree::
    :maxdepth: 2
    :glob:
+
+   about
+   usecases
+   conceptualframework
+   identification
+   spatialdata
+   recommendations
 
    *
    */*

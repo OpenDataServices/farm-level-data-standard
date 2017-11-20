@@ -15,7 +15,7 @@ The current version provides:
 
 These three elements provide the basis for the reference framework. Other organisations are invited to help extending the framework by adding the data standards and data collection protocols. To add or to ask questions about the first mile reference **please contact: andre.jellema@data-impact.com**. 
 
-The development of this framework has been developed by [UTZ](https://utz.org/) supported by [Data-Impact.com](www.Data-Impact.com) and [Open Data Services](www.opendataservices.coop/) and funded by [ISEAL](https://www.isealalliance.org/)
+The development of this framework has been developed by [UTZ](https://utz.org/) supported by [Data-Impact.com](http://www.Data-Impact.com) and [Open Data Services](http://www.opendataservices.coop/) and funded by [ISEAL](https://www.isealalliance.org/)
 
 The following organisations are thanked for their reflection and contributions to the framework:
 

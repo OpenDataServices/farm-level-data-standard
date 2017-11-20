@@ -400,6 +400,9 @@ def setup(app):
     
     print("Full schema in first-mile-schema.json updated")
 
+    from flattentool import create_template, unflatten, flatten
+    create_template(schema="_static/first-mile-farm-data-schema.json",output_name="_static/flattened")
+
     global html_static_path
     for file in glob.glob("extensions/*/*.json"):
         html_static_path = html_static_path + [file]

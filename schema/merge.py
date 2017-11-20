@@ -3,7 +3,7 @@ import json_merge_patch
 import os
 import glob
 from collections import OrderedDict
-
+from flattentool import create_template, unflatten, flatten
 
 schema = OrderedDict()
 
@@ -19,5 +19,8 @@ for file in glob.glob("components/*.JSON") + glob.glob("components/*.json"):
 
 with open("first-mile-farm-data-schema.json","w") as outfile:
     outfile.write(json.dumps(schema,indent=2))
+
+create_template(schema="first-mile-farm-data-schema.json",output_name="../csv",output_format='csv')
+
 
 print("Full schema in first-mile-farm-data-schema.json updated")

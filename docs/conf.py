@@ -406,3 +406,6 @@ def setup(app):
     global html_static_path
     for file in glob.glob("extensions/*/*.json"):
         html_static_path = html_static_path + [file]
+
+    for file in glob.glob("../schema/components/*.json"):
+        html_static_path = html_static_path + [file]

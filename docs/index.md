@@ -20,12 +20,13 @@
    :maxdepth: 2
    :glob:
 
+   recommendations
    about
    usecases
    conceptualframework
    identification
    spatialdata
-   recommendations
+  
 
    *
    */*

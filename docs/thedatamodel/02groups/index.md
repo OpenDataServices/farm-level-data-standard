@@ -13,4 +13,4 @@ The data structure is visualised in the table below. All required data attribute
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/group.json"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../_static/farm.json"></script>

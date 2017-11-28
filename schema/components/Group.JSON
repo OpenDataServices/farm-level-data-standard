@@ -1,7 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/group.json",
   "definitions": {
-    "Group": {
+    "group": {
       "description": "Schema for the description of farmer groups",
       "primarykey": [
         "groupRecordGlobalID"

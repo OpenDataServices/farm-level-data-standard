@@ -17,43 +17,43 @@
         "04_farmerFamilyName"
       ],
       "properties": {
-        "05_FarmersAddress": {
-          "$ref": "#/definitions/address",
-          "description": "An address. This is the (legally) registered address of the organization.",
-          "title": "Address of the farmer"
-        },
-        "04_farmerFamilyName": {
-          "description": "Family name farmer",
-          "title": "Family name",
-          "type": "string"
-        },
-        "03_farmerFirstName": {
-          "description": "First name farmer",
-          "title": "First name ",
-          "type": "string"
-        },
-        "02_farmerGeoID": {
-          "$ref": "#/definitions/GeoID",
-          "description": "Geolocation that helps to uniquely identify the farmer in the field",
-          "title": "GeoID of the Farmer"
+        "00_farmerRecordGlobalID": {
+          "$ref": "#/definitions/GlobalID",
+          "description": "Globally Unique ID of the recording of the farmer at a specific time and by a specific organisation.",
+          "title": "Global farmer Record ID"
         },
         "01_farmerInternalID": {
           "description": "Internal dataset ID for the farmer in the dataset",
           "title": "Internal farmer ID",
           "type": "string"
         },
-        "00_farmerRecordGlobalID": {
-          "$ref": "#/definitions/GlobalID",
-          "description": "Globally Unique ID of the recording of the farmer at a specific time and by a specific organisation.",
-          "title": "Global farmer Record ID"
+        "02_farmerGeoID": {
+          "$ref": "#/definitions/GeoID",
+          "description": "Geolocation that helps to uniquely identify the farmer in the field",
+          "title": "GeoID of the Farmer"
+        },        
+        "03_farmerFirstName": {
+          "description": "First name farmer",
+          "title": "First name ",
+          "type": "string"
+        },
+        "04_farmerFamilyName": {
+          "description": "Family name farmer",
+          "title": "Family name",
+          "type": "string"
+        },
+        "05_FarmersAddress": {
+          "$ref": "#/definitions/address",
+          "description": "An address. This is the (legally) registered address of the organization.",
+          "title": "Address of the farmer"
         },
         "06_groupInternalIDs": {
+          "title": "groupInternalIDs",
+          "type": "array",
           "description": "array of group Internal Identification numbers linking the farmer to 1 or more groups",
           "items": {
             "type": "string"
-          },
-          "title": "groupInternalIDs",
-          "type": "array"
+          }
         }
       }
     }

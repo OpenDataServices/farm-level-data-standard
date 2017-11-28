@@ -7,20 +7,30 @@
 	"type": "object",
 	"properties": 
 	{
-		
-		"observations": {
-			"type":"array",
-			"title":"observations",
-			"items":{
-				  "$ref":"#/definitions/observation"
-			}
-		},
-		"plots": 
+		"metaData": 
 		{
 			"type":"array",
-			"title":"plots",
+			"title":"Meta data",
 			"items":{
-				"$ref":"#/definitions/plot"
+				"$ref":"#/definitions/metaData"
+			}
+		},
+		
+		"farmerGroups": 
+		{
+			"type":"array",
+			"title":"Farmer groups",
+			"items":{
+				"$ref":"#/definitions/group"
+			}
+		},		
+		
+		"farmers": 
+		{
+			"type":"array",
+			"title":"farmers",
+			"items":{
+				"$ref":"#/definitions/farmer"
 			}
 		},
 		
@@ -32,29 +42,21 @@
 				"$ref":"#/definitions/farm"
 			}
 		},
-		"farmers": 
-		{
+		
+		"observations": {
 			"type":"array",
-			"title":"farmers",
+			"title":"observations",
 			"items":{
-				"$ref":"#/definitions/farmer"
+				  "$ref":"#/definitions/observation"
 			}
 		},
-		"farmerGroups": 
+		
+		"plots": 
 		{
 			"type":"array",
-			"title":"Farmer groups",
+			"title":"plots",
 			"items":{
-				"$ref":"#/definitions/group"
-			}
-
-		},
-		"metaData": 
-		{
-			"type":"array",
-			"title":"Meta data",
-			"items":{
-				"$ref":"#/definitions/metaData"
+				"$ref":"#/definitions/plot"
 			}
 		}
 	}

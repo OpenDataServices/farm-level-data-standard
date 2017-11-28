@@ -6,10 +6,10 @@
       "title": "Observation",
       "type": "object",
       "required": [
-        "00_cropObservationRecordGlobalID",
-        "01_cropObservationInternalID",
-        "02_cropObservationDescription",
-        "03_cropObservationGeometry"
+        "00_ObservationRecordGlobalID",
+        "01_ObservationInternalID",
+        "02_ObservationDescription",
+        "03_ObservationGeometry"
         
       ],
       "Foreignkey": [
@@ -31,12 +31,12 @@
           "title": "plotInternalID",
           "type": "string"
         }
-        "02_bservationDescription": {
+        "02_observationDescription": {
           "description": "Description of het crop observation",
           "title": "Description of het crop observation",
           "type": "string"
         },
-        "03_bservationGeometry": {
+        "03_observationGeometry": {
           "description": "Geometry of the Observation as measured",
           "oneOf": [
             {
@@ -83,7 +83,7 @@
             "type",
             "coordinates"
           ],
-          "title": "CropObservationGeometry",
+          "title": "ObservationGeometry",
           "type": "object"
         }
       }

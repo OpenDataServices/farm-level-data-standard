@@ -45,6 +45,11 @@
           "title": "Internal Farmer ID",
           "type": "string"
         },
+        "05_owner_ID": {
+          "description": "ID of the owner as used by the datacollecting organisation",
+          "title": "Owner-ID",
+          "type": "string"
+        },
         "06_plotInternalIDs": {
           "description": "array of internal  plot_IDs ",
           "items": {
@@ -52,11 +57,6 @@
           },
           "title": "Internal ID for the plot",
           "type": "array"
-        },
-        "05_owner_ID": {
-          "description": "ID of the owner as used by the datacollecting organisation",
-          "title": "Owner-ID",
-          "type": "string"
         },
         "07_herdInternalIDs": {
           "description": "array of internal  herd_IDs ",

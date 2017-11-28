@@ -8,36 +8,36 @@
 	"properties": 
 	{
 
-		"Obsevations": {
+		"obsevations": {
 			"type":"array",
-			"title":"Observations",
+			"title":"observations",
 			"items":{
-				"$ref":"#/definitions/Observation"
+				"$ref":"#/definitions/observation"
 			}
 		},
-		"Plots": 
+		"plots": 
 		{
 			"type":"array",
-			"title":"Plots",
+			"title":"plots",
 			"items":{
-				"$ref":"#/definitions/Plot"
+				"$ref":"#/definitions/plot"
 			}
 		},
 		
-		"Farms": 
+		"farms": 
 		{
 			"type":"array",
 			"title":"Farm",
 			"items":{
-				"$ref":"#/definitions/Farm"
+				"$ref":"#/definitions/farm"
 			}
 		},
-		"Farmers": 
+		"farmers": 
 		{
 			"type":"array",
-			"title":"Farmers",
+			"title":"farmers",
 			"items":{
-				"$ref":"#/definitions/Farmer"
+				"$ref":"#/definitions/farmer"
 			}
 		},
 		"farmerGroups": 
@@ -45,7 +45,7 @@
 			"type":"array",
 			"title":"Farmer groups",
 			"items":{
-				"$ref":"#/definitions/Group"
+				"$ref":"#/definitions/group"
 			}
 
 		},
@@ -54,7 +54,7 @@
 			"type":"array",
 			"title":"Meta data",
 			"items":{
-				"$ref":"#/definitions/MetaData"
+				"$ref":"#/definitions/metaData"
 			}
 		}
 	}

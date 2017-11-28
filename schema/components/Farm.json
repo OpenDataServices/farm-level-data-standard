@@ -3,52 +3,60 @@
   "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/Farm.json",
   "definitions": {
     "farm": {
-      "Foreignkey": [
-        "farmerInternalID",
-        "owner_ID"
-      ],
+      "title": "Farm",
+      "type": "object"
       "description": "Schema for the description of a farm",
       "primarykey": [
         "farmRecordGlobalID"
       ],
+      "Foreignkey": [
+        "farmerInternalID",
+        "owner_ID"
+      ],
+      "required": [
+        "00_farmRecordGlobalID",
+        "01_farmInternalID",
+        "02_farmGeoID",
+        "03_farmDescription"
+      ],
       "properties": {
-        "3_farmAddress": {
+        "03_farmAddress": {
           "$ref": "#/definitions/address",
           "description": "An address. This is the (legally) registered address of the organization.",
           "title": "Address of the farm"
         },
-        "9_farmArea": {
+        "10_farmArea": {
           "description": "Surface area of all land belonging to (and not necessarily owned by) farm",
           "minimum": 0,
           "title": "Farm Area",
           "type": "number"
         },
-        "8_farmBoundary": {
+        "09_farmBoundary": {
           "$ref": "#/definitions/polygon",
           "description": "All the land belonging to (and not necessarily owned by) farm",
           "title": "Farm Boundary"
         },
-        "2_farmGeoID": {
+        "02_farmGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the farm  in the field",
           "title": "GeoID of the Farm"
         },
-        "1_farmInternalID": {
+        "01_farmInternalID": {
           "description": "Internal dataset ID for the farm in the dataset",
           "title": "Internal Farm ID",
           "type": "string"
         },
-        "0_farmRecordGlobalID": {
+        "00_farmRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "Global Farm Record ID"
         },
-        "4_farmerInternalID": {
+        "04_farmerInternalID": {
           "description": "Internal dataset ID for the farmer in the dataset",
           "title": "Internal Farmer ID",
           "type": "string"
         },
-        "herdInternalIDs": {
+        "07_herdInternalIDs": {
           "description": "array of internal  herd_IDs ",
           "items": {
             "type": "string"
@@ -69,13 +77,13 @@
           "title": "Internal ID for the plot",
           "type": "array"
         },
-        "10_stockofProduce": {
+        "11_stockofProduce": {
           "description": "Total stock of produce on the farm",
           "minimum": 0,
           "title": "Stock of Produce",
           "type": "number"
         },
-        "7_workerInternalIDs": {
+        "08_workerInternalIDs": {
           "description": "array of internal  worker_IDs ",
           "items": {
             "type": "string"
@@ -83,15 +91,7 @@
           "title": "Internal ID for the worker",
           "type": "array"
         }
-      },
-      "required": [
-        "0_farmRecordGlobalID",
-        "1_farmInternalID",
-        "2_farmGeoID",
-        "3_farmDescription"
-      ],
-      "title": "Farm",
-      "type": "object"
+      }
     }
   }
 }

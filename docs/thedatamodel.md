@@ -71,8 +71,8 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../../_static/docson/widget.js" data-schema="../../_static/Farmer.JSON"></script>
 
-The farm
-=========
+## The farm
+
 **Definition**
 A farm is described as a collection assets managed as 1 entity with the primarily objective to raise living organisms for food or raw materials. A farm often consists of fields, buildings and livestock and is run a farm manager and the farm owner has the rights on the produce. The farm owner and the farm owner are often united in 1 person: the farmer. A farm manager is often supported by farm workers to carry out the activities.
 

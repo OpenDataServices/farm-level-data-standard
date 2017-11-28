@@ -7,12 +7,12 @@
 	"type": "object",
 	"properties": 
 	{
-
-		"obsevations": {
+		
+		"observations": {
 			"type":"array",
 			"title":"observations",
 			"items":{
-				"$ref":"#/definitions/observation"
+				  "$ref":"#/definitions/observation"
 			}
 		},
 		"plots": 

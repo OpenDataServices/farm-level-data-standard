@@ -1,5 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+   "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/MetaData.json",
+   "definitions": {
     "metaData": {
       "description": "This data entity provides meta data about the first mile farm data",
       "primarykey": [
@@ -55,4 +57,4 @@
       "type": "object"
     }
   }
-
+}

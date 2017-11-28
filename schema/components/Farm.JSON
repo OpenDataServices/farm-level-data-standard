@@ -1,7 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/Farm.json",
   "definitions": {
-    "Farm": {
+    "farm": {
       "Foreignkey": [
         "farmerInternalID",
         "owner_ID"

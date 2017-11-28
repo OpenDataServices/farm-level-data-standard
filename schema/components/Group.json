@@ -5,7 +5,7 @@
     "group": {
       "description": "Schema for the description of farmer groups",
       "title": "Famer group",
-      "type": "object"
+      "type": "object",
       "primarykey": [
         "00_groupRecordGlobalID"
       ],

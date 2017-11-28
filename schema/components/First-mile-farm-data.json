@@ -16,7 +16,7 @@
 			}
 		},
 		
-		"farmerGroups": 
+		"groups": 
 		{
 			"type":"array",
 			"title":"Farmer groups",

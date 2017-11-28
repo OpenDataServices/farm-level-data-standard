@@ -7,52 +7,52 @@
       "title": "Famer group",
       "type": "object"
       "primarykey": [
-        "0_groupRecordGlobalID"
+        "00_groupRecordGlobalID"
       ],
       "required": [
-        "0_groupRecordGlobalID",
-        "1_groupInternalID",
-        "2_groupGeoID",
-        "3_groupName",
-        "4_groupDescription"
+        "00_groupRecordGlobalID",
+        "01_groupInternalID",
+        "02_groupGeoID",
+        "03_groupName",
+        "04_groupDescription"
       ],
       "properties": {
-        "0_groupRecordGlobalID": {
+        "00_groupRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farmer group at a specific time and by a specific organisation.",
           "title": "Global Group Record ID"
         },
-        "1_groupInternalID": {
+        "01_groupInternalID": {
           "description": "Internal dataset ID for the farmers group in the dataset",
           "title": "Internal Group ID",
           "type": "string"
         },
-        "2_groupGeoID": {
+        "02_groupGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the farmer group in the field",
           "title": "GeoID of the Farmergroup"
         },      
-        "3_groupName": {
+        "03_groupName": {
           "description": "Official name farmer group",
           "title": "Name of the farmer group",
           "type": "string"
         },
-       "4_groupDescription": {
+       "04_groupDescription": {
           "description": "Description of the farmersgroup",
           "title": "Group description",
           "type": "string"
         },     
-        "5_groupContactPoint": {
+        "05_groupContactPoint": {
           "$ref": "#/definitions/contactpoint",
           "description": "An person, contact point or department to contact at the farmergroup",
           "title": "Contact point farmers group"
         },
-        "6_groupAddress": {
+        "06_groupAddress": {
           "$ref": "#/definitions/address",
           "description": "An address. This is the (legally) registered address of the organization.",
           "title": "Group address"
         },
-        "7_farmer-IDS": {
+        "07_farmer-IDS": {
           "description": "array of all the farmer IDs, as used by the data collecting organisation, who are member of the group by ;",
           "items": [
             {
@@ -62,12 +62,12 @@
           "title": "Member farmers",
           "type": "array"
         },
-        "8_groupArea": {
+        "08_groupArea": {
           "$ref": "#/definitions/polygon",
           "description": "Area of operation of the famers group WGS84 Lat-Long Coordinates ddd.dddd",
           "title": "Group Area"
         },
-        "9_groupCertificates": {
+        "09_groupCertificates": {
           "description": "Certifications from standard organisations granted to this farmers group",
           "title": "Group Certificates",
           "type": "string"

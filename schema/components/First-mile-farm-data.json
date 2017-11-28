@@ -43,14 +43,6 @@
 			}
 		},
 		
-		"observations": {
-			"type":"array",
-			"title":"observations",
-			"items":{
-				  "$ref":"#/definitions/observation"
-			}
-		},
-		
 		"plots": 
 		{
 			"type":"array",
@@ -58,6 +50,15 @@
 			"items":{
 				"$ref":"#/definitions/plot"
 			}
-		}
+		},
+		
+		"observations": {
+			"type":"array",
+			"title":"observations",
+			"items":{
+				  "$ref":"#/definitions/observation"
+			}
+		} 
+		
 	}
 }

@@ -4,7 +4,7 @@
   "definitions": {
     "farm": {
       "title": "Farm",
-      "type": "object"
+      "type": "object",
       "description": "Schema for the description of a farm",
       "primarykey": [
         "farmRecordGlobalID"

@@ -12,14 +12,14 @@
         "03_plotDescription"
        ],
       "primarykey": [
-        "00_recordGlobalID"
+        "00_plotRecordGlobalID"
       ],
       "foreignkey": [
         "03_farm-ID",
         "04_owner-ID"
       ],
       "properties": {
-        "00_farmRecordGlobalID": {
+        "00_plotRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "Global Farm Record ID"
@@ -29,7 +29,7 @@
           "title": "Internal Farm ID",
           "type": "string"
         },
-        "02_PlotGeoID": {
+        "02_plotGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the plot  in the field",
           "title": "GeoID of the plot"

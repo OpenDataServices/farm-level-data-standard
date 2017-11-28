@@ -1,22 +1,42 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/observation.json",
+  "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/Observation.json",
   "definitions": {
     "observation": {
+      "title": "Observation",
+      "type": "object",
+      "required": [
+        "00_cropObservationRecordGlobalID",
+        "01_cropObservationInternalID",
+        "02_cropObservationDescription",
+        "03_cropObservationGeometry"
+        
+      ],
       "Foreignkey": [
-        "plotInternalID"
+        "04_plotInternalID"
       ],
       "description": "Schema for the description of a crop observation ",
       "primarykey": [
-        "cropObservationRecordGlobalID"
+        "00_observationRecordGlobalID"
       ],
       "properties": {
-        "cropObservationDescription": {
+        
+        "00_observationRecordGlobalID": {
+          "$ref": "#/definitions/GlobalID",
+          "description": "Globally Unique ID of the recording of the cropObservation at a specific time and by a specific organisation.",
+          "title": "Global cropObservation Record ID"
+        },
+        "01_observationInternalID": {
+          "description": "Internal Identification number of the plot",
+          "title": "plotInternalID",
+          "type": "string"
+        }
+        "02_bservationDescription": {
           "description": "Description of het crop observation",
           "title": "Description of het crop observation",
           "type": "string"
         },
-        "cropObservationGeometry": {
+        "03_bservationGeometry": {
           "description": "Geometry of the Observation as measured",
           "oneOf": [
             {
@@ -65,31 +85,8 @@
           ],
           "title": "CropObservationGeometry",
           "type": "object"
-        },
-        "cropObservationInternalID": {
-          "description": "Internal dataset ID for the crop observation  in the dataset",
-          "title": "Internal ID for the CropObservation",
-          "type": "string"
-        },
-        "cropObservationRecordGlobalID": {
-          "$ref": "#/definitions/GlobalID",
-          "description": "Globally Unique ID of the recording of the cropObservation at a specific time and by a specific organisation.",
-          "title": "Global cropObservation Record ID"
-        },
-        "plotInternalID": {
-          "description": "Internal Identification number of the plot",
-          "title": "plotInternalID",
-          "type": "string"
         }
-      },
-      "required": [
-        "cropObservationRecordGlobalID",
-        "cropObservationInternalID",
-        "cropObservationGeometry",
-        "cropObservationDescription"
-      ],
-      "title": "Crop observation",
-      "type": "object"
+      }
     }
   }
 }

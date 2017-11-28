@@ -5,53 +5,53 @@
     "metaData": {
       "description": "This data entity provides meta data about the first mile farm data",
       "primarykey": [
-        "exportDate",
-        "dataProvidersGeolocation"
+        "0_exportDate",
+        "1_dataProvidersGeolocation"
       ],
       "properties": {
-      "0exportDate": {
+      "0_exportDate": {
           "description": "Date when the data has been exported from the database into first-mile-farm-data-schema",
           "format": "date-time",
           "title": "Export date",
           "type": "string"
         },
-       "1dataProvidersID": {
+       "1_dataProvidersID": {
           "description": "Legal registration number of the organisation that converted its data into first-mile-farm-data-schema",
           "title": "Legal registration number of the data provider",
           "type": "string"
         },
-        "2dataProvidersName": {
+        "2_dataProvidersName": {
           "description": "Official name of the organisation that converted its data into First Mile Data Format",
           "title": "data provider name",
           "type": "string"
         },
-        "3dataProvidersGeolocation": {
+        "3_dataProvidersGeolocation": {
           "$ref": "#/definitions/position",
           "description": "Location of the frontdoor of head office of the organisation that converted it's data into first-mile-farm-data-schemaindicated by WGS84 Lat-Long Coordinates ddd.dddd",
           "title": "Geolocation of the data provider"
         },
-        "4datasetDescription": {
+        "4_datasetDescription": {
           "description": "Description of the data set that is converted into first-mile-farm-data-schema",
           "title": "Dataset description",
           "type": "string"
         },
-        "5dataProvidersPointofContact": {
+        "5_dataProvidersPointofContact": {
           "$ref": "#/definitions/contactpoint",
           "description": "Contact point of the organisation that converted it's data into first-mile-farm-data-schema",
           "title": "data provider point of contact"
         },
-        "6dataProvidersAdress": {
+        "6_dataProvidersAdress": {
           "$ref": "#/definitions/address",
           "description": "The legally registered address of the organisation that converted it's data into first-mile-farm-data-schema.",
           "title": "data providers lega; adress"
         }
       },
       "required": [
-        "exportDate",
-        "dataProvidersGeolocation",
-        "dataProvidersID",
-        "dataProvidersName",
-        "datasetDescription"
+        "0_exportDate",
+        "1_dataProvidersID",
+        "2_dataProvidersName",
+        "3_dataProvidersGeolocation",
+        "4_datasetDescription"
       ],
       "title": "Meta_data",
       "type": "object"

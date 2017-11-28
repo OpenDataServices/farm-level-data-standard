@@ -5,10 +5,10 @@
     "group": {
       "description": "Schema for the description of farmer groups",
       "primarykey": [
-        "groupRecordGlobalID"
+        "0_groupRecordGlobalID"
       ],
       "properties": {
-        "farmer-IDS": {
+        "7_farmer-IDS": {
           "description": "array of all the farmer IDs, as used by the data collecting organisation, who are member of the group by ;",
           "items": [
             {
@@ -18,52 +18,52 @@
           "title": "Member farmers",
           "type": "array"
         },
-        "groupAddress": {
+        "6_groupAddress": {
           "$ref": "#/definitions/address",
           "description": "An address. This is the (legally) registered address of the organization.",
           "title": "Group address"
         },
-        "groupArea": {
+        "8_groupArea": {
           "$ref": "#/definitions/polygon",
           "description": "Area of operation of the famers group WGS84 Lat-Long Coordinates ddd.dddd",
           "title": "Group Area"
         },
-        "groupCertificates": {
+        "9_groupCertificates": {
           "description": "Certifications from standard organisations granted to this farmers group",
           "title": "Group Certificates",
           "type": "string"
         },
-        "groupContactPoint": {
+        "5_groupContactPoint": {
           "$ref": "#/definitions/contactpoint",
           "description": "An person, contact point or department to contact at the farmergroup",
           "title": "Contact point farmers group"
         },
-        "groupDescription": {
+        "4_groupDescription": {
           "description": "Description of the farmersgroup",
           "title": "Group description",
           "type": "string"
         },
-        "groupGeoID": {
+        "2_groupGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the farmer group in the field",
           "title": "GeoID of the Farmergroup"
         },
-        "groupInternalID": {
+        "1_groupInternalID": {
           "description": "Internal dataset ID for the farmers group in the dataset",
           "title": "Internal Group ID",
           "type": "string"
         },
-        "groupName": {
+        "3_groupName": {
           "description": "Official name farmer group",
           "title": "Name of the farmer group",
           "type": "string"
         },
-        "groupRecordGlobalID": {
+        "0_groupRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farmer group at a specific time and by a specific organisation.",
           "title": "Global Group Record ID"
         },
-        "totalAmountofCertifiedProduce": {
+        "10_totalAmountofCertifiedProduce": {
           "description": "Total amount of certified produce in stock expressed in kg",
           "minimum": 0,
           "title": "Total amount of Certified Produce",
@@ -71,11 +71,11 @@
         }
       },
       "required": [
-        "groupRecordGlobalID",
-        "groupInternalID",
-        "groupGeoID",
-        "groupName",
-        "groupDescription"
+        "0_groupRecordGlobalID",
+        "1_groupInternalID",
+        "2_groupGeoID",
+        "3_groupName",
+        "4_groupDescription"
       ],
       "title": "Famer group",
       "type": "object"

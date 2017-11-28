@@ -8,37 +8,37 @@
         "farmerRecordGlobalID"
       ],
       "properties": {
-        "FarmersAddress": {
+        "5_FarmersAddress": {
           "$ref": "#/definitions/address",
           "description": "An address. This is the (legally) registered address of the organization.",
           "title": "Address of the farmer"
         },
-        "farmerFamilyName": {
+        "4_farmerFamilyName": {
           "description": "Family name farmer",
           "title": "Family name",
           "type": "string"
         },
-        "farmerFirstName": {
+        "3_farmerFirstName": {
           "description": "First name farmer",
           "title": "First name ",
           "type": "string"
         },
-        "farmerGeoID": {
+        "2_farmerGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the farmer in the field",
           "title": "GeoID of the Farmer"
         },
-        "farmerInternalID": {
+        "1_farmerInternalID": {
           "description": "Internal dataset ID for the farmer in the dataset",
           "title": "Internal farmer ID",
           "type": "string"
         },
-        "farmerRecordGlobalID": {
+        "0_farmerRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farmer at a specific time and by a specific organisation.",
           "title": "Global farmer Record ID"
         },
-        "groupInternalIDs": {
+        "6_groupInternalIDs": {
           "description": "array of group Internal Identification numbers linking the farmer to 1 or more groups",
           "items": {
             "type": "string"
@@ -48,11 +48,11 @@
         }
       },
       "required": [
-        "farmerRecordGlobalID",
-        "farmerInternalID",
-        "farmerGeoID",
-        "farmerFirstName",
-        "farmerFamilyName"
+        "0_farmerRecordGlobalID",
+        "1_farmerInternalID",
+        "2_farmerGeoID",
+        "3_farmerFirstName",
+        "4_farmerFamilyName"
       ],
       "title": "Farmer",
       "type": "object"

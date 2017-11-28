@@ -12,38 +12,38 @@
         "farmRecordGlobalID"
       ],
       "properties": {
-        "farmAddress": {
+        "3_farmAddress": {
           "$ref": "#/definitions/address",
           "description": "An address. This is the (legally) registered address of the organization.",
           "title": "Address of the farm"
         },
-        "farmArea": {
+        "9_farmArea": {
           "description": "Surface area of all land belonging to (and not necessarily owned by) farm",
           "minimum": 0,
           "title": "Farm Area",
           "type": "number"
         },
-        "farmBoundary": {
+        "8_farmBoundary": {
           "$ref": "#/definitions/polygon",
           "description": "All the land belonging to (and not necessarily owned by) farm",
           "title": "Farm Boundary"
         },
-        "farmGeoID": {
+        "2_farmGeoID": {
           "$ref": "#/definitions/GeoID",
           "description": "Geolocation that helps to uniquely identify the farm  in the field",
           "title": "GeoID of the Farm"
         },
-        "farmInternalID": {
+        "1_farmInternalID": {
           "description": "Internal dataset ID for the farm in the dataset",
           "title": "Internal Farm ID",
           "type": "string"
         },
-        "farmRecordGlobalID": {
+        "0_farmRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "Global Farm Record ID"
         },
-        "farmerInternalID": {
+        "4_farmerInternalID": {
           "description": "Internal dataset ID for the farmer in the dataset",
           "title": "Internal Farmer ID",
           "type": "string"
@@ -56,12 +56,12 @@
           "title": "Internal ID for the herd",
           "type": "array"
         },
-        "owner_ID": {
+        "5_owner_ID": {
           "description": "ID of the owner as used by the datacollecting organisation",
           "title": "Owner-ID",
           "type": "string"
         },
-        "plotInternalIDs": {
+        "6_plotInternalIDs": {
           "description": "array of internal  plot_IDs ",
           "items": {
             "type": "string"
@@ -69,13 +69,13 @@
           "title": "Internal ID for the plot",
           "type": "array"
         },
-        "stockofProduce": {
+        "10_stockofProduce": {
           "description": "Total stock of produce on the farm",
           "minimum": 0,
           "title": "Stock of Produce",
           "type": "number"
         },
-        "workerInternalIDs": {
+        "7_workerInternalIDs": {
           "description": "array of internal  worker_IDs ",
           "items": {
             "type": "string"
@@ -85,11 +85,10 @@
         }
       },
       "required": [
-        "farmRecordGlobalID",
-        "farmInternalID",
-        "farmGeoID",
-        "farmName",
-        "farmDescription"
+        "0_farmRecordGlobalID",
+        "1_farmInternalID",
+        "2_farmGeoID",
+        "3_farmDescription"
       ],
       "title": "Farm",
       "type": "object"

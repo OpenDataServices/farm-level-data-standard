@@ -36,8 +36,8 @@ In the following sections the core data entities of the generic data structure f
 ### Flattened table in Excel format
 A flattened table in excel format is avialable [here](http://farm-level-data-standard.readthedocs.io/en/latest/_static/first-mile-farm-data-schema-flattened.xlsx) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storag and exchange.
 
-Farmer group
-===========
+## Farmer group
+
 **Definition**
 Loosely defined group of farmers. Farmers can be member of a cooperative or union, organized by a company as contract farmers or as part of a support program, etc. 
 
@@ -53,8 +53,8 @@ The data structure is visualised in the table below. All required data attribute
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../../_static/docson/widget.js" data-schema="../../_static/Group.json"></script>
 
-The farmer
-=========
+## The farmer
+
 **Definition**
 The farmer is the person that manages one or more farms, possibly helped by farm workers. The farmer takes the major management decisions even when the decision is to do contract farming where the farm practice is often prescribed in detail by an external actor. In this model the farmer is not necessarily the owner of the farm. A farmer can manage someone else’s farm. Nor does he or she need to be the owner of the assets composing the farm, e.g a sharecropper is seen as a farmer in this model. For a more detailed explanation on how ownership plays a role in modelling different farm types, see also the conceptual model in '*the approac*' section.
 
@@ -91,8 +91,8 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../../_static/docson/widget.js" data-schema="../../_static/Farm.JSON"></script>
 
-The plot
-=========
+## The plot
+
 **Definition**
 A plot is an area of land, enclosed or otherwise, used for agricultural purposes such as cultivating crops or for livestock.
 
@@ -119,8 +119,8 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../../_static/docson/widget.js" data-schema="../../_static/Plot.JSON"></script>
 
-The plot observation
-=========
+## The observation
+
 **Definition**
 Data obtained from an assessment in a plot, generally done at a specific location, in a transect or in an area. This data entity is not meant to describe the plot as a whole. Based on observations estimates are made for the characteristics of the plot as a whole. The observations are records of the ‘plot observation’ data entity, where as the estimation for the plot as a whole based on the observations should be added as a data attribute of the plot data entity. For example in a grass plot the biomass is measured at 3 points. This can be added to the data set as 3 plot observation records, the average biomass calculated for the plot can be added to the plot data entity.
 
@@ -148,6 +148,6 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/observation.JSON"></script>
+<script src="../../_static/docson/widget.js" data-schema="../../_static/Observation.JSON"></script>
 
 

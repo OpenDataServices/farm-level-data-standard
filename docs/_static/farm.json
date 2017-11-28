@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {
+
     "Farm": {
       "Foreignkey": [
         "farmerInternalID",
@@ -94,4 +94,3 @@
       "type": "object"
     }
   }
-}

@@ -38,4 +38,4 @@ In the following sections the core data entities of the generic data structure f
 
 ### Flattened table in Excel format
 
-A flattened table in excel format is avialable [here](https://docs.google.com/spreadsheets/d/1lmKCK8K4ZXjjW23dOeA7WtUf3QbyhKg3HWF_7StsAsY/edit?usp=sharing) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storag and exchange.
+A flattened table in excel format is avialable [here](http://farm-level-data-standard.readthedocs.io/en/latest/_static/first-mile-farm-data-schema-flattened.xlsx) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storag and exchange.

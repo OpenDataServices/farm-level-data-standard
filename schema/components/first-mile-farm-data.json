@@ -6,15 +6,40 @@
 	"type": "object",
 	"properties": 
 	{
-		"1metaData": 
-		{
+
+		"Obsevations": {
 			"type":"array",
-			"title":"Meta data",
+			"title":"Observations",
 			"items":{
-				"$ref":"#/definitions/MetaData"
+				"$ref":"#/definitions/Observation"
 			}
 		},
-		"2farmerGroups": 
+		"Plots": 
+		{
+			"type":"array",
+			"title":"Plots",
+			"items":{
+				"$ref":"#/definitions/Plot"
+			}
+		},
+		
+		"Farms": 
+		{
+			"type":"array",
+			"title":"Farm",
+			"items":{
+				"$ref":"#/definitions/Farm"
+			}
+		},
+		"Farmers": 
+		{
+			"type":"array",
+			"title":"Farmers",
+			"items":{
+				"$ref":"#/definitions/Farmer"
+			}
+		},
+		"farmerGroups": 
 		{
 			"type":"array",
 			"title":"Farmer groups",
@@ -23,35 +48,12 @@
 			}
 
 		},
-		"3Farmers": 
+		"metaData": 
 		{
 			"type":"array",
-			"title":"Farmers",
+			"title":"Meta data",
 			"items":{
-				"$ref":"#/definitions/Farmer"
-			}
-		},
-		"4Farms": 
-		{
-			"type":"array",
-			"title":"Farm",
-			"items":{
-				"$ref":"#/definitions/Farm"
-			}
-		},
-		"5Plots": 
-		{
-			"type":"array",
-			"title":"Plots",
-			"items":{
-				"$ref":"#/definitions/Plot"
-			}
-		},
-		"6cropObsevations": {
-			"type":"array",
-			"title":"Crop Observations",
-			"items":{
-				"$ref":"#/definitions/CropObservation"
+				"$ref":"#/definitions/MetaData"
 			}
 		}
 	}

@@ -6,77 +6,77 @@
       "title": "Farm plot",
       "description": "Schema for the description of a farm plot ",
        "required": [
-        "00_PlotRecordGlobalID",
-        "01_PlotInternalID",
-        "02_PlotGeoID",
-        "03_PlotDescription"
+        "00_plotRecordGlobalID",
+        "01_plotInternalID",
+        "02_plotGeoID",
+        "03_plotDescription"
        ],
       "primarykey": [
-        "00_RecordGlobalID"
+        "00_recordGlobalID"
       ],
       "foreignkey": [
         "03_farm-ID",
-        "04owner-ID"
+        "04_owner-ID"
       ],
       "properties": {
-        "02_PlotGeoID": {
-          "$ref": "#/definitions/GeoID",
-          "description": "Geolocation that helps to uniquely identify the plot  in the field",
-          "title": "GeoID of the plot"
-        },
-        "09borderCrop": {
-          "description": "Name and variety of the border crop",
-          "title": "borderCrop",
-          "type": "string"
-        },
-        "01_farmInternalID": {
-          "description": "Internal dataset ID for the farm in the dataset",
-          "title": "Internal Farm ID",
-          "type": "string"
-        },
         "00_farmRecordGlobalID": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "Global Farm Record ID"
         },
-        "09expectedHarvestMainCrop": {
-          "description": "Expected harvest result main crop",
-          "minimum": 0,
-          "title": "Expected harvest result main crop",
-          "type": "number"
+        "01_plotInternalID": {
+          "description": "Internal dataset ID for the farm in the dataset",
+          "title": "Internal Farm ID",
+          "type": "string"
         },
-        "03farm-ID": {
+        "02_PlotGeoID": {
+          "$ref": "#/definitions/GeoID",
+          "description": "Geolocation that helps to uniquely identify the plot  in the field",
+          "title": "GeoID of the plot"
+        },   
+        "03_farm-ID": {
           "description": "Identification number of the farm which uses this plot, as used by the datacollecting organisation",
           "title": "Farm-ID",
           "type": "string"
         },
-        "08interCrop": {
-          "description": "Name and variety of the inter crop",
-          "title": "interCrop",
-          "type": "string"
-        },
-        "07mainCrop": {
-          "description": "Name and variety of the main crop",
-          "title": "MainCrop",
-          "type": "string"
-        },
-        "04owner_ID": {
+        "04_owner_ID": {
           "description": "ID of the owner as used by the datacollecting organisation",
           "title": "Owner-ID",
           "type": "string"
         },
-        "05plotArea": {
+        "05_plotArea": {
           "description": "Total area of the plot in hectare",
           "minimum": 0,
           "title": "Plot area",
           "type": "number"
         },
-        "06plotGeometry": {
+        "06_plotGeometry": {
           "$ref": "#/definitions/polygon",
           "description": "Geometry of the plot as measured",
           "title": "plotGeometry"
         },
-        "11soilType": {
+        "07_mainCrop": {
+          "description": "Name and variety of the main crop",
+          "title": "MainCrop",
+          "type": "string"
+        },
+        "08_interCrop": {
+          "description": "Name and variety of the inter crop",
+          "title": "interCrop",
+          "type": "string"
+        },
+        "09_borderCrop": {
+          "description": "Name and variety of the border crop",
+          "title": "borderCrop",
+          "type": "string"
+        },     
+        "10_expectedHarvestMainCrop": {
+          "description": "Expected harvest result main crop",
+          "minimum": 0,
+          "title": "Expected harvest result main crop",
+          "type": "number"
+        },
+        "11_soilType": {
           "description": "Main soiltype of the polt area",
           "minimum": 0,
           "title": "Soil type",

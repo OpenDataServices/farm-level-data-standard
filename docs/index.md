@@ -20,13 +20,14 @@
    :maxdepth: 2
    :glob:
 
-   recommendations
+   
    about
    usecases
    conceptualframework
+   thedatamodel
    identification
    spatialdata
-  
+   recommendations
 
    *
    */*

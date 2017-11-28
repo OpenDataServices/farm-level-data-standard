@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "Farm": {
+   
       "Foreignkey": [
         "farmerInternalID",
         "owner_ID"
@@ -92,5 +92,5 @@
       ],
       "title": "Farm",
       "type": "object"
-    }
+    
   }

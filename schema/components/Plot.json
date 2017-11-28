@@ -15,8 +15,8 @@
         "00_RecordGlobalID"
       ],
       "foreignkey": [
-        "farm-ID",
-        "owner-ID"
+        "03_farm-ID",
+        "04owner-ID"
       ],
       "properties": {
         "02_PlotGeoID": {

@@ -20,40 +20,42 @@
         "03_farmDescription"
       ],
       "properties": {
-        "03_farmAddress": {
-          "$ref": "#/definitions/address",
-          "description": "An address. This is the (legally) registered address of the organization.",
-          "title": "Address of the farm"
-        },
-        "10_farmArea": {
-          "description": "Surface area of all land belonging to (and not necessarily owned by) farm",
-          "minimum": 0,
-          "title": "Farm Area",
-          "type": "number"
-        },
-        "09_farmBoundary": {
-          "$ref": "#/definitions/polygon",
-          "description": "All the land belonging to (and not necessarily owned by) farm",
-          "title": "Farm Boundary"
-        },
-        "02_farmGeoID": {
-          "$ref": "#/definitions/GeoID",
-          "description": "Geolocation that helps to uniquely identify the farm  in the field",
-          "title": "GeoID of the Farm"
+        "00_farmRecordGlobalID": {
+          "$ref": "#/definitions/GlobalID",
+          "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
+          "title": "Global Farm Record ID"
         },
         "01_farmInternalID": {
           "description": "Internal dataset ID for the farm in the dataset",
           "title": "Internal Farm ID",
           "type": "string"
         },
-        "00_farmRecordGlobalID": {
-          "$ref": "#/definitions/GlobalID",
-          "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
-          "title": "Global Farm Record ID"
+        "02_farmGeoID": {
+          "$ref": "#/definitions/GeoID",
+          "description": "Geolocation that helps to uniquely identify the farm  in the field",
+          "title": "GeoID of the Farm"
+        },
+        "03_farmAddress": {
+          "$ref": "#/definitions/address",
+          "description": "An address. This is the (legally) registered address of the organization.",
+          "title": "Address of the farm"
         },
         "04_farmerInternalID": {
           "description": "Internal dataset ID for the farmer in the dataset",
           "title": "Internal Farmer ID",
+          "type": "string"
+        },
+        "06_plotInternalIDs": {
+          "description": "array of internal  plot_IDs ",
+          "items": {
+            "type": "string"
+          },
+          "title": "Internal ID for the plot",
+          "type": "array"
+        },
+        "05_owner_ID": {
+          "description": "ID of the owner as used by the datacollecting organisation",
+          "title": "Owner-ID",
           "type": "string"
         },
         "07_herdInternalIDs": {
@@ -64,25 +66,6 @@
           "title": "Internal ID for the herd",
           "type": "array"
         },
-        "5_owner_ID": {
-          "description": "ID of the owner as used by the datacollecting organisation",
-          "title": "Owner-ID",
-          "type": "string"
-        },
-        "6_plotInternalIDs": {
-          "description": "array of internal  plot_IDs ",
-          "items": {
-            "type": "string"
-          },
-          "title": "Internal ID for the plot",
-          "type": "array"
-        },
-        "11_stockofProduce": {
-          "description": "Total stock of produce on the farm",
-          "minimum": 0,
-          "title": "Stock of Produce",
-          "type": "number"
-        },
         "08_workerInternalIDs": {
           "description": "array of internal  worker_IDs ",
           "items": {
@@ -90,6 +73,23 @@
           },
           "title": "Internal ID for the worker",
           "type": "array"
+        },
+        "09_farmBoundary": {
+          "$ref": "#/definitions/polygon",
+          "description": "All the land belonging to (and not necessarily owned by) farm",
+          "title": "Farm Boundary"
+        },        
+        "10_farmArea": {
+          "description": "Surface area of all land belonging to (and not necessarily owned by) farm",
+          "minimum": 0,
+          "title": "Farm Area",
+          "type": "number"
+        },
+        "11_stockofProduce": {
+          "description": "Total stock of produce on the farm",
+          "minimum": 0,
+          "title": "Stock of Produce",
+          "type": "number"
         }
       }
     }

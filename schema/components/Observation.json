@@ -30,7 +30,7 @@
           "description": "Internal Identification number of the plot",
           "title": "plotInternalID",
           "type": "string"
-        }
+        },
         "02_observationDescription": {
           "description": "Description of het crop observation",
           "title": "Description of het crop observation",

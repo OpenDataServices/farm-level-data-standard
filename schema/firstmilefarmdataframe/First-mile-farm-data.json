@@ -9,7 +9,7 @@
 	{
 		"metaData": 
 		{
-			"type":"object",
+			"type":"array",
 			"title":"Metadata",
 			"items":{
 			"$ref":"#/definitions/metaData"

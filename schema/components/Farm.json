@@ -32,7 +32,7 @@
         },
         "02_farmGeoID": {
           "$ref": "#/definitions/GeoID",
-          "description": "Geolocation that helps to uniquely identify the farm  in the field",
+          "description": "Geolocation that helps to uniquely identify the farm in the field",
           "title": "GeoID of the Farm"
         },
         "03_farmAddress": {

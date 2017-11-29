@@ -90,14 +90,13 @@
           "minimum": 0,
           "title": "Stock of Produce",
           "type": "number"
-        }      
-      "properties": {
-      "00_extension1": {
-      "$ref": "#/definitions/GlobalID",
-      "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
-      "title": "extension1"
-    }
-        "$ref":"#/definitions/Farmextension"
+        },      
+        
+        "Farmextensions": {
+    			"type":"object",
+		    	"title":"Meta data",
+			    "$ref":"#/definitions/Farmextension"
+    		}
       }
     }
   }

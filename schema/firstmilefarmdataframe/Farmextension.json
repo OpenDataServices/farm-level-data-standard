@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/Farmextension.json",
   "definitions": {
-          "00_extension1": {
+          "Farmextension": {
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "extension1"

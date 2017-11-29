@@ -1,7 +1,7 @@
 {
   "title": "Farmextension",
   "type": "object",
-  "description": "Schema for all added extentions",
+  "description": "Listof all added extentions",
   "properties": {
     "00_extension1": {
       "$ref": "#/definitions/GlobalID",

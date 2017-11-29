@@ -92,11 +92,11 @@
           "type": "number"
         },      
         
-        "Farmextensions": {
+        "12_Farmextensions": {
     			"type":"object",
-		    	"title":"Meta data",
-			    "$ref":"#/definitions/Farmextension"
-    		}
+		    	"title":"Farmextension",
+			"$ref":"#/definitions/Farmextension"
+    	}
       }
     }
   }

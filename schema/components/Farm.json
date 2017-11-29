@@ -90,7 +90,9 @@
           "minimum": 0,
           "title": "Stock of Produce",
           "type": "number"
-    	}
+    	  },
+        "12_Farmextension": 
+      		{"$ref":"#/definitions/Farmextension"},
       }
     }
   }

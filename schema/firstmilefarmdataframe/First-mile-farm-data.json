@@ -12,7 +12,6 @@
 			"type":"object",
 			"title":"Meta data",
 			"$ref":"#/definitions/metaData"
-			}
 		},
 		
 		"groups": 

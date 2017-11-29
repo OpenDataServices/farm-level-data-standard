@@ -92,7 +92,17 @@
           "type": "number"
     	  },
         "12_Farmextension": 
-      		{"$ref":"#/definitions/Farmextension"}
+      		{
+              "title": "Farmextension",
+      "type": "object",
+      "description": "Listof all added extentions",
+      "properties": {
+          "00_extension1": {
+          "$ref": "#/definitions/GlobalID",
+          "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
+          "title": "extension1"}
+      }
+    }
       }
     }
   }

@@ -10,8 +10,10 @@
 		"metaData": 
 		{
 			"type":"object",
-			"title":"Meta data",
+			"title":"Metadata",
+			"items":{
 			"$ref":"#/definitions/metaData"
+			}
 		},
 		
 		"groups": 

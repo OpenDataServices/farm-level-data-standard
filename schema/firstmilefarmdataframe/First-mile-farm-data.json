@@ -8,13 +8,8 @@
 	"properties": 
 	{
 		"metaData": 
-		{
-			"type":"array",
-			"title":"Metadata",
-			"items":{
-			"$ref":"#/definitions/metaData"
-			}
-		},
+		{"$ref":"#/definitions/metaData"},
+		
 		
 		"groups": 
 		{

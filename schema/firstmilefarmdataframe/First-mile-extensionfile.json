@@ -8,18 +8,29 @@
       "description": "Here all farmer group extensions can be added",
       "properties": {}
       },  
-      
-      
+     "Farmerextension":{
+      "title": "Farmerextension",
+      "type": "object",
+      "description": "Here all farmer extensions can be added",
+      "properties": {}
+      },  
     "Farmextension":{
       "title": "Farmextension",
       "type": "object",
-      "description": "Listof all added extentions",
-      "properties": {
-          "00_extension1": {
-          "$ref": "#/definitions/GlobalID",
-          "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
-          "title": "extension1"
-          }
+      "description": "Here all farmer extensions can be added",
+      "properties": {}
+      },  
+    "Plotextension":{
+      "title": "Plotextension",
+      "type": "object",
+      "description": "Here all farmer extensions can be added",
+      "properties": {}
+      },  
+    "Observationextension":{
+      "title": "Observationextension",
+      "type": "object",
+      "description": "Here all farmer extensions can be added",
+      "properties": {}
       }
     }
   }

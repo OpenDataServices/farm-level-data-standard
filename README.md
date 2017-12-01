@@ -1,4 +1,4 @@
-# Open Data Services Sphinx Base
+# First Mile Reference Framework
 
 The reference framework for first mile farm data collection, storage and exchange
 
@@ -23,9 +23,8 @@ make dirhtml
 ### Translations
 
 Translations are generally done using this transifex project.
-Create one at https://www.transifex.com/OpenDataServices/add/ :
+Create one at https://www.transifex.com/:
 * Select "Public project" and "File-based Project".
-* Add the url of the project to this README, e.g. https://www.transifex.com/OpenDataServices/sphinx-base/dashboard/
 
 How to push new text up to Transifex:
 

@@ -25,4 +25,4 @@ The logic of the model is to map the first mile data elements collected in the f
 The dark blue elements in the figure above indicated in the model will be detailed out more in the description of the first mile data structure. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. 
 
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/marsadoptionobservationsb.json"></script>
+<script src="_static/docson/widget.js" data-schema="../../_static/marsadoptionobservationsb.json"></script>

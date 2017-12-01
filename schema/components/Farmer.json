@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/farmer.json",
   "definitions": {
     "farmer": {
       "description": "Schema for the description of a farmer",

@@ -90,7 +90,7 @@
           "minimum": 0,
           "title": "Stock of Produce",
           "type": "number"
-    	  }
+    	  }        
       }
     }
   }

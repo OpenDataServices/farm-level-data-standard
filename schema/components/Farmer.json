@@ -53,12 +53,13 @@
           "description": "array of group Internal Identification numbers linking the farmer to 1 or more groups",
           "items": {
             "type": "string"
+          }
           },
-        "12_Farmextension": 
+        "Farmextension": 
       	{"$ref":"#/definitions/Farmextension"}
       
         }
       }
     }
   }
-}
+

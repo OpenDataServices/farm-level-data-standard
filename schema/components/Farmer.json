@@ -55,8 +55,8 @@
             "type": "string"
           }
           },
-        "Farmextension": 
-      	{"$ref":"#/definitions/Farmextension"}
+        "Farmerextension": 
+      	{"$ref":"#/definitions/Farmerextension"}
       
         }
       }

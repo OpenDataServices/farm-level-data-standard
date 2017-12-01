@@ -53,6 +53,10 @@
           "$ref": "#/definitions/address",
           "description": "The legally registered address of the organisation that converted it's data into first-mile-farm-data-schema.",
           "title": "data providers lega; adress"
+        },
+        "Metadataextension": 
+      	{"$ref":"#/definitions/Metadataextension"}
+      
         }
       }
     }

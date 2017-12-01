@@ -7,7 +7,7 @@ from flattentool import create_template, unflatten, flatten
 
 schema = OrderedDict()
 
-for file in glob.glob("firstmilefarmdataframe/*.JSON") + glob.glob("components/*.json"):
+for file in glob.glob("firstmilefarmdataframe/*.json") + glob.glob("components/*.json"):
     try:
         with open(file,'r') as schema_file:
             print("Merging "+ file)

@@ -20,14 +20,12 @@
    :maxdepth: 2
    :glob:
 
-   test
    about
    usecases
-   conceptualframework
    thedatamodel
-   extensions
    identification
    spatialdata
+   extensions
    recommendations
 
 

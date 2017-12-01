@@ -1,6 +1,8 @@
 The data model
 ================
 
+## Approach
+
 In [the three schema approach](http://www.idef.com/wp-content/uploads/2016/02/idef0.pdf) a conceptual data model is proposed as an effective way to integrate between different databases and organisations. In the conceptual model the data entities are defined in the way that the end-users think and talk about concepts in the real world. It is therefore assumed that multiple organisations can easily develop a mapping from their own internal data structures onto such conceptual model because of the internal logic of the community. The conceptual model can therefore function as a neutral and organisation independent interface for the data from 1 database to another database. If all organisations would develop such a mapping (or adapt their own internal data structures), effortless and automated data exchange and data integration can take place. The reference framework for first mile farm data aims to put the foundation for such a neutral model.
 
 In ‘first mile’ projects many different aspects of farms are being collected. Examples are the agricultural and economic performance of a farm, farming activities performed at a farm, social and environmental conditions, compliance to standard measures etc. It is beyond the scope of this document to address all of these aspects in detail, including the recommended field data collection methodologies and associated data formats. This document presents a generic structure by representing the core components of a farm as data entities. It will only discuss data attributes that are essential for the internal structure and which are needed to be able understand and combine the data, such as farmers ID or the shape of the fields or are commonly collected such as the address or expected yield. It will also present the logic how the model can be expanded with additional data attributes or data entities providing the option to customise the model and to provide the opportunity to expand the generic model into a more all comprehensive model at a later stage.
@@ -24,7 +26,7 @@ The logic of the model is to map the first mile data elements collected in the f
 
 The dark blue elements in the figure above indicated in the model will be detailed out more in the description of the first mile data structure. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. 
 
-### Overview of model JSON model
+## Overview of model JSON model
 
 The complete data structure is visualised in the table below:
 * All required data attributes are indicated bold in, 
@@ -50,7 +52,7 @@ It is not required use all data entities (Farmer grouo, Farmer, Farm, Plot, Plot
 
 However to maintain compatibility of different global data sources it is essential that all data attributes are recorded at the right data entity level to maintain the internal structure of the data format. For example it does not fit the logic of the reference framework to add an attribute ‘farm size’ to the data entity ‘farmer’, even if that farmer owns or manages that farm. The farm and it’s size are inextricable, even if this is the only attribute recorded about farms in the data set. As a result the farm size of a farmer's farm can only be found by first finding the farm instance of the farmer's farm using internals keys and next the size of that farm instance.  
 
-### Extensions
+**Extensions**
 The reference framework is designed in such away that new data attributes or even new data entities for different purposes can be added to the model easily. This is illustrated under the heading extensions, for Cocoa action program and MARS Adoption Observations. The data formats are available together with the official protocols on how to collect the data in the field. 
 
 By adding more and more extensions to the reference framework, a repositry emerges of 'proven' data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in 1 repositry will also facilitate further standardization and interoperability discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
@@ -60,7 +62,7 @@ In the following sections the core data entities of the generic data structure f
 ### Flattened table in Excel format
 A flattened table in excel format is avialable [here](http://farm-level-data-standard.readthedocs.io/en/latest/_static/first-mile-farm-data-schema-flattened.xlsx) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storag and exchange
 
-## Detailed Json schema
+## Schema details in JSON
 
 ### Farmer group
 

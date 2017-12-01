@@ -81,6 +81,10 @@
           "minimum": 0,
           "title": "Soil type",
           "type": "integer"
+        },
+        "Plotextension": 
+      	{"$ref":"#/definitions/Plotextension"}
+      
         }
       }
     }

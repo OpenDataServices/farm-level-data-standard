@@ -3,10 +3,10 @@
 	"description": "Extension for the First-Mile Farm Data Schema to comply to the MARS adoption observations data submission template",
 	"properties": 
 	{
-		"plot":
+		"plotextension":
 					
 		{
-			"title": "plot-adds ",
+			"title": "Mars adobtion observation plot-adds ",
 			"description": "data attributes added to the plot data entity", 
 			"properties": 
 			{

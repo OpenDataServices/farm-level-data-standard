@@ -2,6 +2,12 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
 
     "definitions": {
+      "Metadataextension":{
+      "title": "Groupextension",
+      "type": "object",
+      "description": "Here all farmer group extensions can be added",
+      "properties": {}
+      },  
     "Groupextension":{
       "title": "Groupextension",
       "type": "object",
@@ -34,4 +40,3 @@
       }
     }
   }
-}

@@ -84,6 +84,10 @@
           ],
           "title": "ObservationGeometry",
           "type": "object"
+        },
+        "Observationextension": 
+      	{"$ref":"#/definitions/Observationextension"}
+      
         }
       }
     }

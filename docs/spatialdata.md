@@ -33,13 +33,52 @@ Nowadays spatial information is often collected and stored digitally using [an o
 ## Using a Navigational Satellite System (NSS) to collect spatial data in the field.
 A [Navigational Satellite System](https://en.wikipedia.org/wiki/Satellite_navigation) is a constellation satellites with accurately known positions or orbits that transmits coded radio signals. These coded radio signals are used by specialized electronic devices to calculate the location on the earth’s surface relative to the satellite constellation. Currently the American [NAVSTAR Global Positioning System or GPS](http://www.gps.gov/) is the most used system. However alternative systems exist, or become operational soon in the future (see also the below table below). Nowadays some receivers can already use the data from these alternative systems, or combine the signals of several systems. Combining the data from 2 or more NSS increases the accuracy of the measurement and decreases the search time for satellites data connections. Measurement with a NSS has an error. This error is depending on the system used, the openness of the sky above the location device (no buildings or trees), the number of satellites above the horizon at the moment of the measurement and actual position of these satellites in the sky. Under optimal conditions the error varies between 2 and 10 meters.  
 
-System | Coverage | Public horizontal Accuracy | Current Status | [TRF]( http://www.navipedia.net/index.php/Reference_Frames_in_GNSS)
---- | --- | --- | --- | ---
-[GPS](http://www.gps.gov/) | Global | 2-9m | Operational | WGS84
-[GLONASS](https://www.glonass-iac.ru/en/) | Global | 4-7m | Operational | PZ-90
-[BeiDou-2](http://en.beidou.gov.cn/) | South East Asia and Australia | 10m | Regionally Operational, Global in 2020 | BTRF
-[Galileio](http://www.esa.int/Our_Activities/Navigation/Galileo_and_EGNOS) | Global | 4m | Accessible,fully Operational in 2019 | GTFR
-[NAVIC](http://www.isro.gov.in/irnss-programme) | 1.500 km beyond the Indian subcontinent | 10m | Operational | ITRF
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Coverage</th>
+<th>Public horizontal Accuracy</th>
+<th>Current Status</th>
+<th><a href="http://www.navipedia.net/index.php/Reference_Frames_in_GNSS" rel="nofollow">TRF</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.gps.gov/" rel="nofollow">GPS</a></td>
+<td>Global</td>
+<td>2-9m</td>
+<td>Operational</td>
+<td>WGS84</td>
+</tr>
+<tr>
+<td><a href="https://www.glonass-iac.ru/en/" rel="nofollow">GLONASS</a></td>
+<td>Global</td>
+<td>4-7m</td>
+<td>Operational</td>
+<td>PZ-90</td>
+</tr>
+<tr>
+<td><a href="http://en.beidou.gov.cn/" rel="nofollow">BeiDou-2</a></td>
+<td>South East Asia and Australia</td>
+<td>10m</td>
+<td>Regionally Operational, Global in 2020</td>
+<td>BTRF</td>
+</tr>
+<tr>
+<td><a href="http://www.esa.int/Our_Activities/Navigation/Galileo_and_EGNOS" rel="nofollow">Galileio</a></td>
+<td>Global</td>
+<td>4m</td>
+<td>Accessible,fully Operational in 2019</td>
+<td>GTFR</td>
+</tr>
+<tr>
+<td><a href="http://www.isro.gov.in/irnss-programme" rel="nofollow">NAVIC</a></td>
+<td>1.500 km beyond the Indian subcontinent</td>
+<td>10m</td>
+<td>Operational</td>
+<td>ITRF</td>
+</tr></tbody></table>
 
 ### Collecting a point location
 

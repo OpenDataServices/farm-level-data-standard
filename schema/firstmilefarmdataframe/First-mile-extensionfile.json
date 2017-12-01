@@ -3,7 +3,7 @@
 
     "definitions": {
       "Metadataextension":{
-      "title": "Groupextension",
+      "title": "Matadataextension",
       "type": "object",
       "description": "Here all farmer group extensions can be added",
       "properties": {}

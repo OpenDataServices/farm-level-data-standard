@@ -35,10 +35,10 @@ for file in glob.glob("marsadoptionobservations/*.json") + glob.glob("components
         print("Problem merging from " + file)
         pass
 
-with open("first-mile marsadoptionobservations.json","w") as outfile:
+with open("first-mile-marsadoptionobservations.json","w") as outfile:
     outfile.write(json.dumps(schema,indent=2))
 
-create_template(schema="first-mile marsadoptionobservations.json",output_name="../csv",output_format='csv')
+create_template(schema="first-mile-marsadoptionobservations.json",output_name="../csv",output_format='csv')
 
 
 print("Full schema in first-mile marsadoptionobservations.json updated")

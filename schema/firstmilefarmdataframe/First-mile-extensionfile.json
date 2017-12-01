@@ -5,7 +5,7 @@
       "Metadataextension":{
       "title": "Metadataextension",
       "type": "object",
-      "description": "Here all farmer group extensions can be added",
+      "description": "Here all meta data extensions can be added",
       "properties": {}
       },  
     "Groupextension":{
@@ -23,19 +23,19 @@
     "Farmextension":{
       "title": "Farmextension",
       "type": "object",
-      "description": "Here all farmer extensions can be added",
+      "description": "Here all farm extensions can be added",
       "properties": {}
       },  
     "Plotextension":{
       "title": "Plotextension",
       "type": "object",
-      "description": "Here all farmer extensions can be added",
+      "description": "Here all plot extensions can be added",
       "properties": {}
       },  
     "Observationextension":{
       "title": "Observationextension",
       "type": "object",
-      "description": "Here all farmer extensions can be added",
+      "description": "Here all observation extensions can be added",
       "properties": {}
       }
     }

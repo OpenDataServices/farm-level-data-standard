@@ -24,4 +24,3 @@ create_template(schema="first-mile-farm-data-schema.json",output_name="../csv",o
 
 
 print("Full schema in first-mile-farm-data-schema.json updated")
-

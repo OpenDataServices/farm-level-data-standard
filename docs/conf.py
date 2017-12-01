@@ -385,7 +385,7 @@ def setup(app):
 
     schema = OrderedDict()
 
-    for file in glob.glob("../schema/components/*.JSON") + glob.glob("../schema/components/*.json"):
+    for file in glob.glob("../schema/firstmilefarmdataframe/*.json") + glob.glob("../schema/components/*.json"):
         try:
             with open(file,'r') as schema_file:
                 print("Merging "+ file)

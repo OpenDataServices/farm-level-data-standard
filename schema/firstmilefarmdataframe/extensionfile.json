@@ -1,6 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
+    "definitions": {
+    "farm": {
+    "12_Farmextension":{
       "title": "Farmextension",
       "type": "object",
       "description": "Listof all added extentions",
@@ -9,6 +12,7 @@
           "$ref": "#/definitions/GlobalID",
           "description": "Globally Unique ID of the recording of the farm at a specific time and by a specific organisation.",
           "title": "extension1"
+          }
       }
     }
   }

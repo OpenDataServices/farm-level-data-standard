@@ -78,8 +78,8 @@
           "title": "Total amount of Certified Produce",
           "type": "number"
         },
-        "Farmextension": 
-      	{"$ref":"#/definitions/Farmextension"}
+        "Groupextension": 
+      	{"$ref":"#/definitions/Groupextension"}
         
       }
     }

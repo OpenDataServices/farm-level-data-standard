@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "definitions": {
-    "farm": {
     "12_Farmextension":{
       "title": "Farmextension",
       "type": "object",

@@ -1,4 +1,4 @@
-# Datamodel extensions
+Extensions
 
 ## CocoaAction
 

@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id":"https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/First-mile-farm-data.json",
-	"title": "First mile farm data schema",
+	"title": "First mile farm mars adoption observations schema",
 	"description": "Data structure for first mile farm data, as part of the reference framework for the collection, storage and exchanget of first mile farm data",
 	"language": "en",
 	"type": "object",

@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"id":"https://raw.githubusercontent.com/firstmile/reference-framework/master/schema/components/First-mile-farm-data.json",
 	"title": "First mile farm mars adoption observations schema",
-	"description": "Data structure for the collection of mars adoption observation data ",
+	"description": "First mile data structure for cocoa action ",
 	"language": "en",
 	"type": "object",
 	"properties": 

@@ -36,6 +36,8 @@ The complete data structure is visualised in the table below:
 
 <script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/_static/first-mile-farm-data-schema.json"></script>
 
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/_static/first-mile-farm-data-marsadoptionobservations-schema.json"></script>
+
 In [JSON schema language]( http://json-schema.org/) the data entities making up the conceptual model (Group, Farmer, Farm, Plot, Plotobservation) as described in the conceptual model are stored as [arrays of JSON objects](https://specs.frictionlessdata.io/table-schema/).
 
 Each time a data entity is recorded a new JSON object is created and added to the array. The recording of the same data entity at another point in time needs to be added as a new record to allow for continuous monitoring and to allow the composition of farms and ownership to change overtime. The recording of the data entities therefore are timestamped. 

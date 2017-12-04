@@ -84,7 +84,7 @@ The data structure is visualised in the table below. All required data attribute
 ### The farmer
 
 **Definition**
-The farmer is the person that manages one or more farms, possibly helped by farm workers. The farmer takes the major management decisions even when the decision is to do contract farming where the farm practice is often prescribed in detail by an external actor. In this model the farmer is not necessarily the owner of the farm. A farmer can manage someone else’s farm. Nor does he or she need to be the owner of the assets composing the farm, e.g a sharecropper is seen as a farmer in this model. For a more detailed explanation on how ownership plays a role in modelling different farm types, see also the conceptual model in '*the approac*' section.
+The farmer is the person that manages one or more farms, possibly helped by farm workers. The farmer takes the major management decisions even when the decision is to do contract farming where the farm practice is often prescribed in detail by an external actor. In this model the farmer is not necessarily the owner of the farm. A farmer can manage someone else’s farm. Nor does he or she need to be the owner of the assets composing the farm, e.g a sharecropper is seen as a farmer in this model. For a more detailed explanation on how ownership plays a role in modelling different farm types, see also the conceptual model in '*the approach*' section.
 
 **Data attributes**
 
@@ -97,7 +97,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../_static/docson/widget.js" data-schema="_static/Farmer.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="_static/Farmer.json"></script>
 
 ### The farm
 
@@ -117,7 +117,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../_static/docson/widget.js" data-schema="_static/Farm.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/Farm.json"></script>
 
 ### The plot
 

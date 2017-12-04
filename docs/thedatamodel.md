@@ -79,7 +79,7 @@ The data structure is visualised in the table below. All required data attribute
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/Group.json"></script>
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/Group.json"></script>
 
 ### The farmer
 
@@ -97,7 +97,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/Farmer.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/Farmer.JSON"></script>
 
 ### The farm
 
@@ -117,7 +117,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/Farm.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/Farm.JSON"></script>
 
 ### The plot
 
@@ -145,7 +145,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/Plot.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/Plot.JSON"></script>
 
 ### The observation
 
@@ -176,6 +176,6 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../_static/docson/widget.js" data-schema="../_static/Farm.json"></script>
+<script src="../_static/docson/widget.js" data-schema="http://farm-level-data-standard.readthedocs.io/en/latest/Observation.json"></script>
 
 

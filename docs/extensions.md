@@ -7,7 +7,7 @@ This is an unofficial extension schema on the reference framework for first mile
 
 **Added data entities and data attributes**
 
-<script src="_static/docson/widget.js" data-schema="http://data-impact.com/thefirstmile-referenceframe/JSON/cocoaactionb.json"></script>
+<script src="../_static/docson/widget.js" data-schema="http://data-impact.com/thefirstmile-referenceframe/JSON/cocoaactionb.json"></script>
 
 
 (to be completed)
@@ -31,7 +31,7 @@ This is an unofficial extension schema of the reference framework for first mile
 
 **Added data entities and data attributes**
 
-<script src="../../_static/docson/widget.js" data-schema="http://data-impact.com/thefirstmile-referenceframe/JSON/marsadoptionobservationsb.json"></script>
+<script src="../_static/docson/widget.js" data-schema="http://data-impact.com/thefirstmile-referenceframe/JSON/marsadoptionobservationsb.json"></script>
 
 **Prescribed methodologies to measure the data elements**
 

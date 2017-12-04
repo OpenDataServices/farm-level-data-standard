@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "definitions": {
+      "Metadataextension":{
+      "title": "Metadataextension",
+      "type": "object",
+      "description": "Here all meta data extensions can be added",
+      "properties": {}
+      },  
+    "Groupextension":{
+      "title": "Groupextension",
+      "type": "object",
+      "description": "Here all farmer group extensions can be added",
+      "properties": {}
+      },  
+     "Farmerextension":{
+      "title": "Farmerextension",
+      "type": "object",
+      "description": "Here all farmer extensions can be added",
+      "properties": {}
+      },  
+    "Farmextension":{
+      "title": "Farmextension",
+      "type": "object",
+      "description": "Here all farm extensions can be added",
+      "properties": {}
+      },  
+    "Plotextension":{
+      "title": "Plotextension",
+      "type": "object",
+      "description": "Here all plot extensions can be added",
+      "properties": {}
+      },  
+    "Observationextension":{
+      "title": "Observationextension",
+      "type": "object",
+      "description": "Here all observation extensions can be added",
+      "properties": {}
+      }
+    }
+  }

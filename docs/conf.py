@@ -384,7 +384,7 @@ def setup(app):
     from collections import OrderedDict
      
     
-      schema = OrderedDict()
+    schema = OrderedDict()
 
     for file in glob.glob("../schema/cocoaaction/*.json") + glob.glob("../schema/components/*.json"):
         try:

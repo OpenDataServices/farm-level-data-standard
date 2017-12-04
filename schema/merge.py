@@ -17,7 +17,7 @@ for file in glob.glob("marsadoptionobservations/*.json") + glob.glob("components
         print("Problem merging from " + file)
         pass
 
-with open("first-mile-farm-data-schema.json","w") as outfile:
+with open("first-mile-farm-data-marsadoptionobservations-schema.json","w") as outfile:
     outfile.write(json.dumps(schema,indent=2))
 
 create_template(schema="first-mile-farm-data-schema.json",output_name="../csv",output_format='csv')

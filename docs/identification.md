@@ -4,24 +4,24 @@ Uniquely identifying data elements
 ### Key message
 **In the reference framework a system of 3 identifiers is proposed to uniquely identify objects and model the relationships between these objects.** These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalRecordID. The system allows the exchange and merging of data that is structured in a similar way.
 
-1. **The InternalID** provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them. 
-2. **The GeoID** provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
-3. **The GlobalRecordID** is a globally unique identifier for First Mile Farm data record.
+1. **The GlobalRecordID** is a globally unique identifier for First Mile Farm data record. 
+2. **The InternalID** provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them.
+3. **The GeoID** provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
 
-The GeoID and the GlobalRecordID can be used to maintain the InternalID structure while exchanging data between organisations.
+The Internal database structure is provided by the InternatID.The GeoID and the GlobalRecordID can be used to maintain this structure while exchanging data between organisations.
 
 ### Introduction
 In an ideal world every farmer, farm, plot or farmers group would be globally uniquely identified by some formal or informal system and these identification numbers would be generally known and used by different organisations. Organisations could make data recordings about farmer, farm, plot or farmer groups and could easily combine these recordings with other recordings trusting these globally unique IDs to sort the data and make analyses using all records combined. However currently this is an utopia, because there is no perfect system uniquely identifying all farmer, farm, plot or farmers groups globally (see also the sections below). 
 
-Instead the reference framework uses 3 identifiers to build and internal structure and maintain a local data set of first mile farm data: 1 the internal ID, 2 the GloballyUniqueRecordID and the GeoID. 
+Instead the reference framework uses 3 identifiers to build and internal structure and maintain a local data set of first mile farm data: 1 the internal ID, 2 the GloballyUniqueRecordID and 3 the GeoID. 
 
 ### The InternalID
 The InternalID is the ID used to uniquely identify Data Entities in a data set in a local data base and to structure the data using these internalIDs as Keys to link the farmers to farmer groups, farms to farmers, plots to farms and plot observations to plots. 
 
-When the data set is merged with another First Mile Farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principles there are **3 problems that need to be solved**.
+When the data set is merged with another First Mile Farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principle there are **3 problems that need to be solved**.
 
 1. **If 2 datasets are merged and they may contain information about the same farmers** these farmers should get the same InternalIDs and all related Keys inside the combined dataset need to be updated.
-2. **If 2 different farmers have the same InternalID before the merge**, 1 of the 2 farmers need to get a new and unique ID during the merger and all Keys need to be updated accordingly.
+2. **If 2 different farmers have the same InternalID before the merge**, 1 of the 2 farmers need to get a new and unique InternalID during the merger and all Keys need to be updated accordingly.
 3. **If dataset a is shared with organisation b and with organisation c and next these organisations merge their datasets** the newly derived data set will contain all records of dataset a twice. These doubles need to be removed from the database.
 
 **Datastructure**
@@ -46,6 +46,8 @@ It is assumed that even the location of an interview is relative in the proximit
 * the legal registration number (and what kind)
 * the Address
 * etc. (*see also the section below on alternative ways of identification for more suggestions*)
+
+**The GeoID also provides a means to verify an identities of objects in the field.**
 
 **Datastructure**
 The supporting data structure is visualised in the table below. All required data attributes are indicated in bold.
@@ -82,7 +84,7 @@ All of this data could be added to the records to facilitate the identification 
 
 * **Using Cooperative register** Many farmers work for a cooperative. In order to function well the cooperative needs to register all its members to administrate things like: the farmers input need, the amount of produce delivered to the farmer, debit and credits, etc. The reliability of the data in the administration of a cooperatives varies to a great extent. Moreover not all farmers are connected to a cooperative making it impossible to create a globally unique identifier.
 
-* **Using the Blue Number** The Blue Number Initiative, led by International Trade Center (ITC), the UN and GS1, aims to make food and agriculture supply chains and systems more sustainable, contributing to the United Nations Global Goals for Sustainable Development. The Blue Number acts as a unique identifier for use by anyone involved in the food chain from farmers, producers, distributors and vendors to consumers. Currently there are about 2000 people registered mainly in Singapore.
+* **Using the Blue Number** The [Blue Number Initiative](https://www.bluenumber.org/), led by International Trade Center (ITC), the UN and GS1, aims to make food and agriculture supply chains and systems more sustainable, contributing to the United Nations Global Goals for Sustainable Development. The Blue Number acts as a unique identifier for use by anyone involved in the food chain from farmers, producers, distributors and vendors to consumers. Currently there are about 2000 people registered mainly in Singapore.
 
 * **Building an enumeration of real world characteristics.** Uniquely identifying a farmer by his or her name works pretty well in small groups. However when the database expands many doubles will occur. As strategy to stratification with real world characteristics can be created in the database to maintain the small groups with mostly unique names. An examples of such a stratification is to add the names of the lowest and second lowest administrative zones to the name the farmer.
 

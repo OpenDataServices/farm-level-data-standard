@@ -5,6 +5,10 @@
 	"description": "Data structure for first mile farm data, as part of the reference framework for the collection, storage and exchanget of first mile farm data",
 	"language": "en",
 	"type": "object",
+
+        "required": [
+         "metaData"
+        ],
 	"properties": 
 	{
 		"metaData": 

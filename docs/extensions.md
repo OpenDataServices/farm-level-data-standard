@@ -11,7 +11,7 @@ This is an unofficial extension schema of the reference framework for first mile
 **Added data entities and data attributes**
 In the MARS adoption observations framework questions are being asked about the farm. However when carefully read all data needs seem to adress generalizations of the crop at plot level. Hence the Mars adoption observations have been implemented as plot level data entities. 
 
-<script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/marsadoptionobservationsextension.json"></script>
+
 
 **Prescribed methodologies to measure the data elements**
 
@@ -24,7 +24,7 @@ This is an unofficial extension schema on the reference framework for first mile
 
 **Added data entities and data attributes**
 
-<script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/cocoaactionextension.json"></script>
+
 
 
 (to be completed)

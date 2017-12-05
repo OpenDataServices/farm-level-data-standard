@@ -1,11 +1,15 @@
 Extensions
 ===============
+The reference framework is designed in such away that new data attributes or even new data entities for different purposes can be added to the model easily. This is illustrated below for Cocoa action program and MARS Adoption Observations. The data formats are available together with the official protocols on how to collect the data in the field.
+
+By adding more and more extensions to the reference framework, a repositry emerges of ‘proven’ data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in 1 repositry will also facilitate further standardization and interoperability discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
 
 ## MARS adoption observations
 
 This is an unofficial extension schema of the reference framework for first mile farm data collection, storage and exchange, intended as an example for the MARS Adoption Observations. For further information on MARS Adoption Observations see [the ppt](https://sustainablefoodlab.org/wp-content/uploads/2017/03/Mars_Cocoa-learnings_SFL-smallholders-meeting-1.pdf)  
 
 **Added data entities and data attributes**
+In the MARS adoption observations framework questions are being asked about the farm. However when carefully read all data needs seem to adress generalizations of the crop at plot level. Hence the Mars adoption observations have been implemented as plot level data entities. 
 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/marsadoptionobservationsextension.json"></script>
 

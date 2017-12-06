@@ -382,10 +382,10 @@ def setup(app):
     import os
     import glob
     from collections import OrderedDict
-     
+
     schema = OrderedDict()
 
-    for file in glob.glob("../schema/firstmilefarmdataframe/*.json") + glob.glob("../schema/components/*.json"):
+    for file in glob.glob("../schema/components/*.JSON") + glob.glob("../schema/components/*.json"):
         try:
             with open(file,'r') as schema_file:
                 print("Merging "+ file)
@@ -402,47 +402,6 @@ def setup(app):
 
     from flattentool import create_template, unflatten, flatten
     create_template(schema="_static/first-mile-farm-data-schema.json",output_name="_static/flattened")
-
-    schema = OrderedDict()
-
-    for file in glob.glob("../schema/marsadoptionobservations/*.json") + glob.glob("../schema/components/*.json"):
-        try:
-            with open(file,'r') as schema_file:
-                print("Merging "+ file)
-                schema_element = json.loads(schema_file.read(), object_pairs_hook=OrderedDict)
-                schema = json_merge_patch.merge(schema, schema_element, position='last')
-        except Exception:
-            print("Problem merging from " + file)
-            pass
-
-    with open("_static/first-mile-farm-data-marsadoptionobservations-schema.json", "w") as outfile:
-        outfile.write(json.dumps(schema,indent=2))        
-    
-    print("Full schema in first-mile-farm-data-marsadoptionobservations-schema.json updated")
-
-    from flattentool import create_template, unflatten, flatten
-    create_template(schema="_static/first-mile-farm-data-marsadoptionobservations-schema.json",output_name="_static/flattened")    
-    
-    schema = OrderedDict()
-
-    for file in glob.glob("../schema/cocoaaction/*.json") + glob.glob("../schema/components/*.json"):
-        try:
-            with open(file,'r') as schema_file:
-                print("Merging "+ file)
-                schema_element = json.loads(schema_file.read(), object_pairs_hook=OrderedDict)
-                schema = json_merge_patch.merge(schema, schema_element, position='last')
-        except Exception:
-            print("Problem merging from " + file)
-            pass
-
-    with open("_static/first-mile-farm-data-cocoaaction-schema.json", "w") as outfile:
-        outfile.write(json.dumps(schema,indent=2))        
-    
-    print("Full schema in first-mile-farm-data-cocoaaction-schema.json updated")
-
-    from flattentool import create_template, unflatten, flatten
-    create_template(schema="_static/first-mile-farm-data-cocoaaction-schema.json",output_name="_static/flattened")
-   
 
     global html_static_path
     for file in glob.glob("extensions/*/*.json"):

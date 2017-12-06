@@ -12,7 +12,7 @@
 				"plantingMaterial": 
 				{
 					"type": "object",
-					"title": "plantingMaterial",
+					"title": "Planting material",
 					"description": "Evaluation of the planting material used",
 					"properties": 
 					{

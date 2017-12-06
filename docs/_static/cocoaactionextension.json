@@ -1,379 +1,567 @@
 {
-	"title": "CocoaAction extension",
-	"description": "Extension for the First-Mile Farm Data Schema to comply to the CocoaAction data submission template",
-	"properties": 
-	{
-		"metaData": 
-		{
-		"title": "metaData-adds ",
-		"description": "data attributes added to the meta data entity",
-			"properties": 
-			{
-			"reportingYear": 
-		{
-			"title": "Reporting year",
-			"description": "Year of reporting to Cocoa Action",
-			"type": "string",
-			"format": "date-fullyear"
-		}
-		}
-		},
-		"Group": 
-		{
-		"title": "Group-adds ",
-		"description": "data attributes added to the group data entity",
-			"properties": 
-			{
-				"Averageproduction": 
-				{
-					"type": "intiger",
-					"title": "Average production by group",
-					"description": "Average production by the farmer group calculated as the production sum off all farmers devided by the total cultivated area",
-					"type": "number",
-					"minimum": -1
-				},
-				"Averagemaleproduction": 
-				{
-					"type": "intiger",
-					"title": "Average producution by males",
-					"description": "Average producution by the males in the group calculated as the production sum off all male farmers devided by the total area cultivated by the male farmers",
-					"type": "number",
-					"minimum": -1
-				},
-				"Averagefemaleproduction": 
-				{
-					"type": "intiger",
-					"title": "Average producution by females",
-					"description": "Average producution by the females in the group calculated as the production sum off all female farmers devided by the total area cultivated by the female farmers",
-					"type": "number",
-					"minimum": -1
-				}
-			}
-		},
-		"Farmer": 
-		{
-		"title": "Farmer-adds ",
-		"description": "data attributes to the farmer data entity",
-
-			"properties": 
-			{
-				"#Farmsmanaged": 
-				{
-					"type": "intiger",
-					"title": "# Farms managed",
-					"description": "Number of farms managed by this particular farmer (ownership of the farm is an attriute of the farm itself, since farms can also be owned by an other private individual, a compagny or a community )",
-					"type": "intiger",
-					"minimum": -1
-				},
-				"participatedintraining": 
-				{
-					"type": "intiger",
-					"title": "Participated in training",
-					"description": "The farmer participated in the cocoa-action training (yes=1,no=0)",
-					"type": "intiger",
-					"minimum": 0,
-					"maximum": 1
-				}
- 
-			}
-		
-	},
-		
-	"Farm": {
-		"title": "Farm-adds ",
-		"description": "data attributes to the farm data entity",
-			"properties": 
-			{
-				"Productionarea": 
-				{
-					"type": "number",
-					"title": "Farm production area",
-					"description": "Total farm production area",
-					"minimum": 0
-				},
-				"Estimatedproduction": 
-				{
-					"type": "number",
-					"title": "Estimated farm production",
-					"description": "Estimated production of the whole farm",
-					"minimum": 0
-				}
-			}
-			
-		},
-		
-		"Plot": 
-		{
-			"title": "plot-adds ",
-			"description": "data attributes added to the plot data entity",
-			"properties": 
-			{
-				"oldestTrees": 
-				{
-					"type": "string",
-					"title": "Oldest trees",
-					"description": "Age of the oldest trees",
-					"enum": 
-					[
-						"Under 5 years",
-						"between 5- 15 years",
-						"between 16-25 years",
-						"between 26-29 years ",
-						"30 and over",
-						"Does not know",
-						"Refused to answer"
-					]
-				},
-				"youngestTrees": 
-				{
-					"type": "string",
-					"title": "Youngest trees",
-					"description": "Age of the youngest trees",
-					"enum": 
-					[
-						"Under 5 years",
-						"between 5- 15 years",
-						"between 16-25 years",
-						"between 26-29 years ",
-						"30 and over",
-						"Does not know",
-						"Refused to answer"
-					]
-				},
-				"ageMajorityTrees": 
-				{
-					"type": "string",
-					"title": "Age majority trees",
-					"description": "Age of the majority of the trees",
-					"enum": 
-					[
-						"Under 5 years",
-						"between 5- 15 years",
-						"between 16-25 years",
-						"between 26-29 years ",
-						"30 and over",
-						"Does not know",
-						"Refused to answer"
-					]
-				},
-				"frequencyofPodcollection": 
-				{
-					"type": "string",
-					"title": "Age majority trees",
-					"description": "Age of the majority of the trees",
-					"enum": 
-					[
-						"Under 5 years",
-						"between 5- 15 years",
-						"between 16-25 years",
-						"between 26-29 years ",
-						"30 and over",
-						"Does not know",
-						"Refused to answer"
-					]
-				},
-				"beginningofPodcollection": 
-				{
-					"type": "string",
-					"title": "Beginning of the pod collection",
-					"description": "Month indicating the beginning of the pod collection period",
-					"enum": 
-					[
-						"Jan",
-						"Feb",
-						"March",
-						"April",
-						"May",
-						"June",
-						"July",
-						"August",
-						"Sept",
-						"Oct",
-						"Nov",
-						"Dec",
-						"Not able to indicate",
-						"Not necessary"
-					]
-				}
-			}
-		},
-		"plotObservation": 
-		{
-			"title": "Plotobservation-adds ",
-			"description": "data attributes to the plot observation data entity",
-			"properties": 
-			{
-				"GAP1": 
-				{
-					"type": "string",
-					"title": "Cocoapruning",
-					"description": "Basic GAP1: Cocoa tree pruning observation score",
-					"enum": 
-					[
-						"no evidence",
-						"evidence but insufficient",
-						"evidence and sufficient",
-						"Not able to indicate",
-						"Not necessary"
-					]
-				},
-				"GAP2": 
-				{
-					"type": "object",
-					"title": "Pest and diseases scores",
-					"description": "Basic GAP2: Pest and diseases observed at this location",
-					"properties": 
-					{
-						"cocoastemborer": 
-						{
-							"type": "string",
-							"title": "Cocoastemborer",
-							"description": "Cocoa tree stemborer observation score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"Canker": 
-						{
-							"type": "string",
-							"title": "CocoaCanker",
-							"description": "Cocoa tree Canker observation score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"Mistletoe": 
-						{
-							"type": "string",
-							"title": "CocoaMistletoe",
-							"description": "Mistletoe observation score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"Blackpod": 
-						{
-							"type": "string",
-							"title": "CocoaBlackpod",
-							"description": "Black pod observation score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"Mirid": 
-						{
-							"type": "string",
-							"title": "CocoaMirid",
-							"description": "Mirid observation score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						}
-					}
-				},
-				"GAP3": 
-				{
-					"type": "string",
-					"title": "CocoaWeed",
-					"description": "Basic GAP3: Cocoa tree weed management score",
-					"enum": 
-					[
-						"no evidence",
-						"evidence but insufficient",
-						"evidence and sufficient",
-						"Not able to indicate",
-						"Not necessary"
-					]
-				},
-				"GAP4": 
-				{
-					"type": "object",
-					"title": "Shadescores",
-					"description": "Basic GAP4: Cocoa tree shade management score",
-					"properties": 
-					{
-						"needforShade": 
-						{
-							"type": "string",
-							"title": "Need for shade",
-							"description": "The need for permanent or temporary shade at the point of observation",
-							"enum": 
-							[
-								"permanent shade",
-								"temporary shade",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"existingShade": 
-						{
-							"type": "string",
-							"title": "Existingshade",
-							"description": "Existing shade score",
-							"enum": 
-							[
-								"no evidence",
-								"evidence but insufficient",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						},
-						"plannedShadingactions": 
-						{
-							"type": "string",
-							"title": "Planned shading actions",
-							"description": "Actiones planned to improve the shading conditions",
-							"enum": 
-							[
-								"no evidence",
-								"evidence and sufficient",
-								"Not able to indicate",
-								"Not necessary"
-							]
-						}
-					}
-				},
-				"GAP5:": 
-				{
-					"type": "string",
-					"title": "Cocoa harvest",
-					"description": "GAP5: Cocoa harvest management score",
-					"enum": 
-					[
-						"no evidence",
-						"evidence but insufficient",
-						"evidence and sufficient",
-						"Not able to indicate",
-						"Not necessary"
-					]
-				}
-			}
-		}
-	}
+  "title": "CocoaAction extension",
+  "description": "Extension for the First-Mile Farm Data Schema to comply to the CocoaAction data submission template",
+  "properties": {
+    "Metadata": {
+      "title": "Metadata-adds ",
+      "description": "data attributes added to the meta data entity",
+      "properties": {
+         "Reportingyear": {
+          "title": "Reporting year",
+          "description": "Year of reporting to Cocoa Action",
+          "type": "string",
+          "format": "date-fullyear"
+        }
+      }
+    },
+    "Community": {
+      "title": "Community",
+      "description": "New data entity community needed to implement cocoaaction",
+      "properties": {
+        "communityName": {
+          "title": "Community name",
+          "description": "Name of the community",
+          "type": "string"
+        },
+        "administrativeLevel1": {
+          "title": "Administrative level 1",
+          "description": "Name of the administrative level 1 unit there the community is located",
+          "type": "string"
+        },
+        "administrativeLevel2": {
+          "title": "Administrative level 2",
+          "description": "Name of the administrative level 1 unit there the community is located",
+          "type": "string"
+        },
+        "communityLocation": {
+          "title": "Community location",
+          "description": "Lat long coordinates of the community",
+          "$ref": "#/definitions/position"
+        },
+        "communitySchools": {
+          "title": "Community schools",
+          "description": "List of schools that worked with cocoa action from the start",
+          "type": "array",
+          "items": {
+            "title": "School",
+            "type": "object",
+            "description": "School wich is part of the cocoaaction program",
+            "properties": {
+              "schoolName": {
+                "title": "School name",
+                "description": "Name of the school",
+                "type": "string"
+              },
+              "schoolLocation": {
+                "title": "School location",
+                "description": "Lat long coordinates of the community",
+                "$ref": "#/definitions/position"
+              },
+              "schoolIntervention": {
+                "title": "School intervation",
+                "description": "Was there a intervation in the schoolin the year of recording",
+                "type": "string",
+                "enum": [
+                  "yes",
+                  "no",
+                  "not able to indicate"
+                ]
+              },
+              "schoolboys": {
+                "title": "School boys",
+                "description": "Number of boys enroled in the year of data collection",
+                "type": "integer"
+              },
+              "schoolgirls": {
+                "title": "School girls",
+                "description": "Number of boys enroled in the year of data collection",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Group": {
+      "title": "Group-adds ",
+      "description": "data attributes added to the group data entity",
+      "properties": {
+        "Averageproduction": {
+          "type": "number",
+          "title": "Average production by group",
+          "description": "Average production by the farmer group calculated as the production sum off all farmers devided by the total cultivated area",
+          "minimum": -1
+        },
+        "Averagemaleproduction": {
+          "type": "number",
+          "title": "Average producution by males",
+          "description": "Average producution by the males in the group calculated as the production sum off all male farmers devided by the total area cultivated by the male farmers",
+          "minimum": -1
+        },
+        "Averagefemaleproduction": {
+          "type": "number",
+          "title": "Average producution by females",
+          "description": "Average producution by the females in the group calculated as the production sum off all female farmers devided by the total area cultivated by the female farmers",
+          "minimum": -1
+        }
+      }
+    },
+    "Farmer": {
+      "title": "Farmer-adds ",
+      "description": "data attributes to the farmer data entity",
+      "properties": {
+        "#Farmsmanaged": {
+          "type": "intiger",
+          "title": "# Farms managed",
+          "description": "Number of farms managed by this particular farmer (ownership of the farm is an attriute of the farm itself, since farms can also be owned by an other private individual, a compagny or a community )",
+          "minimum": -1
+        },
+        "participatedintraining": {
+          "type": "intiger",
+          "title": "Participated in training",
+          "description": "The farmer participated in the cocoa-action training (yes=1,no=0)",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "Farm": {
+      "title": "Farm-adds ",
+      "description": "data attributes to the farm data entity",
+      "properties": {
+        "Productionarea": {
+          "type": "number",
+          "title": "Farm production area",
+          "description": "Total farm production area",
+          "minimum": 0
+        },
+        "Estimatedproduction": {
+          "type": "number",
+          "title": "Estimated farm production",
+          "description": "Estimated production of the whole farm",
+          "minimum": 0
+        },
+        "plantingMaterials": {
+          "type": "object",
+          "title": "Rehabilitation",
+          "description": "Details on the rehabilitation practice per farm",
+          "properties": {
+            "rehab": {
+              "type": "string",
+              "title": "Rehabilitation",
+              "description": "Is rehabilitation needed on the farm?",
+              "enum": [
+                "Yes",
+                "No",
+                "Not able to indicate",
+                "refused to respond"
+              ]
+            },
+            "type": {
+              "type": "string",
+              "title": "Planting material used",
+              "description": "Type of planting material used",
+              "enum": [
+                "Not needed",
+                "Improved",
+                "Conventional",
+                "Not able to indicate",
+                "refused to respond"
+              ]
+            },
+            "received": {
+              "type": "integer",
+              "title": "Planting material received",
+              "description": "Number of planting material received"
+            },
+            "used": {
+              "type": "integer",
+              "title": "Number of planting material used",
+              "description": "Number of planting material used"
+            },
+            "actionsPlanned": {
+              "type": "string",
+              "title": "Actions planned",
+              "description": "New actions planned by the farmer",
+              "enum": [
+                "Not needed",
+                "Farmer was able to provide on farm evidence",
+                "Farmer was not able to provide on farm evidence",
+                "Refused to respond"
+              ]
+            },
+            "bestPractice": {
+              "type": "string",
+              "title": "Best practice",
+              "description": "New actions planned by the farmerconform best practice ?",
+              "enum": [
+                "Not needed",
+                "New actions planned by the farmer conform best practice",
+                "New actions planned by the farmer not conform best practice",
+                "Not able to indicate",
+                "Refused to respond"
+              ]
+            },
+            "protectedLand": {
+              "type": "string",
+              "title": "Protected land",
+              "description": "Streches the farm land into protected area's?",
+              "enum": [
+                "yes",
+                "no",
+                "Not able to indicate",
+                "Refused to respond"
+              ]
+            }
+          }
+        },
+        "plannedFertilityManagement": {
+          "type": "string",
+          "title": "Planned fertility management",
+          "description": "Soil fertility actions planned by the farmer",
+          "enum": [
+            "Farmer was able to present evidence on the farm",
+            "Farmer was not able to present evidence on the farm",
+            "Refused to respond"
+          ]
+        },
+        "soilNutrientReplenishment": {
+          "type": "object",
+          "title": "Soil Nutrient Replenishment",
+          "description": "Soil nutrient replenishment evaluation",
+          "properties": {
+            "farmScore": {
+              "type": "string",
+              "title": "farmScore",
+              "description": "Overall farmscore for  soil nutrient replenishment",
+              "enum": [
+                "No evidence",
+                "No evidence but insufficient",
+                "Evidence and insufficient",
+                "Not ableto indicate",
+                "Not necessary"
+              ]
+            },
+            "fertilizerQuantity": {
+              "type": "number",
+              "title": "Fertilizer quantity",
+              "description": "Fertilizer quantity across the whole farm"
+            },
+            "fertilizerDose": {
+              "type": "number",
+              "title": "Fertilizer dose",
+              "description": "Fertilizer dose per unit"
+            },
+            "fertilizerDoseUnit": {
+              "type": "string",
+              "title": "Fertilizer dose unit",
+              "description": "Unit used to express the fertilizer dose",
+              "enum": [
+                "gr per tree",
+                "kg/ha",
+                "Not ableto indicate",
+                "Refuses to respond"
+              ]
+            },
+            "fertilizerType": {
+              "type": "string",
+              "title": "Fertilizer type",
+              "description": "Type of fertilizer used"
+            }
+          }
+        },
+        "erosionProtection": {
+          "type": "object",
+          "title": "Erosion protection",
+          "description": "Erosion protection evaluation",
+          "properties": {
+            "farmScore": {
+              "type": "string",
+              "title": "farmScore",
+              "description": "Overall farmscore for  soil nutrient replenishment",
+              "enum": [
+                "No evidence",
+                "No evidence but insufficient",
+                "Evidence and insufficient",
+                "Not ableto indicate",
+                "Not necessary"
+              ]
+            },
+            "newActions": {
+              "type": "string",
+              "title": "newActions",
+              "description": "New Actions planned by the farmer for soil erotion protection",
+              "enum": [
+                "The farmer was able to present on farm evidence",
+                "The farmer was not able to present on farm evidence",
+                "Not ableto indicate"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Plot": {
+      "title": "plot-adds ",
+      "description": "data attributes added to the plot data entity",
+      "properties": {
+        "oldestTrees": {
+          "type": "string",
+          "title": "Oldest trees",
+          "description": "Age of the oldest trees",
+          "enum": [
+            "Under 5 years",
+            "between 5- 15 years",
+            "between 16-25 years",
+            "between 26-29 years ",
+            "30 and over",
+            "Does not know",
+            "Refused to answer"
+          ]
+        },
+        "youngestTrees": {
+          "type": "string",
+          "title": "Youngest trees",
+          "description": "Age of the youngest trees",
+          "enum": [
+            "Under 5 years",
+            "between 5- 15 years",
+            "between 16-25 years",
+            "between 26-29 years ",
+            "30 and over",
+            "Does not know",
+            "Refused to answer"
+          ]
+        },
+        "agemajorityTrees": {
+          "type": "string",
+          "title": "Age majority trees",
+          "description": "Age of the majority of the trees",
+          "enum": [
+            "Under 5 years",
+            "between 5- 15 years",
+            "between 16-25 years",
+            "between 26-29 years ",
+            "30 and over",
+            "Does not know",
+            "Refused to answer"
+          ]
+        },
+        "frequencyofPodcollection": {
+          "type": "string",
+          "title": "Age majority trees",
+          "description": "Age of the majority of the trees",
+          "enum": [
+            "Under 5 years",
+            "between 5- 15 years",
+            "between 16-25 years",
+            "between 26-29 years ",
+            "30 and over",
+            "Does not know",
+            "Refused to answer"
+          ]
+        },
+        "beginningofPodcollection": {
+          "type": "string",
+          "title": "Beginning of the pod collection",
+          "description": "Month indicating the beginning of the pod collection period",
+          "enum": [
+            "Jan",
+            "Feb",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "Sept",
+            "Oct",
+            "Nov",
+            "Dec",
+            "Not able to indicate",
+            "Not necessary"
+          ]
+        }
+      }
+    },
+    "Observation": {
+      "title": "Observation-adds ",
+      "description": "data attributes to the plot observation data entity",
+      "properties": {
+        "GAP1": {
+          "type": "string",
+          "title": "Cocoapruning",
+          "description": "Basic GAP1: Cocoa tree pruning observation score",
+          "enum": [
+            "no evidence",
+            "evidence but insufficient",
+            "evidence and sufficient",
+            "Not able to indicate",
+            "Not necessary"
+          ]
+        },
+        "GAP2": {
+          "type": "object",
+          "title": "Pest and diseases scores",
+          "description": "Basic GAP2: Pest and diseases observed at this location",
+          "properties": {
+            "cocoastemborer": {
+              "type": "string",
+              "title": "Cocoastemborer",
+              "description": "Cocoa tree stemborer observation score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "Canker": {
+              "type": "string",
+              "title": "CocoaCanker",
+              "description": "Cocoa tree Canker observation score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "Mistletoe": {
+              "type": "string",
+              "title": "CocoaMistletoe",
+              "description": "Mistletoe observation score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "Blackpod": {
+              "type": "string",
+              "title": "CocoaBlackpod",
+              "description": "Black pod observation score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "Mirid": {
+              "type": "string",
+              "title": "CocoaMirid",
+              "description": "Mirid observation score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            }
+          }
+        },
+        "GAP3": {
+          "type": "string",
+          "title": "CocoaWeed",
+          "description": "Basic GAP3: Cocoa tree weed management score",
+          "enum": [
+            "no evidence",
+            "evidence but insufficient",
+            "evidence and sufficient",
+            "Not able to indicate",
+            "Not necessary"
+          ]
+        },
+        "GAP4": {
+          "type": "object",
+          "title": "Shadescores",
+          "description": "Basic GAP4: Cocoa tree shade management score",
+          "properties": {
+            "needforShade": {
+              "type": "string",
+              "title": "Need for shade",
+              "description": "The need for permanent or temporary shade at the point of observation",
+              "enum": [
+                "permanent shade",
+                "temporary shade",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "existingShade": {
+              "type": "string",
+              "title": "Existingshade",
+              "description": "Existing shade score",
+              "enum": [
+                "no evidence",
+                "evidence but insufficient",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            },
+            "plannedShadingactions": {
+              "type": "string",
+              "title": "Planned shading actions",
+              "description": "Actiones planned to improve the shading conditions",
+              "enum": [
+                "no evidence",
+                "evidence and sufficient",
+                "Not able to indicate",
+                "Not necessary"
+              ]
+            }
+          }
+        },
+        "GAP5:": {
+          "type": "string",
+          "title": "Cocoa harvest",
+          "description": "GAP5: Cocoa harvest management score",
+          "enum": [
+            "no evidence",
+            "evidence but insufficient",
+            "evidence and sufficient",
+            "Not able to indicate",
+            "Not necessary"
+          ]
+        },
+        "soilFertilityManagement:": {
+          "type": "string",
+          "title": "Soil fertility management",
+          "description": "Is there eidence of soilfertility management",
+          "enum": [
+            "no evidence",
+            "evidence but insufficient",
+            "evidence and sufficient",
+            "Not able to indicate",
+            "Not necessary"
+          ]
+        }
+      }
+    }
+  },
+  "definitions": {
+    "position": {
+      "title": "Position",
+      "description": "A single position",
+      "type": "array",
+      "minItems": 2,
+      "items": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "additionalItems": false
+    }
+  }
 }

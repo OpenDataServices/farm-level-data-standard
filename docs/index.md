@@ -23,10 +23,9 @@
    about
    usecases
    thedatamodel
+   extensions
    identification
    spatialdata
-   extensions
-   recommendations
 
 
 ```

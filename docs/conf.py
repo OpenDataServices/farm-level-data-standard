@@ -55,7 +55,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'The reference framework for first mile farm data (underdevelopment)'
+project = 'The reference framework for first mile farm data (Beta)'
 copyright = 'GNU General Public License'
 author = 'Data-Impact.com'
 
@@ -64,7 +64,7 @@ author = 'Data-Impact.com'
 # built documents.
 #
 # The short X.Y version.
-version = '1.0'
+version = 'beta'
 # The full version, including alpha/beta/rc tags.
 release = 'beta'
 
@@ -327,7 +327,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sphinx', 'The reference framework for first mile farm data (V1.0)',
+    (master_doc, 'sphinx', 'The reference framework for first mile farm data (Beta)',
      [author], 1)
 ]
 
@@ -342,7 +342,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'sphinx', 'The reference framework for first mile farm data (V1.0)',
+    (master_doc, 'sphinx', 'The reference framework for first mile farm data (Beta)',
      author, 'sphinx', 'One line description of project.',
      'Miscellaneous'),
 ]

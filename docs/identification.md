@@ -54,7 +54,7 @@ The supporting data structure is visualised in the table below. All required dat
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/GeoID.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="_static/GeoID.json"></script>
 
 ### GloballyUniqueRecordID 
 **To solve problem 3 the GloballyUniqueRecordID is used.** The GloballyUniqueRecordID is considered an indivisible part of the data record and attached to it at the time of recording. The GloballyUniqueRecordID consists of:
@@ -74,7 +74,7 @@ The supporting data structure is visualised in the table below. All required dat
 * By clicking on the blue table title -> all data attributes become visable, 
 * By clicking on the data entity buttons -> all data ttributes become visable of that data entity and.
 * By clicking on the {} symbols -> the JSON becomes visable 
-<script src="../../_static/docson/widget.js" data-schema="../../../schema/components/GloballyUniqueRecordID.JSON"></script>
+<script src="../_static/docson/widget.js" data-schema="_static/GlobalID.json"></script>
 
 ### Alternative ways of identification 
 

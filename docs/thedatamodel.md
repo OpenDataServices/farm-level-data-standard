@@ -1,13 +1,13 @@
-The data model
+3 The data model
 ================
 
-## Approach
+## 3.1 Approach
 
 In [the three schema approach](http://www.idef.com/wp-content/uploads/2016/02/idef0.pdf) a conceptual data model is proposed as an effective way to integrate between different databases and organisations. In the conceptual model the data entities are defined in the way that the end-users think and talk about concepts in the real world. It is therefore assumed that multiple organisations can easily develop a mapping from their own internal data structures onto such conceptual model because of the internal logic of the end-user community. The conceptual model can therefore function as a neutral and organisation independent interface for the data from 1 database to another database. If all organisations would develop such a mapping (or adapt their own internal data structures), effortless and automated data exchange and data integration can take place. The reference framework for first mile farm data aims to put the foundation for such a neutral model.
 
 In ‘first mile’ projects many different aspects of farms are being collected. Examples are the agricultural and economic performance of a farm, farming activities performed at a farm, social and environmental conditions, compliance to standard measures etc. It is beyond the scope of this document to address all of these aspects in detail, including the recommended field data collection methodologies and associated data formats. This document presents a generic structure by representing the core components of a farm as data entities. It will only discuss data attributes that are essential for the internal structure and which are needed to be able understand and combine the data, such as farmers ID or the shape of the fields or are commonly collected such as the address or expected yield. It will also present the logic how the model can be expanded with additional data attributes or data entities providing the option to customise the model and to provide the opportunity to expand the generic model into a more all comprehensive model at a later stage.
 
-### The conceptual model 
+### 3.1.1 The conceptual model 
 
 ![Conceptual model for first mile farm data](_static/images/Neutraldatamodelgif.gif)
 
@@ -26,7 +26,7 @@ The logic of the model is to map the first mile data elements collected in the f
 
 The dark blue elements in the figure above indicated in the model will be detailed out more below. The lighter blue elements to visualize the logic in the model and to indicate possible extensions in the future or customization options. 
 
-## Overview of model JSON model
+## 3.2 Overview of model JSON model
 The complete data structure is visualised in the table below:
 * All required data attributes are indicated in bold, 
 * By clicking on the blue table title -> all data attributes become visible, 
@@ -52,19 +52,19 @@ However because all data elements are mapped on the same data entities, datasets
 
 As a result, to maintain compatibility for different global data sources, with different combinations of data entities (Farmer group, Farmer, Farm, Plot, Plot Observation), it is essential that all data attributes are mapped at the right data entity level. For example it does not fit the logic of the reference framework to add an attribute ‘farm size’ to the data entity ‘farmer’, even if that farmer owns or manages that farm. The farm and it’s size are inextricable, even if this is the only attribute recorded about farms in the data set. As a result the farm size of a farmer's farm can only be found by first finding the farm instance of the farmer's farm using internals keys and next the size of that farm instance.  
 
-### Extensions
+### 3.2.1 Extensions
 The reference framework is designed in such a way that new data attributes or even new data entities for different purposes can be added to the model easily. This is illustrated under the heading extensions, for Cocoa action program and MARS Adoption Observations. The data formats are available together with the official protocols on how to collect the data elements in the field. 
 
 By adding more and more extensions to the reference framework, a repositry emerges of 'proven' data formats and data collection protocols. Organsations can benefit from this repositry harvesting the formats and data collection protocols they need for their own data management. Having different data formats and datacollection methodologies in one repository will also facilitate further standardization and interoperability discussions. To add to the reference framework please contact andre.jellema@data-impact.com.
 
 In the following sections the core data entities of the generic data structure for farm data collection, storag and exchange will be further elaborated under the Chapter '[Extentions](http://farm-level-data-standard.readthedocs.io/en/latest/extensions/)".
 
-### Flattened table in Excel format
+### 3.2.2 Flattened table in Excel format
 A flattened table in excel format is avialable [here](https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/First-Mile-Farm-Data.xlsx) The flattened table can be used to make a mapping from an existing data structure to the generic data structure for farm data collection, storage and exchange.
 
-## Schema details in JSON
+## 3.3 Schema details in JSON
 
-### Farmer group
+### 3.3.1 Farmer group
 
 **Definition**
 Loosely defined group of farmers. Farmers can be member of a cooperative or union, organized by a company as contract farmers or as part of a support program, etc. 
@@ -81,7 +81,7 @@ The data structure is visualised in the table below. All required data attribute
 * By clicking on the {} symbols -> the JSON becomes visible 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/Group.json"></script>
 
-### The farmer
+### 3.3.2 The farmer
 
 **Definition**
 The farmer is the person that manages one or more farms, possibly helped by farm workers. The farmer takes the major management decisions even when the decision is to do contract farming where the farm practice is often prescribed in detail by an external actor. In this model the farmer is not necessarily the owner of the farm. A farmer can manage someone else’s farm. Nor does he or she need to be the owner of the assets composing the farm, e.g a sharecropper is seen as a farmer in this model. For a more detailed explanation on how ownership plays a role in modelling different farm types, see also the conceptual model in '[the approach](http://farm-level-data-standard.readthedocs.io/en/latest/thedatamodel/#approach)' section.
@@ -98,7 +98,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visible. 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/Farmer.json"></script>
 
-### The farm
+### 3.3.3 The farm
 
 **Definition**
 A farm is described as a collection of assets managed as 1 entity with the primarily objective to raise living organisms for food or raw materials. A farm often consists of fields, buildings and livestock and is run by a farm manager and the farm owner has the rights on the produce. The farm manager and the farm owner are often united in 1 person: the farmer. A farm manager is often supported by farm workers to carry out the activities.
@@ -117,7 +117,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visible 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/Farm.json"></script>
 
-### The plot
+### 3.3.4 The plot
 
 **Definition**
 A plot is an area of land, enclosed or otherwise, used for agricultural purposes such as cultivating crops or for livestock.
@@ -145,7 +145,7 @@ Required data attributes are indicated by grey shaded fields in the table below.
 * By clicking on the {} symbols -> the JSON becomes visible 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/Plot.json"></script>
 
-### The observation
+### 3.3.5 The observation
 
 **Definition**
 Data obtained from an assessment in a plot, generally done at a specific location, in a transect or in an area. This data entity is not meant to describe the plot as a whole. Based on observations estimates are made for the characteristics of the plot as a whole. The observations are records of the observation data entity, where as the estimation for the plot as a whole based on the observations should be added as a data attribute of the plot data entity. For example in a grass plot the biomass is measured at 3 points. This can be added to the data set as 3 observation records, the average biomass calculated for the plot can be added to the plot data entity.

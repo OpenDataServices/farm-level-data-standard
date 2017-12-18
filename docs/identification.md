@@ -1,24 +1,24 @@
-Uniquely identifying data elements
+5 Uniquely identifying data elements
 =========================
 
 ### Key message
 **In the reference framework a system of 3 identifiers is proposed to uniquely identify objects and model the relationships between these objects.** These Identifiers are called: 1 the InternalID, 2 the GeoID and 3 the GlobalID. The system allows the exchange and merging of data that is structured in a similar way.
 
-1. **The GlobalID** is a globally unique identifier for First Mile Farm data record. 
-2. **The InternalID** provides a means internally structure the data set uniquely identifying the  objects in the dataset and relations between them.
+1. **The GlobalID** is a globally unique identifier for first mile Farm data record. 
+2. **The InternalID** provides a means internally structure the data set by uniquely identifying the  objects in the dataset and relations between them.
 3. **The GeoID** provides an imperfect means to uniquely identify the object in the field and to clean the dataset when it is combined with datasets from other sources.
 
 The Internal database structure is provided by the InternatID.The GeoID and the GlobalID can be used to maintain this structure while exchanging data between organisations.
 
-### Introduction
+### 5.1 Introduction
 In an ideal world every farmer, farm, plot or farmers group would be globally uniquely identified by some formal or informal system and these identification numbers would be generally known and used by different organisations. Organisations could make data recordings about farmer, farm, plot or farmer groups and could easily combine these recordings with other recordings trusting these globally unique IDs to sort the data and make analyses using all records combined. However currently this is an utopia, because there is no perfect system uniquely identifying all farmer, farm, plot or farmers groups globally (see also the sections below). 
 
 Instead the reference framework uses 3 identifiers to build and internal structure and maintain a local data set of first mile farm data: 1 the internal ID, 2 the GlobalID and 3 the GeoID. 
 
-### The InternalID
+### 5.2 The InternalID
 The InternalID is the ID used to uniquely identify Data Entities in a data set in a local data base and to structure the data using these internalIDs as Keys to link the farmers to farmer groups, farms to farmers, plots to farms and plot observations to plots. 
 
-When the data set is merged with another First Mile Farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principle there are **3 problems that need to be solved**.
+When the data set is merged with another first mile farm data set the internal ID needs to be updated to represent the new structure of the data sets. In principle there are **3 problems that need to be solved**.
 
 1. **If 2 datasets are merged and they may contain information about the same farmers** these farmers should get the same InternalIDs and all related Keys inside the combined dataset need to be updated.
 2. **If 2 different farmers have the same InternalID before the merge**, 1 of the 2 farmers need to get a new and unique InternalID during the merger and all Keys need to be updated accordingly.
@@ -27,7 +27,7 @@ When the data set is merged with another First Mile Farm data set the internal I
 **Datastructure**
 The InternalID is a string with a Universally unique identifier used in many databases to identify dataelements.
 
-### The GeoID
+### 5.3 The GeoID
 **To clean the datasets from problem 1 and 2 the GeoID is introduced.** The GeoID is the location of an object in WGS84 coordinates and a description of where the geolocation is measured. When the WGS84 TRF (*see also the section on spatial data acquistion and standards*)  is viewed as an register using 2 ID numbers, WGS84 can be considered as the only registration system that is consistently used globally to uniquely “identify” objects over the past 20 year. However the location of an object may have different interpretations between different data collectors, therefor a description of where the geolocation is measured is made part of the GeoID to ease the cleaning process. One can imagine that the cleaning based on geolocation will be made with much more confidence when all GeoIDs are taken at the doorstep of a farm and not at the location where the interview is taken. However sometimes the GeoID can not be taken at the doorstep, therefor different options are provided with decreasing accuracy:
 
 1. Location of main entrance of the object or the front door of the main office from where operations take place; 
@@ -52,7 +52,7 @@ The supporting data structure is visualised in the table below. All required dat
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static/GeoID.json"></script>
 
-### GlobalID 
+### 5.4 GlobalID 
 **To solve problem 3 the GlobalID is used.** The GlobalID is considered an indivisible part of the data record and attached to it at the time of recording. The GlobalID consists of:
 
 * The original internal ID used by the data collection organisation to identify that farmer, farm, plot, farmers group etc; When objects are uniquely identified only at project level, the project ID needs to be added to the object ID for example (Internal Project ID + Internal Object ID). 
@@ -72,7 +72,7 @@ The supporting data structure is visualised in the table below. All required dat
 * By clicking on the {} symbols -> the JSON becomes visable 
 <script src="../_static/docson/widget.js" data-schema="https://raw.githubusercontent.com/firstmile/reference-framework/master/docs/_static//GlobalID.json"></script>
 
-### Alternative ways of identification 
+### 5.5 Alternative ways of identification 
 
 All of this data could be added to the records to facilitate the identification in the field and the cleaning of datasets.
 

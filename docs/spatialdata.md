@@ -112,10 +112,10 @@ Screen digitization is always in relation to another data source (aerial photogr
 
 *The following procedure is derived from the SAN guidelines for certificate mapping produced by the Rainforest Alliance.*
 
->### Point locations
+>### 6.3.1 Point locations
 >If the location of interest can be identified in a web-map or via satellite view, then it may be easy to obtain the GPS coordinates from the screen. In Google Earth, just place the cursor at the desired location and read off the coordinate values from the “Status bar” at the bottom of the screen. In Google Maps, simply create a point or marker at the desired location and then click on that marker to display the properties, which will show the GPS coordinates (usually at the bottom left of the pop-up). When reporting these points, make sure that they are in Decimal Degrees. 
 
->### The digitization of polygons 
+>### 6.3.2 The digitization of polygons 
 
 >*Using Google Earth*
 >Google Earth Pro is a program that you can download for free and install on your computer ([download here](https://www.google.com/earth/download/gep/agree.html)). After installing the program, select from the main menu Tools -> Options and configure: show Lat/Long in Decimal Degrees (3D View tab).
@@ -165,7 +165,7 @@ Screen digitization is always in relation to another data source (aerial photogr
 >To export the map, click on the three dots in the top right of the map box, select “export to kml” and select whether you want to export all the map data, or just the data in a specific layer. Note that Google My Maps has limited ability to move and organize features into layers, so for complex sites, it might be necessary to export the map into a more full-featured program, such as Google Earth, to organization the multiple polygons.
 
 
-## 6.3 Some more background on the complexity behind geodata
+## 6.4 Some more background on the complexity behind geodata
 When working with spatial data it is important to be aware of the complexity behind it. Locations in space are generally described in mathematics, as points in a rectangular coordinate system consisting of three axis (x,y,z). However, when we are thinking and talking about the world around us in daily live, we are actually mentally flattening the curved surface of the earth in the 2 dimensions (x,y)  of a flat plane and define height (z) as the elevation of the surface above sea level. This section explains some fundamentals from geodesy and cartography to get an understanding of this complexity in order to avoid mistakes during spatial data handling because of misinterpretations.
 
 The description of the earth surface in coordinates is based on mathematical models called [Terrestrial Reference Frames (TRF)](https://www.iers.org/IERS/EN/Home/home_node.html).  A modern TRF is defined by *a Datum* and *a Geoid model* of the earth.

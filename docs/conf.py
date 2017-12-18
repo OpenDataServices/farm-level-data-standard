@@ -285,8 +285,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'sphinx.tex', 'The reference framework for first mile farm data (V1.0)',
-     'The reference framework for first mile farm data (V1.0)', 'manual'),
+    (master_doc, 'sphinx.tex', 'The reference framework for first mile farm data (Beta)',
+     'The reference framework for first mile farm data (Beta)', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
